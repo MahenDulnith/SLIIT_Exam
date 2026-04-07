@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SLIIT Mid Practice Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">Adaptive MCQ Trainer</p>
+      <h1>SLIIT Mid Practice</h1>
+      <p>Load MCQs from TXT, keep progress in this browser, and practice by weak topic.</p>
+    </header>
+
+    <nav class="tab-nav" aria-label="Page views">
+      <button id="tabDashboardBtn" class="tab-btn active" type="button">Dashboard</button>
+      <button id="tabPracticeBtn" class="tab-btn" type="button">Practice</button>
+      <button id="tabLoadBtn" class="tab-btn" type="button">Load Question Data</button>
+    </nav>
+
+    <section id="dashboardView" class="view active">
+      <section class="dashboard panel">
+        <h2>Dashboard</h2>
+        <div class="subject-controls">
+          <label for="subjectSelector">Subject</label>
+          <select id="subjectSelector">
+            <option value="ALL">All Subjects</option>
+          </select>
+          <span id="subjectScopeText" class="hint">Showing all subjects.</span>
+        </div>
+        <div class="stats">
+          <article><span>Total Questions</span><strong id="totalQuestions">0</strong></article>
+          <article><span>Answered</span><strong id="answeredCount">0</strong></article>
+          <article><span>Correct</span><strong id="correctCount">0</strong></article>
+          <article><span>Accuracy</span><strong id="accuracy">0%</strong></article>
+        </div>
+        <div class="stats details-stats">
+          <article><span>Wrong</span><strong id="wrongCount">0</strong></article>
+          <article><span>Skipped</span><strong id="skippedCount">0</strong></article>
+          <article><span>Timed Out</span><strong id="timedOutCount">0</strong></article>
+          <article><span>Unseen</span><strong id="unseenCount">0</strong></article>
+        </div>
+        <div class="details-panel">
+          <h3>Topic Breakdown</h3>
+          <div class="topic-table-wrap">
+            <table class="topic-table">
+              <thead>
+                <tr>
+                  <th>Topic</th>
+                  <th>Attempts</th>
+                  <th>Correct</th>
+                  <th>Wrong</th>
+                  <th>Skipped/Timeout</th>
+                  <th>Accuracy</th>
+                </tr>
+              </thead>
+              <tbody id="topicBreakdownBody">
+                <tr><td colspan="6">No attempts yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="weak-topics">
+          <h3>Weak Topics</h3>
+          <ul id="weakTopicsList">
+            <li>No data yet</li>
+          </ul>
+        </div>
+        <button id="practiceWeakBtn" class="secondary" disabled>Practice Weak Topics</button>
+      </section>
+    </section>
+
+    <section id="loadView" class="view">
+      <section class="panel">
+        <h2>Load Question Data</h2>
+        <p class="hint">Paste your GPT output in the required TXT format, or upload a .txt file.</p>
+        <p class="hint">Your latest loaded MCQ set is saved locally in this browser.</p>
+        <textarea id="txtInput" placeholder="Paste QUESTION_START ... QUESTION_END blocks here"></textarea>
+        <div class="actions">
+          <button id="loadFromTextBtn">Load From Text</button>
+          <button id="loadDefaultBtn" class="secondary">Load mcq-data.txt</button>
+          <label class="file-btn" for="txtFile">Choose TXT File</label>
+          <input id="txtFile" type="file" accept=".txt" />
+          <button id="loadFromFileBtn">Load From File</button>
+          <button id="resetBtn" class="secondary">Reset Session</button>
+        </div>
+        <p id="loadMessage" class="status"></p>
+      </section>
+    </section>
+
+    <section id="practiceView" class="view">
+      <section id="quizPlaceholder" class="panel placeholder-panel">
+        <h2>Practice Space</h2>
+        <p class="hint">Load a question set from Load Question Data to start practicing.</p>
+      </section>
+
+      <section id="quizPanel" class="panel hidden">
+        <div class="quiz-head">
+          <span id="questionCounter">Question 0 / 0</span>
+          <span id="metaInfo">-</span>
+        </div>
+        <div class="quiz-tracking">
+          <div class="progress-row">
+            <span id="roundProgressText">Progress 0 / 0</span>
+            <span class="timer">Time Left: <strong id="timerValue">--</strong>s</span>
+          </div>
+          <div class="round-progress">
+            <div id="roundProgressFill" class="round-progress-fill"></div>
+          </div>
+          <div class="timer-progress">
+            <div id="timerProgressFill" class="timer-progress-fill"></div>
+          </div>
+        </div>
+        <div id="questionText" class="question-text">Question will appear here</div>
+        <div id="optionsContainer" class="options"></div>
+        <p id="quizHint" class="hint">This is MSQ. Select one or more answers, then submit.</p>
+        <div class="actions">
+          <button id="submitBtn">Submit Answer</button>
+          <button id="skipBtn" class="secondary">Skip Question</button>
+          <button id="nextBtn" class="secondary hidden" disabled>Next Question</button>
+        </div>
+        <div id="feedback" class="feedback"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

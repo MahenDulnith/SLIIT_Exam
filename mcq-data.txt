@@ -1,0 +1,6607 @@
+QUESTION_START
+ID: OOP-001
+MODULE: OOP
+TOPIC: Basics
+SUBTOPIC: OOP vs Procedural
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which best describes Procedural Programming?
+OPTION_A: Programs built using interacting objects
+OPTION_B: Programs written as a sequence of functions
+OPTION_C: Programs based on inheritance
+OPTION_D: Programs hide data using encapsulation
+ANSWER: B
+REASONING: Procedural programming focuses on step-by-step functions. Objects and encapsulation belong to OOP.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-002
+MODULE: OOP
+TOPIC: Basics
+SUBTOPIC: OOP Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the main focus of Object-Oriented Programming?
+OPTION_A: Functions
+OPTION_B: Objects
+OPTION_C: Variables
+OPTION_D: Loops
+ANSWER: B
+REASONING: OOP organizes programs as a collection of objects that interact.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-003
+MODULE: OOP
+TOPIC: Basics
+SUBTOPIC: True Statements
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which statement is TRUE?
+OPTION_A: Procedural programming uses bottom-up design
+OPTION_B: OOP cannot solve complex problems
+OPTION_C: OOP uses objects that cooperate
+OPTION_D: Procedural programming uses classes
+ANSWER: C
+REASONING: OOP uses interacting objects. Procedural uses top-down design and does not use classes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-004
+MODULE: OOP
+TOPIC: Classes and Objects
+SUBTOPIC: Class Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: A class is:
+OPTION_A: A real-world entity
+OPTION_B: A blueprint/template
+OPTION_C: A variable
+OPTION_D: A method
+ANSWER: B
+REASONING: A class defines structure and behavior for objects.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-005
+MODULE: OOP
+TOPIC: Classes and Objects
+SUBTOPIC: Object Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: An object is:
+OPTION_A: A function
+OPTION_B: A template
+OPTION_C: An instance of a class
+OPTION_D: A datatype
+ANSWER: C
+REASONING: Objects are instances created from classes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-006
+MODULE: OOP
+TOPIC: Classes and Objects
+SUBTOPIC: Analogy
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which analogy is correct?
+OPTION_A: Object = blueprint, Class = house
+OPTION_B: Class = blueprint, Object = house
+OPTION_C: Object = function, Class = variable
+OPTION_D: Class = loop, Object = condition
+ANSWER: B
+REASONING: A class is a blueprint, and objects are real instances.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-007
+MODULE: OOP
+TOPIC: Concepts
+SUBTOPIC: OOP Concepts
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is NOT an OOP concept?
+OPTION_A: Encapsulation
+OPTION_B: Abstraction
+OPTION_C: Compilation
+OPTION_D: Inheritance
+ANSWER: C
+REASONING: Compilation is not an OOP concept.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-008
+MODULE: OOP
+TOPIC: Concepts
+SUBTOPIC: Encapsulation
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Encapsulation means:
+OPTION_A: Hiding data
+OPTION_B: Showing all variables
+OPTION_C: Using loops
+OPTION_D: Creating objects
+ANSWER: A
+REASONING: Encapsulation is about hiding internal data and exposing controlled access.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-009
+MODULE: OOP
+TOPIC: Encapsulation
+SUBTOPIC: Bank System
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Why should balance be private in a bank system?
+OPTION_A: Increase speed
+OPTION_B: Hide and protect data
+OPTION_C: Reduce memory
+OPTION_D: Simplify loops
+ANSWER: B
+REASONING: Private variables prevent unauthorized access and ensure data safety.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-010
+MODULE: OOP
+TOPIC: Encapsulation
+SUBTOPIC: Methods
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which is the correct way to modify balance?
+OPTION_A: Direct access
+OPTION_B: Setter method
+OPTION_C: deposit() method
+OPTION_D: Both B and C
+ANSWER: D
+REASONING: Balance should be modified via controlled methods like setters or deposit.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-011
+MODULE: OOP
+TOPIC: Code
+SUBTOPIC: Attributes
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: In class Car { String color; }, what is color?
+OPTION_A: Method
+OPTION_B: Attribute
+OPTION_C: Object
+OPTION_D: Constructor
+ANSWER: B
+REASONING: color is a variable inside the class, so it is an attribute.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-012
+MODULE: OOP
+TOPIC: Code
+SUBTOPIC: Objects
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Car c1 = new Car(); What is c1?
+OPTION_A: Class
+OPTION_B: Method
+OPTION_C: Object
+OPTION_D: Attribute
+ANSWER: C
+REASONING: c1 is an instance of the Car class.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-013
+MODULE: OOP
+TOPIC: Code
+SUBTOPIC: Default Values
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is default value of int instance variable?
+OPTION_A: 0
+OPTION_B: null
+OPTION_C: Error
+OPTION_D: Garbage
+ANSWER: A
+REASONING: Instance variables get default values; int defaults to 0.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-014
+MODULE: OOP
+TOPIC: Code
+SUBTOPIC: Static
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Static variables are:
+OPTION_A: Unique per object
+OPTION_B: Shared among all objects
+OPTION_C: Not accessible
+OPTION_D: Always private
+ANSWER: B
+REASONING: Static variables belong to the class, not instances.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-015
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Private Access
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Accessing private variable directly causes:
+OPTION_A: No error
+OPTION_B: Compile-time error
+OPTION_C: Runtime error
+OPTION_D: Warning only
+ANSWER: B
+REASONING: Private variables cannot be accessed outside the class.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-016
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Null
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens when accessing variable from null object?
+OPTION_A: 0
+OPTION_B: Error
+OPTION_C: NullPointerException
+OPTION_D: Garbage value
+ANSWER: C
+REASONING: Accessing members of null reference causes NullPointerException.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-017
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Instance Variable
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the output?
+class Test {
+    int x = 5;
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.x);
+    }
+}
+OPTION_A: 0
+OPTION_B: 5
+OPTION_C: Error
+OPTION_D: null
+ANSWER: B
+REASONING: The object t is created and x is initialized to 5, so it prints 5.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-018
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Default Value
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Test {
+    int x;
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.x);
+    }
+}
+OPTION_A: 0
+OPTION_B: Garbage
+OPTION_C: Error
+OPTION_D: null
+ANSWER: A
+REASONING: Instance variables are automatically initialized. int defaults to 0.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-019
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Multiple Objects
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Test {
+    int x = 10;
+    public static void main(String[] args) {
+        Test t1 = new Test();
+        Test t2 = new Test();
+        t1.x = 20;
+        System.out.println(t2.x);
+    }
+}
+OPTION_A: 10
+OPTION_B: 20
+OPTION_C: 0
+OPTION_D: Error
+ANSWER: A
+REASONING: Each object has its own copy of instance variables. Changing t1 does not affect t2.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-020
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Static Variable
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Test {
+    static int x = 5;
+    public static void main(String[] args) {
+        Test t1 = new Test();
+        Test t2 = new Test();
+        t1.x = 10;
+        System.out.println(t2.x);
+    }
+}
+OPTION_A: 5
+OPTION_B: 10
+OPTION_C: 0
+OPTION_D: Error
+ANSWER: B
+REASONING: Static variables are shared among all objects, so change in t1 affects t2.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-021
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Non-static Method
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens?
+class Test {
+    int x = 5;
+    void display() {
+        System.out.println(x);
+    }
+    public static void main(String[] args) {
+        display();
+    }
+}
+OPTION_A: 5
+OPTION_B: 0
+OPTION_C: Compile-time error
+OPTION_D: Runtime error
+ANSWER: C
+REASONING: Non-static methods cannot be called directly from static main method without an object.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-022
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Static Access
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens?
+class Test {
+    int x;
+    public static void main(String[] args) {
+        System.out.println(x);
+    }
+}
+OPTION_A: 0
+OPTION_B: Compile-time error
+OPTION_C: Runtime error
+OPTION_D: null
+ANSWER: B
+REASONING: Cannot access non-static variable x from static context without object.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-023
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Local Variable
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens?
+class Test {
+    public static void main(String[] args) {
+        int x;
+        System.out.println(x);
+    }
+}
+OPTION_A: 0
+OPTION_B: Compile-time error
+OPTION_C: Runtime error
+OPTION_D: Garbage
+ANSWER: B
+REASONING: Local variables must be initialized before use.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-024
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Uninitialized Object
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens?
+class Test {
+    public static void main(String[] args) {
+        Test t;
+        System.out.println(t);
+    }
+}
+OPTION_A: null
+OPTION_B: Compile-time error
+OPTION_C: Runtime error
+OPTION_D: Object reference
+ANSWER: B
+REASONING: Variable t is declared but not initialized.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-025
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Null Pointer
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens?
+class Test {
+    int x = 5;
+    public static void main(String[] args) {
+        Test t = null;
+        System.out.println(t.x);
+    }
+}
+OPTION_A: 5
+OPTION_B: 0
+OPTION_C: Compile-time error
+OPTION_D: NullPointerException
+ANSWER: D
+REASONING: Accessing a member of a null reference causes NullPointerException.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-026
+MODULE: OOP
+TOPIC: Encapsulation
+SUBTOPIC: Getter
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is the correct getter method?
+OPTION_A: void getMarks()
+OPTION_B: int getMarks()
+OPTION_C: setMarks()
+OPTION_D: returnMarks()
+ANSWER: B
+REASONING: A getter returns a value, so it must have a return type.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-027
+MODULE: OOP
+TOPIC: Encapsulation
+SUBTOPIC: Setter
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is the correct setter method?
+OPTION_A: int setMarks(int m)
+OPTION_B: void setMarks(int m)
+OPTION_C: getMarks(int m)
+OPTION_D: marks(int m)
+ANSWER: B
+REASONING: A setter assigns a value and does not return anything.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-028
+MODULE: OOP
+TOPIC: Encapsulation
+SUBTOPIC: Banking Logic
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which method ensures balance does not become negative?
+OPTION_A: getBalance()
+OPTION_B: withdraw()
+OPTION_C: displayAccountDetails()
+OPTION_D: setBalance()
+ANSWER: B
+REASONING: withdraw() should check balance before deducting to prevent negative values.
+QUESTION_END
+
+QUESTION_START
+ID: OOP-029
+MODULE: OOP
+TOPIC: Code
+SUBTOPIC: Null Check
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the output?
+Test t = null;
+if (t == null) {
+    System.out.println("Empty");
+}
+OPTION_A: Error
+OPTION_B: Empty
+OPTION_C: NullPointerException
+OPTION_D: 0
+ANSWER: B
+REASONING: Checking for null is safe and does not cause an error.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-001
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is a constructor in Java?
+OPTION_A: A special method used to initialize objects
+OPTION_B: A variable inside a class
+OPTION_C: A loop used for repetition
+OPTION_D: A method that must return void
+ANSWER: A
+REASONING: A constructor initializes an object when it is created.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-002
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Naming Rule
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which statement about a constructor name is correct?
+OPTION_A: It can be any valid identifier
+OPTION_B: It must be the same as the class name
+OPTION_C: It must start with new
+OPTION_D: It must end with Constructor
+ANSWER: B
+REASONING: A constructor has the same name as its class.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-003
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Return Type
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the return type of a constructor?
+OPTION_A: void
+OPTION_B: The class name
+OPTION_C: int
+OPTION_D: No return type
+ANSWER: D
+REASONING: Constructors do not declare a return type, not even void.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-004
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Automatic Call
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: When is a constructor executed?
+OPTION_A: When the class is compiled
+OPTION_B: When an object is created
+OPTION_C: When a setter is called
+OPTION_D: When the main method ends
+ANSWER: B
+REASONING: The matching constructor runs automatically during object creation.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-005
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Default Constructor
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: When will Java automatically provide a default constructor?
+OPTION_A: Always
+OPTION_B: Only when no constructor is defined in the class
+OPTION_C: Only when private variables exist
+OPTION_D: Only when the main method is missing
+ANSWER: B
+REASONING: If you do not define any constructor, Java supplies a default one.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-006
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Default Constructor
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: A default constructor is best described as:
+OPTION_A: A constructor with one parameter
+OPTION_B: A constructor with no parameters
+OPTION_C: A method that returns default values
+OPTION_D: A static method
+ANSWER: B
+REASONING: A default constructor takes no arguments.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-007
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Parameterized Constructor
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is a parameterized constructor?
+OPTION_A: A constructor that accepts arguments
+OPTION_B: A constructor that is private
+OPTION_C: A method with the same name as main
+OPTION_D: A setter method
+ANSWER: A
+REASONING: A parameterized constructor receives values through parameters.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-008
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Overloading
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Constructor overloading means:
+OPTION_A: Using many classes in one program
+OPTION_B: Creating many objects from one class
+OPTION_C: Having multiple constructors with different parameter lists
+OPTION_D: Using a constructor inside a loop
+ANSWER: C
+REASONING: Overloaded constructors share the class name but differ in parameter lists.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-009
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Why are constructors useful?
+OPTION_A: They automatically initialize object attributes
+OPTION_B: They replace all methods
+OPTION_C: They make variables static
+OPTION_D: They remove the need for classes
+ANSWER: A
+REASONING: Constructors are used to give initial values to fields during object creation.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-010
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Choosing Constructor
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: When an object is declared, which constructor is executed?
+OPTION_A: Always the default constructor
+OPTION_B: The constructor whose parameter list matches the arguments
+OPTION_C: All constructors one by one
+OPTION_D: No constructor runs automatically
+ANSWER: B
+REASONING: Java chooses the appropriate constructor based on the arguments provided.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-011
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Compiler Error
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which declaration is a constructor?
+OPTION_A: public void Car()
+OPTION_B: public Car()
+OPTION_C: void Car(int x)
+OPTION_D: int Car()
+ANSWER: B
+REASONING: A constructor has the class name and no return type.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-012
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Not a Constructor
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why is 'public void Student()' not a constructor?
+OPTION_A: Because it is private
+OPTION_B: Because constructors cannot be public
+OPTION_C: Because it has a return type
+OPTION_D: Because it has parentheses
+ANSWER: C
+REASONING: Adding void makes it an ordinary method, not a constructor.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-013
+MODULE: OOP
+TOPIC: Objects
+SUBTOPIC: Creation Steps
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: According to the lecture, what is the correct order for creating objects?
+OPTION_A: Create object, define class, initialize properties
+OPTION_B: Define class, create object using new, initialize properties
+OPTION_C: Initialize properties, define class, call getter
+OPTION_D: Declare variable, call method, compile class
+ANSWER: B
+REASONING: The lecture shows: define class, create object with new, initialize properties.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-014
+MODULE: OOP
+TOPIC: Objects
+SUBTOPIC: Keyword
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which keyword is used to create a dynamic object?
+OPTION_A: class
+OPTION_B: this
+OPTION_C: new
+OPTION_D: public
+ANSWER: C
+REASONING: The new keyword creates objects.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-015
+MODULE: OOP
+TOPIC: Objects
+SUBTOPIC: Dot Operator
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which operator is used to access an object's methods and properties?
+OPTION_A: ->
+OPTION_B: .
+OPTION_C: ::
+OPTION_D: *
+ANSWER: B
+REASONING: The dot operator accesses members of an object.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-016
+MODULE: OOP
+TOPIC: Objects
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: An object in Java is:
+OPTION_A: A blueprint
+OPTION_B: An instance of a class
+OPTION_C: A type of loop
+OPTION_D: A package
+ANSWER: B
+REASONING: Objects are instances created from classes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-017
+MODULE: OOP
+TOPIC: Objects
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which pair correctly matches the lecture's object categories?
+OPTION_A: Primitive objects and package objects
+OPTION_B: User-defined objects and predefined library objects
+OPTION_C: Public objects and private objects
+OPTION_D: Default objects and overloaded objects
+ANSWER: B
+REASONING: The lecture diagram divides them into user-defined and predefined library objects.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-018
+MODULE: OOP
+TOPIC: Access Modifiers
+SUBTOPIC: public
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: The public access modifier means the member is accessible:
+OPTION_A: Only inside the same class
+OPTION_B: Only inside subclasses
+OPTION_C: Only inside the same package
+OPTION_D: From anywhere
+ANSWER: D
+REASONING: public members can be accessed from anywhere.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-019
+MODULE: OOP
+TOPIC: Access Modifiers
+SUBTOPIC: private
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: The private access modifier means the member is accessible:
+OPTION_A: Only within the same class
+OPTION_B: Within the same package
+OPTION_C: From anywhere
+OPTION_D: Only in child classes
+ANSWER: A
+REASONING: private members are available only inside the class.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-020
+MODULE: OOP
+TOPIC: Access Modifiers
+SUBTOPIC: default
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: A member with default access is accessible:
+OPTION_A: Only in the same class
+OPTION_B: Only in the same package
+OPTION_C: Everywhere
+OPTION_D: Only in subclasses outside the package
+ANSWER: B
+REASONING: Default access allows use within the same package.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-021
+MODULE: OOP
+TOPIC: Access Modifiers
+SUBTOPIC: protected
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: A protected member is accessible:
+OPTION_A: Only in the same class
+OPTION_B: Only from anywhere
+OPTION_C: Within the same package and in subclasses outside the package
+OPTION_D: Only through constructors
+ANSWER: C
+REASONING: The lecture defines protected this way.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-022
+MODULE: OOP
+TOPIC: Encapsulation
+SUBTOPIC: Private Fields
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Why should class attributes usually be declared private?
+OPTION_A: To support encapsulation and data security
+OPTION_B: To make them static
+OPTION_C: To avoid constructors
+OPTION_D: To increase package size
+ANSWER: A
+REASONING: Private attributes help restrict direct access and protect data.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-023
+MODULE: OOP
+TOPIC: Getters and Setters
+SUBTOPIC: Setter
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: A setter method is mainly used to:
+OPTION_A: Display object details
+OPTION_B: Retrieve a value
+OPTION_C: Set or update a private attribute
+OPTION_D: Create a new object
+ANSWER: C
+REASONING: Setters modify private fields in a controlled way.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-024
+MODULE: OOP
+TOPIC: Getters and Setters
+SUBTOPIC: Getter
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: A getter method is mainly used to:
+OPTION_A: Create objects
+OPTION_B: Retrieve a private attribute value
+OPTION_C: Delete an object
+OPTION_D: Start the program
+ANSWER: B
+REASONING: Getters read private fields without allowing direct access.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-025
+MODULE: OOP
+TOPIC: Getters and Setters
+SUBTOPIC: Validation
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Why is validation often placed inside setter methods?
+OPTION_A: To stop constructors from running
+OPTION_B: To include checks before assigning values
+OPTION_C: To make variables public
+OPTION_D: To avoid using methods
+ANSWER: B
+REASONING: Setters can enforce rules before storing data.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-026
+MODULE: OOP
+TOPIC: Getters and Setters
+SUBTOPIC: Correct Signatures
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which pair is the most suitable getter and setter for a private int marks field?
+OPTION_A: void getMarks() and int setMarks(int m)
+OPTION_B: int getMarks() and void setMarks(int m)
+OPTION_C: int getMarks(int m) and void setMarks()
+OPTION_D: void getMarks(int m) and int setMarks()
+ANSWER: B
+REASONING: A getter returns the value; a setter usually returns void and takes the new value as a parameter.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-027
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Constructor Runs
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Test {
+    Test() {
+        System.out.println("Hello");
+    }
+    public static void main(String[] args) {
+        new Test();
+    }
+}
+OPTION_A: Hello
+OPTION_B: Nothing
+OPTION_C: Compile-time error
+OPTION_D: null
+ANSWER: A
+REASONING: Creating the object runs the constructor, which prints Hello.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-028
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Constructor Runs Multiple Times
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Test {
+    Test() {
+        System.out.println("Hi");
+    }
+    public static void main(String[] args) {
+        new Test();
+        new Test();
+    }
+}
+OPTION_A: Hi
+OPTION_B: Hi followed by Hi on the next line
+OPTION_C: Nothing
+OPTION_D: Compile-time error
+ANSWER: B
+REASONING: The constructor runs once for each object creation.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-029
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Constructor Name
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens here?
+class Car {
+    public void Car() {
+        System.out.println("X");
+    }
+}
+OPTION_A: It is a valid constructor
+OPTION_B: It is a method, not a constructor
+OPTION_C: It causes a runtime error
+OPTION_D: It creates a default constructor with one parameter
+ANSWER: B
+REASONING: Because of void, this is a normal method, not a constructor.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-030
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: No Matching Constructor
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens here?
+class A {
+    A(int x) {}
+    public static void main(String[] args) {
+        A a = new A();
+    }
+}
+OPTION_A: Program runs correctly
+OPTION_B: Compile-time error because no no-argument constructor exists
+OPTION_C: Runtime error
+OPTION_D: a becomes null
+ANSWER: B
+REASONING: The class has only a constructor with one int parameter, so A() is not available.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-031
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Calling Method Like Constructor
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens here?
+class B {
+    void B() {}
+    public static void main(String[] args) {
+        B b = new B();
+    }
+}
+OPTION_A: Compile-time error
+OPTION_B: Runs fine using the implicit default constructor
+OPTION_C: Runtime error
+OPTION_D: B becomes null
+ANSWER: B
+REASONING: void B() is a method, not a constructor. Since no constructor is defined, Java provides a default constructor.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-032
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Default Values
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is printed?
+class Emp {
+    int id;
+    double salary;
+    String name;
+    public static void main(String[] args) {
+        Emp e = new Emp();
+        System.out.println(e.id + "," + e.salary + "," + e.name);
+    }
+}
+OPTION_A: 0,0.0,null
+OPTION_B: 0,null,0.0
+OPTION_C: Compile-time error
+OPTION_D: Garbage values
+ANSWER: A
+REASONING: Default values are int 0, double 0.0, and object reference null.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-033
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Parameterized Constructor
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the output?
+class Box {
+    int x;
+    Box(int x) { this.x = x; }
+    public static void main(String[] args) {
+        Box b = new Box(7);
+        System.out.println(b.x);
+    }
+}
+OPTION_A: 0
+OPTION_B: 7
+OPTION_C: Compile-time error
+OPTION_D: null
+ANSWER: B
+REASONING: The parameterized constructor stores 7 in the field x.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-034
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Overloaded Constructors
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Demo {
+    int x;
+    Demo() { x = 1; }
+    Demo(int a) { x = a; }
+    public static void main(String[] args) {
+        Demo d1 = new Demo();
+        Demo d2 = new Demo(5);
+        System.out.println(d1.x + " " + d2.x);
+    }
+}
+OPTION_A: 1 5
+OPTION_B: 5 1
+OPTION_C: 0 5
+OPTION_D: Compile-time error
+ANSWER: A
+REASONING: The no-argument constructor sets x to 1, and the overloaded constructor sets x to 5.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-035
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: this Keyword
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Student {
+    int id;
+    Student(int id) { this.id = id; }
+    public static void main(String[] args) {
+        Student s = new Student(10);
+        System.out.println(s.id);
+    }
+}
+OPTION_A: 0
+OPTION_B: 10
+OPTION_C: id
+OPTION_D: Compile-time error
+ANSWER: B
+REASONING: this.id refers to the field, while id on the right is the parameter.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-036
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Shadowing Without this
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the value of x after execution?
+class Test {
+    int x;
+    Test(int x) { x = x; }
+    public static void main(String[] args) {
+        Test t = new Test(9);
+        System.out.println(t.x);
+    }
+}
+OPTION_A: 9
+OPTION_B: 0
+OPTION_C: Compile-time error
+OPTION_D: null
+ANSWER: B
+REASONING: x = x only assigns the parameter to itself. The field remains its default value 0.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-037
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Best Use
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which task is most suitable for a constructor?
+OPTION_A: Initializing an object's fields at creation time
+OPTION_B: Printing every line of output
+OPTION_C: Replacing all getters and setters
+OPTION_D: Reading every file in a folder
+ANSWER: A
+REASONING: Constructors are meant for initial setup of object state.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-038
+MODULE: OOP
+TOPIC: Method Overloading
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Method overloading means:
+OPTION_A: Using methods with the same name but different parameter lists
+OPTION_B: Using methods in different classes
+OPTION_C: Using methods with different names only
+OPTION_D: Using only static methods
+ANSWER: A
+REASONING: Overloading allows one method name to work with different parameter lists.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-039
+MODULE: OOP
+TOPIC: Method Overloading
+SUBTOPIC: Circle
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: In Tutorial 02, why are there two calculateArea methods in Circle?
+OPTION_A: To demonstrate inheritance
+OPTION_B: To demonstrate method overloading
+OPTION_C: To create two objects at once
+OPTION_D: To make the radius public
+ANSWER: B
+REASONING: One method uses the radius field and the other accepts the diameter as a parameter.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-040
+MODULE: OOP
+TOPIC: Method Overloading
+SUBTOPIC: Valid Example
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which pair is a valid overloaded method set?
+OPTION_A: area() and area(double d)
+OPTION_B: area() and calcArea()
+OPTION_C: area(int x) and area(int y) with same single int parameter
+OPTION_D: area(double x) and area(double y) with only parameter name changed
+ANSWER: A
+REASONING: Overloading requires a different parameter list, not just different parameter names.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-041
+MODULE: OOP
+TOPIC: Tutorial Student
+SUBTOPIC: GPA Validation
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: According to Tutorial 02, which GPA is valid?
+OPTION_A: -1.0
+OPTION_B: 4.5
+OPTION_C: 3.2
+OPTION_D: 5.0
+ANSWER: C
+REASONING: The valid GPA range is 0.0 to 4.0 inclusive.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-042
+MODULE: OOP
+TOPIC: Tutorial Student
+SUBTOPIC: Encapsulation
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: In the Student question, how should studentId, name, and gpa be accessed from outside the class?
+OPTION_A: Directly using object.field
+OPTION_B: Through appropriate methods such as getters and setters
+OPTION_C: Only through static methods
+OPTION_D: They cannot be accessed at all
+ANSWER: B
+REASONING: The tutorial says the details must be secured and accessible through appropriate methods.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-043
+MODULE: OOP
+TOPIC: Tutorial Student
+SUBTOPIC: Invalid GPA
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: If an invalid GPA is entered, what should the setter do according to the tutorial?
+OPTION_A: Accept it silently
+OPTION_B: Display an error message
+OPTION_C: Crash the program immediately
+OPTION_D: Convert it to 4.0 automatically
+ANSWER: B
+REASONING: The tutorial specifically asks to display an error message for invalid GPA.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-044
+MODULE: OOP
+TOPIC: Tutorial Student
+SUBTOPIC: Display Method
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the purpose of displayStudentDetails()?
+OPTION_A: To set student values
+OPTION_B: To calculate GPA
+OPTION_C: To display student information
+OPTION_D: To create another Student object
+ANSWER: C
+REASONING: The method is intended to show the student's details.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-045
+MODULE: OOP
+TOPIC: Tutorial Circle
+SUBTOPIC: Formula
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which formula is used in the tutorial hint to calculate the area of a circle?
+OPTION_A: (22 / 7.0) * radius * radius
+OPTION_B: 2 * 22 / 7.0 * radius
+OPTION_C: 22 * radius
+OPTION_D: 3.14 * diameter
+ANSWER: A
+REASONING: The tutorial gives Area = (22 / 7.0) * radius * radius.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-046
+MODULE: OOP
+TOPIC: Tutorial Circle
+SUBTOPIC: Using Diameter
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: If diameter = 14, what radius is used inside the overloaded calculateArea(diameter) logic?
+OPTION_A: 14
+OPTION_B: 7
+OPTION_C: 28
+OPTION_D: 3.5
+ANSWER: B
+REASONING: Radius is diameter / 2, so 14 becomes 7.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-047
+MODULE: OOP
+TOPIC: Tutorial Circle
+SUBTOPIC: Overloading Difference
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the difference between the two calculateArea methods in Circle?
+OPTION_A: One is static and one is not
+OPTION_B: One uses the radius field; the other receives diameter as a parameter
+OPTION_C: One returns int and the other must return void
+OPTION_D: One is public and one must be private
+ANSWER: B
+REASONING: That is exactly how the tutorial defines the overloaded methods.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-048
+MODULE: OOP
+TOPIC: Tutorial Car
+SUBTOPIC: Constructors
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Tutorial 02 asks the Car class to implement:
+OPTION_A: Only a default constructor
+OPTION_B: Only a parameterized constructor
+OPTION_C: Both a default constructor and a parameterized constructor
+OPTION_D: No constructor
+ANSWER: C
+REASONING: The Car question explicitly asks for both.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-049
+MODULE: OOP
+TOPIC: Tutorial Car
+SUBTOPIC: Default Constructor Use
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: What should CarApp do with the object created using the default constructor?
+OPTION_A: Delete it immediately
+OPTION_B: Display its details
+OPTION_C: Convert it to static
+OPTION_D: Use it only to call main
+ANSWER: B
+REASONING: The tutorial says to create a Car using the default constructor and display details.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-050
+MODULE: OOP
+TOPIC: Tutorial Car
+SUBTOPIC: Parameterized Constructor Use
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the main benefit of the parameterized constructor in the Car class?
+OPTION_A: It avoids classes
+OPTION_B: It allows car details to be initialized during object creation
+OPTION_C: It makes all fields public
+OPTION_D: It removes the need for methods
+ANSWER: B
+REASONING: A parameterized constructor can set registration number, model name, and price when the object is created.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-051
+MODULE: OOP
+TOPIC: Tutorial Customer
+SUBTOPIC: Billing Slab 1
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: For 80 units consumed, what is the rate per unit?
+OPTION_A: Rs. 20
+OPTION_B: Rs. 30
+OPTION_C: Rs. 40
+OPTION_D: Rs. 80
+ANSWER: A
+REASONING: Up to 100 units are charged at Rs. 20 per unit.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-052
+MODULE: OOP
+TOPIC: Tutorial Customer
+SUBTOPIC: Billing Slab 2
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: For 250 units consumed, what is the rate per unit?
+OPTION_A: Rs. 20
+OPTION_B: Rs. 25
+OPTION_C: Rs. 30
+OPTION_D: Rs. 40
+ANSWER: C
+REASONING: 101 to 300 units are charged at Rs. 30 per unit.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-053
+MODULE: OOP
+TOPIC: Tutorial Customer
+SUBTOPIC: Billing Slab 3
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: For 301 units consumed, what is the rate per unit?
+OPTION_A: Rs. 20
+OPTION_B: Rs. 30
+OPTION_C: Rs. 40
+OPTION_D: Rs. 50
+ANSWER: C
+REASONING: Above 300 units are charged at Rs. 40 per unit.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-054
+MODULE: OOP
+TOPIC: Tutorial Customer
+SUBTOPIC: Bill Calculation
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: If the tutorial's slab is interpreted as a single rate applied to all consumed units, what is the bill for 90 units?
+OPTION_A: Rs. 900
+OPTION_B: Rs. 1800
+OPTION_C: Rs. 2700
+OPTION_D: Rs. 3600
+ANSWER: B
+REASONING: 90 is up to 100 units, so 90 * 20 = Rs. 1800.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-055
+MODULE: OOP
+TOPIC: Tutorial Customer
+SUBTOPIC: Bill Calculation
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: If the tutorial's slab is interpreted as a single rate applied to all consumed units, what is the bill for 150 units?
+OPTION_A: Rs. 3000
+OPTION_B: Rs. 4500
+OPTION_C: Rs. 6000
+OPTION_D: Rs. 1500
+ANSWER: B
+REASONING: 150 falls in the 101 to 300 range, so 150 * 30 = Rs. 4500.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-056
+MODULE: OOP
+TOPIC: Tutorial Customer
+SUBTOPIC: Bill Calculation
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: If the tutorial's slab is interpreted as a single rate applied to all consumed units, what is the bill for 350 units?
+OPTION_A: Rs. 7000
+OPTION_B: Rs. 10500
+OPTION_C: Rs. 14000
+OPTION_D: Rs. 17500
+ANSWER: C
+REASONING: 350 is above 300, so 350 * 40 = Rs. 14000.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-057
+MODULE: OOP
+TOPIC: Tutorial Customer
+SUBTOPIC: Display Method
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: displayCustomerDetails() should display:
+OPTION_A: Only the customer ID
+OPTION_B: Only the bill amount
+OPTION_C: Customer ID, name, units consumed, and bill amount
+OPTION_D: Only name and units
+ANSWER: C
+REASONING: The tutorial explicitly lists all four details.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-058
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Reference Variable
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does this statement do?
+Student s = new Student();
+OPTION_A: Creates a class named s
+OPTION_B: Declares a reference variable and creates a Student object
+OPTION_C: Only declares a variable without creating an object
+OPTION_D: Makes Student static
+ANSWER: B
+REASONING: s is a reference variable that refers to a newly created Student object.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-059
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Null Reference
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does this mean?
+Test t = null;
+OPTION_A: t refers to a valid Test object
+OPTION_B: t is an int with value 0
+OPTION_C: t is a reference variable that points to no object
+OPTION_D: A constructor is called automatically
+ANSWER: C
+REASONING: null means the reference does not point to any object.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-060
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Null Pointer
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens here?
+class Test {
+    int x = 5;
+    public static void main(String[] args) {
+        Test t = null;
+        System.out.println(t.x);
+    }
+}
+OPTION_A: 5
+OPTION_B: 0
+OPTION_C: Compile-time error
+OPTION_D: NullPointerException
+ANSWER: D
+REASONING: Accessing a member through a null reference causes NullPointerException.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-061
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Safe Null Check
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the output?
+class Test {
+    public static void main(String[] args) {
+        Test t = null;
+        if (t == null) {
+            System.out.println("Empty");
+        }
+    }
+}
+OPTION_A: Empty
+OPTION_B: NullPointerException
+OPTION_C: 0
+OPTION_D: Compile-time error
+ANSWER: A
+REASONING: Checking whether a reference is null is safe.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-062
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Local Variable
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens here?
+class Test {
+    public static void main(String[] args) {
+        int x;
+        System.out.println(x);
+    }
+}
+OPTION_A: 0
+OPTION_B: Garbage value
+OPTION_C: Compile-time error
+OPTION_D: Runtime error
+ANSWER: C
+REASONING: Local variables must be initialized before use.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-063
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Non-static from Static
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens here?
+class Test {
+    int x;
+    public static void main(String[] args) {
+        System.out.println(x);
+    }
+}
+OPTION_A: 0
+OPTION_B: Compile-time error
+OPTION_C: Runtime error
+OPTION_D: null
+ANSWER: B
+REASONING: A non-static field cannot be accessed directly from the static main method.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-064
+MODULE: OOP
+TOPIC: Errors
+SUBTOPIC: Non-static Method Call
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens here?
+class Test {
+    void show() { System.out.println("X"); }
+    public static void main(String[] args) {
+        show();
+    }
+}
+OPTION_A: X
+OPTION_B: Nothing
+OPTION_C: Compile-time error
+OPTION_D: Runtime error
+ANSWER: C
+REASONING: A non-static method must be called through an object in main.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-065
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Object Method Call
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which statement correctly calls a non-static method show() on object t?
+OPTION_A: show();
+OPTION_B: Test.show();
+OPTION_C: t.show();
+OPTION_D: new.show();
+ANSWER: C
+REASONING: Non-static methods are called using the reference variable and dot operator.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-066
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: assignDetails vs Constructor
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: According to the lecture, why is assignDetails() not considered automatic initialization?
+OPTION_A: Because it is private
+OPTION_B: Because it must be called explicitly and only assigns or overwrites values when invoked
+OPTION_C: Because it returns void
+OPTION_D: Because it works only for static variables
+ANSWER: B
+REASONING: The lecture states assignDetails does not initialize attributes automatically; it works only when called.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-067
+MODULE: OOP
+TOPIC: Concept
+SUBTOPIC: Rectangle Diagram
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: In the Rectangle class diagram, length and width are examples of:
+OPTION_A: Methods
+OPTION_B: Attributes
+OPTION_C: Constructors
+OPTION_D: Packages
+ANSWER: B
+REASONING: The diagram labels length and width as attributes/properties/data members.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-068
+MODULE: OOP
+TOPIC: Concept
+SUBTOPIC: Rectangle Diagram
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: In the Rectangle class diagram, calcArea() and calcPerimeter() are examples of:
+OPTION_A: Attributes
+OPTION_B: Objects
+OPTION_C: Methods
+OPTION_D: Constructors only
+ANSWER: C
+REASONING: The diagram labels them as methods/behaviors/member functions.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-069
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Product Activity
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: In Lecture 02 Activity 07, what validation example is given for the Product class setter?
+OPTION_A: quantity should be less than 0
+OPTION_B: price should be greater than 0
+OPTION_C: name should be an int
+OPTION_D: productId should be a String
+ANSWER: B
+REASONING: The activity specifically mentions validation such as price > 0.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-070
+MODULE: OOP
+TOPIC: Summary
+SUBTOPIC: Lecture Outcome
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which topic is explicitly included in the Lecture 02 summary?
+OPTION_A: Inheritance only
+OPTION_B: Method overloading and constructors
+OPTION_C: Recursion
+OPTION_D: File handling
+ANSWER: B
+REASONING: The summary mentions constructors, encapsulation, and method overloading.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-071
+MODULE: OOP
+TOPIC: Hard Mixed
+SUBTOPIC: Constructor Availability
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: If a class defines only Student(int id), which statement is true?
+OPTION_A: Student() can still be used automatically
+OPTION_B: Student() causes a compile-time error unless it is defined
+OPTION_C: Java creates both constructors automatically
+OPTION_D: Only private objects can be created
+ANSWER: B
+REASONING: Once you define a constructor, Java does not automatically add a no-argument constructor.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-072
+MODULE: OOP
+TOPIC: Hard Mixed
+SUBTOPIC: Overloading Rule
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which change makes two constructors overloaded?
+OPTION_A: Changing only the parameter names
+OPTION_B: Changing the number or types of parameters
+OPTION_C: Changing only the return type
+OPTION_D: Changing only the access modifier
+ANSWER: B
+REASONING: Overloading depends on the parameter list, not return type or parameter names.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-073
+MODULE: OOP
+TOPIC: Hard Mixed
+SUBTOPIC: Encapsulation Choice
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which design best supports encapsulation for the Student tutorial question?
+OPTION_A: Make all fields public
+OPTION_B: Make fields private and use getters/setters with GPA validation
+OPTION_C: Use only static fields
+OPTION_D: Remove the display method
+ANSWER: B
+REASONING: Private fields with accessor methods and validation match the tutorial requirement.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-074
+MODULE: OOP
+TOPIC: Hard Mixed
+SUBTOPIC: Circle Input Use
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: In CircleApp, what should happen after accepting the radius from the user?
+OPTION_A: Delete the object
+OPTION_B: Display the area using the radius
+OPTION_C: Immediately calculate diameter only
+OPTION_D: Skip method calls
+ANSWER: B
+REASONING: The tutorial asks to display the area using the radius after reading it.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-075
+MODULE: OOP
+TOPIC: Hard Mixed
+SUBTOPIC: Customer Constructor
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: What kind of constructor does Tutorial 02 require for Customer?
+OPTION_A: Default constructor only
+OPTION_B: Parameterized constructor
+OPTION_C: Private constructor
+OPTION_D: Overloaded constructor with three versions
+ANSWER: B
+REASONING: The Customer question explicitly asks for a parameterized constructor.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-101
+MODULE: OOP
+TOPIC: OOP Basics
+SUBTOPIC: Class vs Object
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which statement correctly describes the relationship between a class and an object?
+OPTION_A: A class is an instance of an object
+OPTION_B: An object is a blueprint of a class
+OPTION_C: A class is a blueprint and an object is its instance
+OPTION_D: Both are the same
+ANSWER: C
+REASONING: A class defines structure, while an object is a real instance created from it.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-102
+MODULE: OOP
+TOPIC: Constructors
+SUBTOPIC: Method vs Constructor
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which of the following differentiates a constructor from a method?
+OPTION_A: Constructors can have return types
+OPTION_B: Methods must have same name as class
+OPTION_C: Constructors do not have return types
+OPTION_D: Methods run automatically on object creation
+ANSWER: C
+REASONING: Constructors have no return type and are automatically executed when an object is created.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-103
+MODULE: OOP
+TOPIC: Methods
+SUBTOPIC: Static vs Non-static
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why can't a non-static variable be accessed directly inside a static method?
+OPTION_A: Because static methods belong to the class, not objects
+OPTION_B: Because variables must be public
+OPTION_C: Because static methods cannot use variables
+OPTION_D: Because non-static variables are always null
+ANSWER: A
+REASONING: Static methods do not belong to an object, so they cannot directly access instance variables.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-104
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Constructor Initialization
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Test {
+    int x = 5;
+    Test() {
+        x = x + 5;
+    }
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.x);
+    }
+}
+OPTION_A: 5
+OPTION_B: 10
+OPTION_C: 0
+OPTION_D: Compile-time error
+ANSWER: B
+REASONING: x starts as 5, then constructor adds 5 → final value is 10.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-105
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Constructor Overloading
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Demo {
+    Demo() {
+        System.out.print("A ");
+    }
+    Demo(int x) {
+        System.out.print("B ");
+    }
+    public static void main(String[] args) {
+        new Demo();
+        new Demo(5);
+    }
+}
+OPTION_A: A B
+OPTION_B: B A
+OPTION_C: A A
+OPTION_D: Compile-time error
+ANSWER: A
+REASONING: First default constructor runs (A), then parameterized constructor (B).
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-106
+MODULE: OOP
+TOPIC: Getters and Setters
+SUBTOPIC: Getter Error
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is wrong with this getter?
+public void getMarks() {
+    return marks;
+}
+OPTION_A: Nothing is wrong
+OPTION_B: Getter should not return anything
+OPTION_C: Getter must return a value, not void
+OPTION_D: marks must be static
+ANSWER: C
+REASONING: Getter must return the value type (e.g., int), not void.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-107
+MODULE: OOP
+TOPIC: Getters and Setters
+SUBTOPIC: Setter Error
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is wrong with this setter?
+public int setMarks(int m) {
+    marks = m;
+}
+OPTION_A: Nothing is wrong
+OPTION_B: Setter should return void
+OPTION_C: Setter cannot take parameters
+OPTION_D: marks must be private
+ANSWER: B
+REASONING: Setters usually return void because they only assign values.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-108
+MODULE: OOP
+TOPIC: Encapsulation
+SUBTOPIC: Violation
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which code violates encapsulation?
+OPTION_A: private int age;
+OPTION_B: public int age;
+OPTION_C: private int age; public void setAge(int a)
+OPTION_D: private int age; public int getAge()
+ANSWER: B
+REASONING: Public variables break encapsulation by allowing direct access.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-109
+MODULE: OOP
+TOPIC: Objects
+SUBTOPIC: Creation Steps
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is the correct sequence of object creation?
+OPTION_A: Initialize → Create → Define
+OPTION_B: Define → Create → Initialize
+OPTION_C: Create → Define → Initialize
+OPTION_D: Initialize → Define → Create
+ANSWER: B
+REASONING: First define class, then create object, then initialize values.
+QUESTION_END
+
+QUESTION_START
+ID: OOP2-110
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Null Handling
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the output?
+class Test {
+    public static void main(String[] args) {
+        Test t = null;
+        if (t != null) {
+            System.out.println("Hello");
+        } else {
+            System.out.println("Null");
+        }
+    }
+}
+OPTION_A: Hello
+OPTION_B: Null
+OPTION_C: Compile-time error
+OPTION_D: Runtime error
+ANSWER: B
+REASONING: t is null, so else block executes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-001
+MODULE: OOP
+TOPIC: SDLC
+SUBTOPIC: Steps
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is the first phase of SDLC?
+OPTION_A: Design
+OPTION_B: Implementation
+OPTION_C: Requirements Gathering
+OPTION_D: Testing
+ANSWER: C
+REASONING: SDLC starts with requirements gathering. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-002
+MODULE: OOP
+TOPIC: SDLC
+SUBTOPIC: Order
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which comes after Design phase?
+OPTION_A: Testing
+OPTION_B: Implementation
+OPTION_C: Maintenance
+OPTION_D: Deployment
+ANSWER: B
+REASONING: Implementation (coding) follows design. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-003
+MODULE: OOP
+TOPIC: Noun Verb Analysis
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Noun/Verb analysis is used to:
+OPTION_A: Write loops
+OPTION_B: Identify classes and responsibilities
+OPTION_C: Compile code
+OPTION_D: Debug errors
+ANSWER: B
+REASONING: It helps identify classes and behaviors. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-004
+MODULE: OOP
+TOPIC: Noun Verb Analysis
+SUBTOPIC: Nouns
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Nouns in analysis represent:
+OPTION_A: Methods
+OPTION_B: Classes
+OPTION_C: Variables
+OPTION_D: Loops
+ANSWER: B
+REASONING: Nouns correspond to classes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-005
+MODULE: OOP
+TOPIC: Noun Verb Analysis
+SUBTOPIC: Verbs
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Verbs represent:
+OPTION_A: Attributes
+OPTION_B: Classes
+OPTION_C: Methods
+OPTION_D: Objects
+ANSWER: C
+REASONING: Verbs describe actions → methods.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-006
+MODULE: OOP
+TOPIC: Noun Analysis
+SUBTOPIC: Rejection Rules
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which noun should be removed?
+OPTION_A: Book
+OPTION_B: Member
+OPTION_C: Search
+OPTION_D: DVD
+ANSWER: C
+REASONING: "Search" is an operation, not a class.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-007
+MODULE: OOP
+TOPIC: Noun Analysis
+SUBTOPIC: Attribute
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: ISBN is:
+OPTION_A: Class
+OPTION_B: Method
+OPTION_C: Attribute
+OPTION_D: Object
+ANSWER: C
+REASONING: ISBN is a property of Book.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-008
+MODULE: OOP
+TOPIC: CRC Cards
+SUBTOPIC: Meaning
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: CRC stands for:
+OPTION_A: Class, Role, Code
+OPTION_B: Class, Responsibility, Collaboration
+OPTION_C: Code, Run, Compile
+OPTION_D: Class, Resource, Component
+ANSWER: B
+REASONING: CRC = Class, Responsibility, Collaboration. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-009
+MODULE: OOP
+TOPIC: CRC Cards
+SUBTOPIC: Structure
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: CRC card contains:
+OPTION_A: Variables only
+OPTION_B: Methods only
+OPTION_C: Class, responsibilities, collaborators
+OPTION_D: Loops and arrays
+ANSWER: C
+REASONING: CRC cards define class behavior and interactions.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-010
+MODULE: OOP
+TOPIC: Inheritance
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Inheritance means:
+OPTION_A: Creating multiple objects
+OPTION_B: One class acquiring properties of another
+OPTION_C: Using loops
+OPTION_D: Creating variables
+ANSWER: B
+REASONING: Inheritance allows reuse of code.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-011
+MODULE: OOP
+TOPIC: Inheritance
+SUBTOPIC: Keyword
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which keyword is used for inheritance in Java?
+OPTION_A: extends
+OPTION_B: implements
+OPTION_C: inherits
+OPTION_D: super
+ANSWER: A
+REASONING: extends is used to inherit a class.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-012
+MODULE: OOP
+TOPIC: Inheritance
+SUBTOPIC: Method Override
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Overriding means:
+OPTION_A: Same method, different parameters
+OPTION_B: Same method in subclass with same signature
+OPTION_C: Different class
+OPTION_D: Static method
+ANSWER: B
+REASONING: Overriding changes behavior in subclass.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-013
+MODULE: OOP
+TOPIC: Polymorphism
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Polymorphism means:
+OPTION_A: One method, many forms
+OPTION_B: Many variables
+OPTION_C: One class
+OPTION_D: No inheritance
+ANSWER: A
+REASONING: Same method behaves differently.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-014
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Vehicle
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Car rental rate per day?
+OPTION_A: 30
+OPTION_B: 50
+OPTION_C: 80
+OPTION_D: 100
+ANSWER: B
+REASONING: Car = $50/day. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-015
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Vehicle
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Truck rental rate?
+OPTION_A: 50
+OPTION_B: 60
+OPTION_C: 80
+OPTION_D: 100
+ANSWER: C
+REASONING: Truck = $80/day. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-016
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Course
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Premium course fee includes:
+OPTION_A: Only duration
+OPTION_B: Only certification
+OPTION_C: Duration + certification fee
+OPTION_D: Nothing
+ANSWER: C
+REASONING: Premium includes certification + duration.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-017
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Inheritance
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens when method overridden is called?
+OPTION_A: Parent method runs
+OPTION_B: Child method runs
+OPTION_C: Both run
+OPTION_D: Error
+ANSWER: B
+REASONING: Overridden method in subclass executes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-101
+MODULE: OOP
+TOPIC: SDLC
+SUBTOPIC: Full Order
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which of the following is the correct complete SDLC order?
+OPTION_A: Requirements → Design → Analysis → Implementation → Testing → Deployment → Maintenance
+OPTION_B: Requirements → Analysis → Design → Implementation → Testing → Deployment → Maintenance
+OPTION_C: Analysis → Requirements → Design → Testing → Implementation → Deployment → Maintenance
+OPTION_D: Requirements → Implementation → Analysis → Design → Testing → Maintenance → Deployment
+ANSWER: B
+REASONING: Correct SDLC order must follow analysis before design and implementation.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-102
+MODULE: OOP
+TOPIC: SDLC
+SUBTOPIC: Requirements
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Use case diagrams are mainly created in which phase?
+OPTION_A: Design
+OPTION_B: Testing
+OPTION_C: Requirements Gathering
+OPTION_D: Implementation
+ANSWER: C
+REASONING: Use cases are part of requirement representation.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-103
+MODULE: OOP
+TOPIC: SDLC
+SUBTOPIC: Design
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which diagram is mainly created in the design phase?
+OPTION_A: Use case diagram
+OPTION_B: Class diagram
+OPTION_C: Error log
+OPTION_D: Output report
+ANSWER: B
+REASONING: Class diagrams belong to the design phase.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-104
+MODULE: OOP
+TOPIC: SDLC
+SUBTOPIC: Testing Types
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which type of testing checks interaction between classes?
+OPTION_A: Unit testing
+OPTION_B: Integration testing
+OPTION_C: Deployment testing
+OPTION_D: Maintenance testing
+ANSWER: B
+REASONING: Integration testing verifies how objects/classes work together.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-105
+MODULE: OOP
+TOPIC: Noun Analysis
+SUBTOPIC: Proper Nouns
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which of the following should NOT be considered as a class?
+OPTION_A: Book
+OPTION_B: Member
+OPTION_C: SLIIT
+OPTION_D: Order
+ANSWER: C
+REASONING: Proper nouns represent specific entities, not general classes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-106
+MODULE: OOP
+TOPIC: Noun Analysis
+SUBTOPIC: Meta Language
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why is "user" sometimes removed in noun analysis?
+OPTION_A: It is an attribute
+OPTION_B: It is redundant or meta-language
+OPTION_C: It is outside system
+OPTION_D: It is a method
+ANSWER: B
+REASONING: Meta-language or redundant nouns are removed.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-107
+MODULE: OOP
+TOPIC: CRC Cards
+SUBTOPIC: Responsibilities
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Responsibilities in CRC cards are identified using:
+OPTION_A: Nouns
+OPTION_B: Verbs
+OPTION_C: Variables
+OPTION_D: Classes
+ANSWER: B
+REASONING: Verbs describe actions → responsibilities.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-108
+MODULE: OOP
+TOPIC: CRC Cards
+SUBTOPIC: Collaboration
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Collaboration in CRC cards represents:
+OPTION_A: Internal variables
+OPTION_B: Relationships with other classes
+OPTION_C: Constructors
+OPTION_D: Loops
+ANSWER: B
+REASONING: Collaboration shows interaction between classes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-109
+MODULE: OOP
+TOPIC: Inheritance
+SUBTOPIC: super Keyword
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the purpose of the super keyword?
+OPTION_A: To call subclass methods
+OPTION_B: To access parent class methods/constructor
+OPTION_C: To override methods
+OPTION_D: To create objects
+ANSWER: B
+REASONING: super is used to access parent class members.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-110
+MODULE: OOP
+TOPIC: Method Overriding
+SUBTOPIC: Rules
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which will break method overriding?
+OPTION_A: Changing method name
+OPTION_B: Keeping same parameters
+OPTION_C: Same return type
+OPTION_D: Same access level
+ANSWER: A
+REASONING: Overriding requires same method name and parameters.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-111
+MODULE: OOP
+TOPIC: Polymorphism
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Method overloading is an example of:
+OPTION_A: Runtime polymorphism
+OPTION_B: Compile-time polymorphism
+OPTION_C: Inheritance
+OPTION_D: Encapsulation
+ANSWER: B
+REASONING: Overloading is resolved at compile time.
+QUESTION_END
+
+QUESTION_START
+ID: OOP3-112
+MODULE: OOP
+TOPIC: Polymorphism
+SUBTOPIC: Runtime
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Method overriding is an example of:
+OPTION_A: Compile-time polymorphism
+OPTION_B: Runtime polymorphism
+OPTION_C: Encapsulation
+OPTION_D: Abstraction
+ANSWER: B
+REASONING: Overriding is resolved at runtime.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-001
+MODULE: OOP
+TOPIC: Relationships
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: How many main types of relationships are there in OOP?
+OPTION_A: 2
+OPTION_B: 3
+OPTION_C: 5
+OPTION_D: 7
+ANSWER: C
+REASONING: Lecture shows 5 relationship types. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-002
+MODULE: OOP
+TOPIC: Inheritance
+SUBTOPIC: Meaning
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Inheritance represents:
+OPTION_A: has-a
+OPTION_B: uses-a
+OPTION_C: is-a
+OPTION_D: contains-a
+ANSWER: C
+REASONING: Inheritance is an "is-a" relationship. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-003
+MODULE: OOP
+TOPIC: Composition
+SUBTOPIC: Meaning
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Composition means:
+OPTION_A: Objects exist independently
+OPTION_B: One class contains another and cannot exist without it
+OPTION_C: Classes inherit each other
+OPTION_D: Objects are reused
+ANSWER: B
+REASONING: Parts cannot exist without whole.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-004
+MODULE: OOP
+TOPIC: Aggregation
+SUBTOPIC: Meaning
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Aggregation means:
+OPTION_A: Strong relationship
+OPTION_B: Independent objects
+OPTION_C: No relationship
+OPTION_D: Inheritance
+ANSWER: B
+REASONING: Aggregation = objects can exist independently.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-005
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Smartphone
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Smartphone with Battery and Processor is:
+OPTION_A: Aggregation
+OPTION_B: Inheritance
+OPTION_C: Composition
+OPTION_D: Dependency
+ANSWER: C
+REASONING: Components cannot exist without smartphone. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-006
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: University
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: University and Professors relationship is:
+OPTION_A: Composition
+OPTION_B: Aggregation
+OPTION_C: Inheritance
+OPTION_D: Dependency
+ANSWER: B
+REASONING: Professors exist independently.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-007
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Car Engine
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Car contains Engine relationship:
+OPTION_A: Aggregation
+OPTION_B: Composition
+OPTION_C: Inheritance
+OPTION_D: Dependency
+ANSWER: B
+REASONING: Engine cannot exist without car.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-008
+MODULE: OOP
+TOPIC: UML
+SUBTOPIC: Class Diagram
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: UML class diagram shows:
+OPTION_A: Only variables
+OPTION_B: Classes, attributes, methods
+OPTION_C: Only loops
+OPTION_D: Only functions
+ANSWER: B
+REASONING: UML shows structure of classes.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-009
+MODULE: OOP
+TOPIC: Inheritance
+SUBTOPIC: extends
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which keyword is used for inheritance?
+OPTION_A: super
+OPTION_B: extends
+OPTION_C: this
+OPTION_D: implement
+ANSWER: B
+REASONING: extends defines inheritance.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-010
+MODULE: OOP
+TOPIC: Constructor
+SUBTOPIC: super
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: super() is used to:
+OPTION_A: Call child constructor
+OPTION_B: Call parent constructor
+OPTION_C: Create object
+OPTION_D: Print value
+ANSWER: B
+REASONING: super() calls superclass constructor.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-011
+MODULE: OOP
+TOPIC: Constructor
+SUBTOPIC: Chaining
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Constructor chaining means:
+OPTION_A: Multiple classes
+OPTION_B: Calling one constructor from another
+OPTION_C: Loop execution
+OPTION_D: Static call
+ANSWER: B
+REASONING: Parent constructor is called automatically. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-012
+MODULE: OOP
+TOPIC: Overriding
+SUBTOPIC: Rules
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Method overriding requires:
+OPTION_A: Different name
+OPTION_B: Same signature
+OPTION_C: Static method
+OPTION_D: Different return type
+ANSWER: B
+REASONING: Same name, parameters, return type.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-013
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Overriding
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which method runs when overridden?
+OPTION_A: Parent
+OPTION_B: Child
+OPTION_C: Both
+OPTION_D: None
+ANSWER: B
+REASONING: Runtime polymorphism → child method runs.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-014
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Transport
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Driver and Vehicle relationship:
+OPTION_A: Composition
+OPTION_B: Aggregation
+OPTION_C: Inheritance
+OPTION_D: None
+ANSWER: B
+REASONING: Driver exists independently.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-015
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Start Method
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Different start() behavior is example of:
+OPTION_A: Inheritance
+OPTION_B: Polymorphism
+OPTION_C: Encapsulation
+OPTION_D: Constructor
+ANSWER: B
+REASONING: Same method, different behavior.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-016
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: super
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens if super() is not called explicitly?
+OPTION_A: Error
+OPTION_B: Parent constructor is called automatically
+OPTION_C: Nothing happens
+OPTION_D: Loop runs
+ANSWER: B
+REASONING: Java inserts default super() automatically.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-101
+MODULE: OOP
+TOPIC: Relationships
+SUBTOPIC: Strength
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which is the weakest relationship?
+OPTION_A: Association
+OPTION_B: Dependency
+OPTION_C: Aggregation
+OPTION_D: Composition
+ANSWER: B
+REASONING: Dependency is the weakest relationship (temporary use).
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-102
+MODULE: OOP
+TOPIC: Relationships
+SUBTOPIC: Order
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which is correct order from weakest to strongest?
+OPTION_A: Dependency → Association → Aggregation → Composition → Inheritance
+OPTION_B: Composition → Aggregation → Association → Dependency → Inheritance
+OPTION_C: Dependency → Aggregation → Association → Composition → Inheritance
+OPTION_D: Association → Dependency → Composition → Aggregation → Inheritance
+ANSWER: A
+REASONING: Lecture shows increasing strength from dependency to inheritance.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-103
+MODULE: OOP
+TOPIC: Relationships
+SUBTOPIC: Association
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Association means:
+OPTION_A: Strong ownership
+OPTION_B: Temporary usage
+OPTION_C: Long-term relationship between objects
+OPTION_D: Inheritance
+ANSWER: C
+REASONING: Association represents a general working relationship.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-104
+MODULE: OOP
+TOPIC: UML
+SUBTOPIC: Symbols
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Empty diamond represents:
+OPTION_A: Composition
+OPTION_B: Aggregation
+OPTION_C: Inheritance
+OPTION_D: Dependency
+ANSWER: B
+REASONING: Aggregation uses empty diamond symbol.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-105
+MODULE: OOP
+TOPIC: UML
+SUBTOPIC: Symbols
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Filled diamond represents:
+OPTION_A: Aggregation
+OPTION_B: Composition
+OPTION_C: Association
+OPTION_D: Dependency
+ANSWER: B
+REASONING: Composition uses filled diamond.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-106
+MODULE: OOP
+TOPIC: UML
+SUBTOPIC: Dependency
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Dashed arrow represents:
+OPTION_A: Inheritance
+OPTION_B: Aggregation
+OPTION_C: Dependency
+OPTION_D: Composition
+ANSWER: C
+REASONING: Dependency is shown with dashed arrow.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-107
+MODULE: OOP
+TOPIC: Inheritance
+SUBTOPIC: Access Modifier
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why use protected variables in parent class?
+OPTION_A: To restrict access completely
+OPTION_B: To allow access in child classes
+OPTION_C: To make variables static
+OPTION_D: To avoid inheritance
+ANSWER: B
+REASONING: Protected allows subclass access.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-108
+MODULE: OOP
+TOPIC: Inheritance
+SUBTOPIC: super
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: super() must be:
+OPTION_A: Anywhere in constructor
+OPTION_B: First statement in constructor
+OPTION_C: Last statement
+OPTION_D: Optional always
+ANSWER: B
+REASONING: super() must be the first statement.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-109
+MODULE: OOP
+TOPIC: Relationships
+SUBTOPIC: Comparison
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the key difference between aggregation and composition?
+OPTION_A: Aggregation is stronger
+OPTION_B: Composition allows independent objects
+OPTION_C: Aggregation allows independent objects, composition does not
+OPTION_D: No difference
+ANSWER: C
+REASONING: Aggregation = independent, Composition = dependent.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-110
+MODULE: OOP
+TOPIC: Scenario
+SUBTOPIC: Relationship Type
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which scenario represents aggregation?
+OPTION_A: Heart inside human
+OPTION_B: Battery inside phone
+OPTION_C: Professor in university
+OPTION_D: Engine inside car
+ANSWER: C
+REASONING: Professor exists independently.
+QUESTION_END
+
+QUESTION_START
+ID: OOP4-111
+MODULE: OOP
+TOPIC: Code Output
+SUBTOPIC: Constructor Order
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is output?
+class A {
+    A() { System.out.print("A "); }
+}
+class B extends A {
+    B() { System.out.print("B "); }
+}
+class C extends B {
+    C() { System.out.print("C "); }
+}
+public class Test {
+    public static void main(String[] args) {
+        new C();
+    }
+}
+OPTION_A: C B A
+OPTION_B: A B C
+OPTION_C: B A C
+OPTION_D: Error
+ANSWER: B
+REASONING: Constructors run from parent to child.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-001
+MODULE: DSA
+TOPIC: Algorithms
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What is an algorithm?
+OPTION_A: A programming language
+OPTION_B: A well-defined computational procedure
+OPTION_C: A variable
+OPTION_D: A compiler
+ANSWER: B
+REASONING: Algorithm is a step-by-step procedure to solve a problem. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-002
+MODULE: DSA
+TOPIC: Algorithms
+SUBTOPIC: Input Output
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: An algorithm must have:
+OPTION_A: Only input
+OPTION_B: Only output
+OPTION_C: Both input and output
+OPTION_D: No input or output
+ANSWER: C
+REASONING: Algorithm takes input and produces output. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-003
+MODULE: DSA
+TOPIC: Algorithms
+SUBTOPIC: Properties
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is NOT a property of an algorithm?
+OPTION_A: Correctness
+OPTION_B: Ambiguity
+OPTION_C: Termination
+OPTION_D: Simplicity
+ANSWER: B
+REASONING: Algorithm must be unambiguous, not ambiguous. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-004
+MODULE: DSA
+TOPIC: Algorithms
+SUBTOPIC: Termination
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: What does termination mean?
+OPTION_A: Infinite loop
+OPTION_B: Algorithm must stop
+OPTION_C: Output only
+OPTION_D: Input only
+ANSWER: B
+REASONING: Algorithm must eventually stop. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-005
+MODULE: DSA
+TOPIC: Algorithms
+SUBTOPIC: Applications
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is an application of algorithms?
+OPTION_A: Painting
+OPTION_B: Sorting data
+OPTION_C: Sleeping
+OPTION_D: Cooking
+ANSWER: B
+REASONING: Sorting is a common algorithm application. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-006
+MODULE: DSA
+TOPIC: Pseudocode
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Pseudocode is:
+OPTION_A: Machine code
+OPTION_B: Informal way of writing algorithms
+OPTION_C: Programming language
+OPTION_D: Compiler
+ANSWER: B
+REASONING: It is easy to read representation of algorithm. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-007
+MODULE: DSA
+TOPIC: Pseudocode
+SUBTOPIC: Rules
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which symbol represents assignment in pseudocode?
+OPTION_A: ==
+OPTION_B: =
+OPTION_C: :=
+OPTION_D: ->
+ANSWER: B
+REASONING: '=' is used for assignment. :contentReference[oaicite:8]{index=8}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-008
+MODULE: DSA
+TOPIC: Pseudocode
+SUBTOPIC: Comments
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which symbol is used for comments?
+OPTION_A: #
+OPTION_B: //
+OPTION_C: /*
+OPTION_D: --
+ANSWER: B
+REASONING: // indicates comments. :contentReference[oaicite:9]{index=9}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-009
+MODULE: DSA
+TOPIC: Analysis
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Why do we analyze algorithms?
+OPTION_A: To increase memory
+OPTION_B: To compare performance
+OPTION_C: To write code
+OPTION_D: To compile
+ANSWER: B
+REASONING: Analysis helps compare efficiency. :contentReference[oaicite:10]{index=10}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-010
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Best Case
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Best case means:
+OPTION_A: Maximum steps
+OPTION_B: Minimum steps
+OPTION_C: Average steps
+OPTION_D: Random steps
+ANSWER: B
+REASONING: Best case = minimum operations. :contentReference[oaicite:11]{index=11}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-011
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Worst Case
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Worst case means:
+OPTION_A: Minimum steps
+OPTION_B: Maximum steps
+OPTION_C: Average steps
+OPTION_D: Random
+ANSWER: B
+REASONING: Worst case = maximum operations. :contentReference[oaicite:12]{index=12}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-012
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Average Case
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Average case means:
+OPTION_A: Best only
+OPTION_B: Worst only
+OPTION_C: Expected steps over all inputs
+OPTION_D: No steps
+ANSWER: C
+REASONING: Average case considers all inputs.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-013
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: While Loop
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is time complexity?
+int i = 0;
+while(i <= n){
+ i++;
+}
+OPTION_A: O(1)
+OPTION_B: O(n)
+OPTION_C: O(n^2)
+OPTION_D: O(log n)
+ANSWER: B
+REASONING: Loop runs n times.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-014
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Nested Loop
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+for(i=0;i<n;i++){
+ for(j=0;j<n;j++){
+  print();
+ }
+}
+OPTION_A: O(n)
+OPTION_B: O(n^2)
+OPTION_C: O(n log n)
+OPTION_D: O(1)
+ANSWER: B
+REASONING: Nested loop → n * n.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-015
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Sequential
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+for(i=0;i<n;i++) print();
+for(j=0;j<n;j++) print();
+OPTION_A: O(n)
+OPTION_B: O(2n)
+OPTION_C: O(n^2)
+OPTION_D: O(1)
+ANSWER: A
+REASONING: O(2n) → simplified to O(n).
+QUESTION_END
+
+QUESTION_START
+ID: DSA-016
+MODULE: DSA
+TOPIC: Scenario
+SUBTOPIC: Sorting Logic
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Repeatedly selecting smallest element describes:
+OPTION_A: Searching
+OPTION_B: Sorting
+OPTION_C: Routing
+OPTION_D: Recursion
+ANSWER: B
+REASONING: This describes sorting process. :contentReference[oaicite:13]{index=13}
+QUESTION_END
+
+QUESTION_START
+ID: DSA-017
+MODULE: DSA
+TOPIC: Algorithms
+SUBTOPIC: Properties
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which violates the "unambiguous" property?
+OPTION_A: Multiply x by 2
+OPTION_B: Increase value
+OPTION_C: Add 5 to x
+OPTION_D: Divide by 2
+ANSWER: B
+REASONING: "Increase value" is unclear and ambiguous.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-018
+MODULE: DSA
+TOPIC: Algorithms
+SUBTOPIC: Generality
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Algorithm that works only for one input violates:
+OPTION_A: Simplicity
+OPTION_B: Generality
+OPTION_C: Termination
+OPTION_D: Correctness
+ANSWER: B
+REASONING: Algorithm must work for all valid inputs.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-019
+MODULE: DSA
+TOPIC: Pseudocode
+SUBTOPIC: Conventions
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why indentation is important in pseudocode?
+OPTION_A: To compile code
+OPTION_B: To improve readability
+OPTION_C: To reduce time complexity
+OPTION_D: To store values
+ANSWER: B
+REASONING: Indentation improves clarity.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-020
+MODULE: DSA
+TOPIC: Pseudocode
+SUBTOPIC: Arrays
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does A[2..5] represent?
+OPTION_A: A single element
+OPTION_B: Elements from index 2 to 5
+OPTION_C: Only A[5]
+OPTION_D: Error
+ANSWER: B
+REASONING: '..' represents range of elements.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-021
+MODULE: DSA
+TOPIC: Analysis
+SUBTOPIC: Resources
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is a resource used in algorithm analysis?
+OPTION_A: Memory
+OPTION_B: CPU time
+OPTION_C: Logic gates
+OPTION_D: All of the above
+ANSWER: D
+REASONING: All are considered resources.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-022
+MODULE: DSA
+TOPIC: Analysis
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why is algorithm analysis important?
+OPTION_A: To write code faster
+OPTION_B: To predict growth of running time
+OPTION_C: To reduce syntax errors
+OPTION_D: To print output
+ANSWER: B
+REASONING: Analysis helps predict performance as input grows.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-023
+MODULE: DSA
+TOPIC: Analysis
+SUBTOPIC: Methods
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is NOT an analysis method?
+OPTION_A: Step count
+OPTION_B: Operation count
+OPTION_C: Compilation method
+OPTION_D: Asymptotic notation
+ANSWER: C
+REASONING: Compilation is not an analysis method.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-024
+MODULE: DSA
+TOPIC: Analysis
+SUBTOPIC: RAM Model
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Step count method assumes:
+OPTION_A: Different operation times
+OPTION_B: All operations take equal time
+OPTION_C: Infinite time
+OPTION_D: No execution
+ANSWER: B
+REASONING: RAM model assumes equal cost for operations.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-025
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Log Loop
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+int i = 1;
+while(i <= n){
+ i = i * 2;
+}
+OPTION_A: O(n)
+OPTION_B: O(log n)
+OPTION_C: O(n^2)
+OPTION_D: O(1)
+ANSWER: B
+REASONING: Value doubles each iteration → logarithmic growth.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-026
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Division
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+while(n > 1){
+ n = n / 2;
+}
+OPTION_A: O(n)
+OPTION_B: O(log n)
+OPTION_C: O(n^2)
+OPTION_D: O(1)
+ANSWER: B
+REASONING: Problem size halves each iteration.
+QUESTION_END
+
+QUESTION_START
+ID: DSA-027
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Mixed Loop
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+for(i=0;i<n;i++){
+ for(j=0;j<i;j++){
+  print();
+ }
+}
+OPTION_A: O(n)
+OPTION_B: O(n^2)
+OPTION_C: O(n log n)
+OPTION_D: O(log n)
+ANSWER: B
+REASONING: Total operations ≈ n(n-1)/2 → O(n^2).
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-001
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Insertion Sort
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: In insertion sort, elements are:
+OPTION_A: Randomly swapped
+OPTION_B: Inserted into correct position in sorted part
+OPTION_C: Deleted
+OPTION_D: Reversed
+ANSWER: B
+REASONING: Insertion sort builds sorted portion step by step. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-002
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Key Concept
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: In insertion sort, "key" refers to:
+OPTION_A: First element
+OPTION_B: Current element being inserted
+OPTION_C: Largest element
+OPTION_D: Index value
+ANSWER: B
+REASONING: Key = A[j] element being positioned. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-003
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Loop Structure
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Outer loop of insertion sort runs:
+OPTION_A: n times
+OPTION_B: n-1 times
+OPTION_C: log n times
+OPTION_D: n^2 times
+ANSWER: B
+REASONING: j = 2 to n → n-1 iterations.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-004
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Inner Loop
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Inner while loop runs:
+OPTION_A: Constant times
+OPTION_B: Depends on input order
+OPTION_C: Always n times
+OPTION_D: Never runs
+ANSWER: B
+REASONING: Depends on how many elements need shifting.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-005
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Best Case
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Best case for insertion sort occurs when:
+OPTION_A: Array is random
+OPTION_B: Array is sorted
+OPTION_C: Array is reverse sorted
+OPTION_D: Array is empty
+ANSWER: B
+REASONING: No shifting needed. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-006
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Worst Case
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Worst case occurs when:
+OPTION_A: Sorted array
+OPTION_B: Reverse sorted array
+OPTION_C: Empty array
+OPTION_D: Single element
+ANSWER: B
+REASONING: Maximum shifting required. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-007
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Best Case Big-O
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Best case time complexity of insertion sort:
+OPTION_A: O(n)
+OPTION_B: O(n log n)
+OPTION_C: O(n^2)
+OPTION_D: O(1)
+ANSWER: A
+REASONING: Linear when already sorted.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-008
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Worst Case Big-O
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Worst case time complexity:
+OPTION_A: O(n)
+OPTION_B: O(n log n)
+OPTION_C: O(n^2)
+OPTION_D: O(log n)
+ANSWER: C
+REASONING: Nested comparisons → quadratic. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-009
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Simplification
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Big-O of T(n) = n^2 + n + 1 is:
+OPTION_A: O(n)
+OPTION_B: O(n^2)
+OPTION_C: O(n^3)
+OPTION_D: O(log n)
+ANSWER: B
+REASONING: Highest term dominates.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-010
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Log Expression
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Big-O of T(n) = n log n + n is:
+OPTION_A: O(n)
+OPTION_B: O(n log n)
+OPTION_C: O(log n)
+OPTION_D: O(n^2)
+ANSWER: B
+REASONING: n log n dominates.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-011
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Nested
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+for(i=0;i<n;i++){
+ j=0;
+ while(j<=5){
+  j++;
+ }
+}
+OPTION_A: O(n)
+OPTION_B: O(n^2)
+OPTION_C: O(log n)
+OPTION_D: O(1)
+ANSWER: A
+REASONING: Inner loop constant → total O(n). :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-012
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Behavior
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: In insertion sort, elements are shifted:
+OPTION_A: Left
+OPTION_B: Right
+OPTION_C: Random
+OPTION_D: Not moved
+ANSWER: B
+REASONING: Larger elements shift right.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-013
+MODULE: DSA
+TOPIC: Exact Analysis
+SUBTOPIC: tj Concept
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: tj represents:
+OPTION_A: Number of loops
+OPTION_B: Times while loop executes for each j
+OPTION_C: Array size
+OPTION_D: Key value
+ANSWER: B
+REASONING: tj = while loop execution count. :contentReference[oaicite:8]{index=8}
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-014
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Stability
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Insertion sort is:
+OPTION_A: Unstable
+OPTION_B: Stable
+OPTION_C: Random
+OPTION_D: Recursive only
+ANSWER: B
+REASONING: Equal elements keep order.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-015
+MODULE: DSA
+TOPIC: Scenario
+SUBTOPIC: Reverse Input
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Maximum comparisons occur when:
+OPTION_A: Sorted input
+OPTION_B: Reverse sorted input
+OPTION_C: Random input
+OPTION_D: Equal elements
+ANSWER: B
+REASONING: Every element shifts fully.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-016
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Key Comparison
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: In insertion sort, the key element is compared with:
+OPTION_A: All elements in array
+OPTION_B: Elements on the right side
+OPTION_C: Elements in the sorted left portion
+OPTION_D: Only first element
+ANSWER: C
+REASONING: Key is compared with sorted portion (left side).
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-017
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Shift vs Swap
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which operation is mainly used in insertion sort?
+OPTION_A: Swapping
+OPTION_B: Shifting elements
+OPTION_C: Reversing
+OPTION_D: Deleting
+ANSWER: B
+REASONING: Insertion sort shifts elements instead of swapping.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-018
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Loop Logic
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Why does insertion sort start from the second element?
+OPTION_A: First element is always largest
+OPTION_B: First element is already considered sorted
+OPTION_C: To reduce time complexity
+OPTION_D: No reason
+ANSWER: B
+REASONING: A single element is already sorted by definition.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-019
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: While Condition
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: The while loop in insertion sort stops when:
+OPTION_A: Element is greater than key
+OPTION_B: Element is smaller or equal to key
+OPTION_C: Loop reaches end
+OPTION_D: Always runs fixed times
+ANSWER: B
+REASONING: Loop stops when correct position is found.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-020
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Average Case
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Average case time complexity of insertion sort is:
+OPTION_A: O(n)
+OPTION_B: O(n log n)
+OPTION_C: O(n^2)
+OPTION_D: O(log n)
+ANSWER: C
+REASONING: Average case still involves many shifts.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-021
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Best Case Reason
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why is insertion sort fast in best case?
+OPTION_A: No loops execute
+OPTION_B: No shifting is required
+OPTION_C: No comparisons occur
+OPTION_D: Uses recursion
+ANSWER: B
+REASONING: Already sorted → no shifts needed.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-022
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Big-O Rules
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Big-O notation ignores:
+OPTION_A: Variables
+OPTION_B: Constants and lower order terms
+OPTION_C: Loops
+OPTION_D: Arrays
+ANSWER: B
+REASONING: Only highest growth term matters.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-023
+MODULE: DSA
+TOPIC: Complexity
+SUBTOPIC: Polynomial
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Big-O of T(n) = 5n^2 + 3n + 100 is:
+OPTION_A: O(n)
+OPTION_B: O(n^2)
+OPTION_C: O(n^3)
+OPTION_D: O(log n)
+ANSWER: B
+REASONING: Highest term n^2 dominates.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-024
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Half Loop
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+for(i=0;i<n/2;i++)
+OPTION_A: O(n)
+OPTION_B: O(n/2)
+OPTION_C: O(log n)
+OPTION_D: O(1)
+ANSWER: A
+REASONING: Constants are ignored → O(n).
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-025
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Log Loop
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+for(i=1;i<=n;i*=2)
+OPTION_A: O(n)
+OPTION_B: O(log n)
+OPTION_C: O(n^2)
+OPTION_D: O(1)
+ANSWER: B
+REASONING: Value doubles → logarithmic growth.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-026
+MODULE: DSA
+TOPIC: Loop Analysis
+SUBTOPIC: Triangular Loop
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Time complexity?
+for(i=0;i<n;i++){
+ for(j=0;j<i;j++){
+ }
+}
+OPTION_A: O(n)
+OPTION_B: O(n^2)
+OPTION_C: O(n log n)
+OPTION_D: O(log n)
+ANSWER: B
+REASONING: Total operations ≈ n(n-1)/2.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-027
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Stability Concept
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why is insertion sort stable?
+OPTION_A: It swaps elements
+OPTION_B: It keeps equal elements in same order
+OPTION_C: It uses recursion
+OPTION_D: It avoids loops
+ANSWER: B
+REASONING: Stable sorting preserves order of equal elements.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-028
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Worst Case Reason
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why is reverse sorted array worst case?
+OPTION_A: No comparisons
+OPTION_B: Maximum shifting required
+OPTION_C: No loops
+OPTION_D: No elements
+ANSWER: B
+REASONING: Every element must shift fully.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-029
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Comparison Count
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Worst-case comparisons in insertion sort are approximately:
+OPTION_A: n
+OPTION_B: n log n
+OPTION_C: n^2/2
+OPTION_D: log n
+ANSWER: C
+REASONING: Sum of comparisons ≈ n(n-1)/2.
+QUESTION_END
+
+QUESTION_START
+ID: DSA2-030
+MODULE: DSA
+TOPIC: Sorting
+SUBTOPIC: Best Case Comparisons
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Best-case comparisons in insertion sort are:
+OPTION_A: n
+OPTION_B: n^2
+OPTION_C: log n
+OPTION_D: 1
+ANSWER: A
+REASONING: One comparison per element.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-001
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: A stack follows which principle?
+OPTION_A: FIFO
+OPTION_B: LIFO
+OPTION_C: Random
+OPTION_D: Priority
+ANSWER: B
+REASONING: Stack follows Last-In-First-Out principle. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-002
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Operations
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Adding an element to stack is called:
+OPTION_A: Insert
+OPTION_B: Push
+OPTION_C: Pop
+OPTION_D: Peek
+ANSWER: B
+REASONING: Push operation adds element to stack. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-003
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Operations
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Removing an element is called:
+OPTION_A: Push
+OPTION_B: Delete
+OPTION_C: Pop
+OPTION_D: Peek
+ANSWER: C
+REASONING: Pop removes top element. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-004
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Peek
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Peek operation:
+OPTION_A: Removes element
+OPTION_B: Adds element
+OPTION_C: Reads top element without removing
+OPTION_D: Clears stack
+ANSWER: C
+REASONING: Peek only reads top. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-005
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Access
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: In a stack, access is allowed:
+OPTION_A: Anywhere
+OPTION_B: Only at top
+OPTION_C: Middle only
+OPTION_D: Bottom only
+ANSWER: B
+REASONING: Only top element is accessible. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-006
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Order
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Elements are removed:
+OPTION_A: Same order inserted
+OPTION_B: Reverse order
+OPTION_C: Random
+OPTION_D: Sorted order
+ANSWER: B
+REASONING: LIFO → reverse order.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-007
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Implementation
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Stack can be implemented using:
+OPTION_A: Array only
+OPTION_B: Linked list only
+OPTION_C: Array or linked list
+OPTION_D: Tree
+ANSWER: C
+REASONING: Both methods possible. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-008
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Empty Condition
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: If top = -1, stack is:
+OPTION_A: Full
+OPTION_B: Empty
+OPTION_C: Half full
+OPTION_D: Overflow
+ANSWER: B
+REASONING: -1 indicates empty stack. :contentReference[oaicite:8]{index=8}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-009
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Complexity
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Time complexity of push:
+OPTION_A: O(n)
+OPTION_B: O(log n)
+OPTION_C: O(1)
+OPTION_D: O(n^2)
+ANSWER: C
+REASONING: Constant time operation. :contentReference[oaicite:9]{index=9}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-010
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Complexity
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Time complexity of pop:
+OPTION_A: O(1)
+OPTION_B: O(n)
+OPTION_C: O(log n)
+OPTION_D: O(n^2)
+ANSWER: A
+REASONING: Pop is constant time.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-011
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Application
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which uses stack?
+OPTION_A: Queue processing
+OPTION_B: Undo feature
+OPTION_C: Sorting array only
+OPTION_D: Database storage
+ANSWER: B
+REASONING: Undo uses stack. :contentReference[oaicite:10]{index=10}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-012
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Application
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Stack is used in:
+OPTION_A: Recursion
+OPTION_B: Binary search only
+OPTION_C: Sorting only
+OPTION_D: Graph traversal only
+ANSWER: A
+REASONING: Function calls use stack. :contentReference[oaicite:11]{index=11}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-013
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Sequence
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Stack operations:
+push(2), push(3), pop(), push(4)
+Top element?
+OPTION_A: 2
+OPTION_B: 3
+OPTION_C: 4
+OPTION_D: Empty
+ANSWER: C
+REASONING: 3 popped → 4 on top.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-014
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Sequence
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: push(1), push(2), push(3), pop(), pop()
+Top element?
+OPTION_A: 1
+OPTION_B: 2
+OPTION_C: 3
+OPTION_D: Empty
+ANSWER: A
+REASONING: 3 and 2 removed → 1 remains.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-015
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Code Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does isEmpty() return when top == -1?
+OPTION_A: false
+OPTION_B: true
+OPTION_C: error
+OPTION_D: null
+ANSWER: B
+REASONING: Stack is empty.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-016
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Code Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: isFull() condition (array stack):
+OPTION_A: top == 0
+OPTION_B: top == maxSize - 1
+OPTION_C: top == -1
+OPTION_D: top > maxSize
+ANSWER: B
+REASONING: Stack full at max index.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-016
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Structure Restriction
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why is stack called a restricted data structure?
+OPTION_A: It cannot store data
+OPTION_B: Access is allowed only at one end
+OPTION_C: It uses arrays
+OPTION_D: It is slow
+ANSWER: B
+REASONING: Stack allows access only from the top.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-017
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Access Rule
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which operation is NOT allowed in a stack?
+OPTION_A: Insert at top
+OPTION_B: Delete from top
+OPTION_C: Insert in middle
+OPTION_D: Peek top
+ANSWER: C
+REASONING: Stack restricts access to top only.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-018
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Implementation Detail
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In array implementation, stack overflow occurs when:
+OPTION_A: top == -1
+OPTION_B: top == maxSize
+OPTION_C: top == maxSize - 1
+OPTION_D: top == 0
+ANSWER: C
+REASONING: Stack is full when top reaches last index.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-019
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Implementation Detail
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Stack underflow occurs when:
+OPTION_A: top == 0
+OPTION_B: top == -1
+OPTION_C: top == maxSize
+OPTION_D: top == 1
+ANSWER: B
+REASONING: -1 indicates empty stack.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-020
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Code Understanding
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does this statement do?
+stackArray[++top] = value;
+OPTION_A: Pop operation
+OPTION_B: Peek operation
+OPTION_C: Push operation
+OPTION_D: Delete operation
+ANSWER: C
+REASONING: top is incremented and value inserted → push.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-021
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Code Understanding
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does this statement do?
+return stackArray[top--];
+OPTION_A: Push
+OPTION_B: Pop
+OPTION_C: Peek
+OPTION_D: Insert
+ANSWER: B
+REASONING: Returns value then decrements top → pop.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-022
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Application Deep
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which application uses stack internally?
+OPTION_A: Binary search
+OPTION_B: Function calls
+OPTION_C: Sorting array directly
+OPTION_D: Database query
+ANSWER: B
+REASONING: Function calls use call stack.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-023
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Memory Model
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In memory, stack is mainly used to store:
+OPTION_A: Static variables
+OPTION_B: Function call data and return addresses
+OPTION_C: Heap data
+OPTION_D: Files
+ANSWER: B
+REASONING: Stack stores function frames.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-024
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Trace Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the final top?
+push(5), push(10), push(15), pop(), push(20), pop()
+OPTION_A: 5
+OPTION_B: 10
+OPTION_C: 15
+OPTION_D: 20
+ANSWER: B
+REASONING: 15 removed, 20 added then removed → 10 remains.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-025
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Trace Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is the size of stack after operations?
+push(1), push(2), push(3), pop(), push(4)
+OPTION_A: 2
+OPTION_B: 3
+OPTION_C: 4
+OPTION_D: 1
+ANSWER: B
+REASONING: Final elements → 1,2,4 → size = 3.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-026
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Display Behavior
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens if we display stack using repeated pop()?
+OPTION_A: Stack remains unchanged
+OPTION_B: Stack gets reversed
+OPTION_C: Stack becomes empty
+OPTION_D: Stack is sorted
+ANSWER: C
+REASONING: Pop removes elements → stack becomes empty.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-027
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Constructor
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What is disadvantage of fixed size stack constructor?
+OPTION_A: Faster execution
+OPTION_B: Cannot handle dynamic growth
+OPTION_C: Uses more memory
+OPTION_D: Cannot push elements
+ANSWER: B
+REASONING: Fixed size limits flexibility.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-028
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Count
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Number of elements in stack is:
+OPTION_A: maxSize
+OPTION_B: top + 1
+OPTION_C: top
+OPTION_D: size * 2
+ANSWER: B
+REASONING: Index starts at 0 → count = top + 1.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-001
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: A stack follows which principle?
+OPTION_A: FIFO
+OPTION_B: LIFO
+OPTION_C: Random
+OPTION_D: Priority
+ANSWER: B
+REASONING: Stack follows Last-In-First-Out principle. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-002
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Operations
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Adding an element to stack is called:
+OPTION_A: Insert
+OPTION_B: Push
+OPTION_C: Pop
+OPTION_D: Peek
+ANSWER: B
+REASONING: Push operation adds element to stack. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-003
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Operations
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Removing an element is called:
+OPTION_A: Push
+OPTION_B: Delete
+OPTION_C: Pop
+OPTION_D: Peek
+ANSWER: C
+REASONING: Pop removes top element. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-004
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Peek
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Peek operation:
+OPTION_A: Removes element
+OPTION_B: Adds element
+OPTION_C: Reads top element without removing
+OPTION_D: Clears stack
+ANSWER: C
+REASONING: Peek only reads top. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-005
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Access
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: In a stack, access is allowed:
+OPTION_A: Anywhere
+OPTION_B: Only at top
+OPTION_C: Middle only
+OPTION_D: Bottom only
+ANSWER: B
+REASONING: Only top element is accessible. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-006
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Order
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Elements are removed:
+OPTION_A: Same order inserted
+OPTION_B: Reverse order
+OPTION_C: Random
+OPTION_D: Sorted order
+ANSWER: B
+REASONING: LIFO → reverse order.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-007
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Implementation
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Stack can be implemented using:
+OPTION_A: Array only
+OPTION_B: Linked list only
+OPTION_C: Array or linked list
+OPTION_D: Tree
+ANSWER: C
+REASONING: Both methods possible. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-008
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Empty Condition
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: If top = -1, stack is:
+OPTION_A: Full
+OPTION_B: Empty
+OPTION_C: Half full
+OPTION_D: Overflow
+ANSWER: B
+REASONING: -1 indicates empty stack. :contentReference[oaicite:8]{index=8}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-009
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Complexity
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Time complexity of push:
+OPTION_A: O(n)
+OPTION_B: O(log n)
+OPTION_C: O(1)
+OPTION_D: O(n^2)
+ANSWER: C
+REASONING: Constant time operation. :contentReference[oaicite:9]{index=9}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-010
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Complexity
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Time complexity of pop:
+OPTION_A: O(1)
+OPTION_B: O(n)
+OPTION_C: O(log n)
+OPTION_D: O(n^2)
+ANSWER: A
+REASONING: Pop is constant time.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-011
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Application
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which uses stack?
+OPTION_A: Queue processing
+OPTION_B: Undo feature
+OPTION_C: Sorting array only
+OPTION_D: Database storage
+ANSWER: B
+REASONING: Undo uses stack. :contentReference[oaicite:10]{index=10}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-012
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Application
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Stack is used in:
+OPTION_A: Recursion
+OPTION_B: Binary search only
+OPTION_C: Sorting only
+OPTION_D: Graph traversal only
+ANSWER: A
+REASONING: Function calls use stack. :contentReference[oaicite:11]{index=11}
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-013
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Sequence
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Stack operations:
+push(2), push(3), pop(), push(4)
+Top element?
+OPTION_A: 2
+OPTION_B: 3
+OPTION_C: 4
+OPTION_D: Empty
+ANSWER: C
+REASONING: 3 popped → 4 on top.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-014
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Sequence
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: push(1), push(2), push(3), pop(), pop()
+Top element?
+OPTION_A: 1
+OPTION_B: 2
+OPTION_C: 3
+OPTION_D: Empty
+ANSWER: A
+REASONING: 3 and 2 removed → 1 remains.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-015
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Code Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does isEmpty() return when top == -1?
+OPTION_A: false
+OPTION_B: true
+OPTION_C: error
+OPTION_D: null
+ANSWER: B
+REASONING: Stack is empty.
+QUESTION_END
+
+QUESTION_START
+ID: DSA3-016
+MODULE: DSA
+TOPIC: Stack
+SUBTOPIC: Code Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: isFull() condition (array stack):
+OPTION_A: top == 0
+OPTION_B: top == maxSize - 1
+OPTION_C: top == -1
+OPTION_D: top > maxSize
+ANSWER: B
+REASONING: Stack full at max index.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-017
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Restriction
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why is queue called a restricted data structure?
+OPTION_A: Cannot store data
+OPTION_B: Access only from front and rear
+OPTION_C: Uses arrays
+OPTION_D: Slow performance
+ANSWER: B
+REASONING: Operations are restricted to front and rear only.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-018
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Operation Restriction
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Which operation is NOT allowed in a queue?
+OPTION_A: Insert at rear
+OPTION_B: Remove at front
+OPTION_C: Insert in middle
+OPTION_D: Peek front
+ANSWER: C
+REASONING: Queue does not allow middle operations.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-019
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Peek Behavior
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: What happens after peekFront()?
+OPTION_A: Element is removed
+OPTION_B: Queue becomes empty
+OPTION_C: Queue remains unchanged
+OPTION_D: Rear moves forward
+ANSWER: C
+REASONING: Peek only reads value without modification.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-020
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Pointer Movement
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: After remove operation, which pointer changes?
+OPTION_A: Rear
+OPTION_B: Front
+OPTION_C: Both
+OPTION_D: None
+ANSWER: B
+REASONING: Removal updates front pointer.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-021
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Pointer Movement
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: After insert operation, which pointer changes?
+OPTION_A: Front
+OPTION_B: Rear
+OPTION_C: Both
+OPTION_D: None
+ANSWER: B
+REASONING: Insert updates rear pointer.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-022
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Circular Queue Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In circular queue, rear moves to beginning when:
+OPTION_A: rear == front
+OPTION_B: rear == maxSize
+OPTION_C: rear reaches end and wraps using modulo
+OPTION_D: front == 0
+ANSWER: C
+REASONING: Circular queue uses modulo for wrap-around.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-023
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Circular Queue Advantage
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Why circular queue is better than linear queue?
+OPTION_A: Faster operations
+OPTION_B: Avoids unused spaces
+OPTION_C: Uses less memory
+OPTION_D: Uses recursion
+ANSWER: B
+REASONING: Circular queue reuses freed positions.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-024
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Count Formula
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Number of elements in linear queue is:
+OPTION_A: rear - front
+OPTION_B: rear - front + 1
+OPTION_C: front - rear
+OPTION_D: front + rear
+ANSWER: B
+REASONING: Standard formula for linear queue size.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-025
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Trace Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: insert(10), insert(20), insert(30), remove(), insert(40)
+Front element?
+OPTION_A: 10
+OPTION_B: 20
+OPTION_C: 30
+OPTION_D: 40
+ANSWER: B
+REASONING: 10 removed → 20 becomes front.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-026
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Trace Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: insert(1), insert(2), remove(), insert(3), remove(), insert(4)
+Front element?
+OPTION_A: 1
+OPTION_B: 2
+OPTION_C: 3
+OPTION_D: 4
+ANSWER: C
+REASONING: Sequence leaves 3 at front.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-027
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Application
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Queue is used in:
+OPTION_A: Recursion
+OPTION_B: CPU scheduling
+OPTION_C: Stack operations
+OPTION_D: Sorting arrays
+ANSWER: B
+REASONING: Queue is used in scheduling systems.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-028
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Application
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Printer queue is an example of:
+OPTION_A: Stack
+OPTION_B: Queue
+OPTION_C: Tree
+OPTION_D: Graph
+ANSWER: B
+REASONING: Jobs are processed in FIFO order.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-029
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Code Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does this represent?
+queueArray[rear++] = value;
+OPTION_A: Remove
+OPTION_B: Insert
+OPTION_C: Peek
+OPTION_D: Delete
+ANSWER: B
+REASONING: Inserts value and increments rear.
+QUESTION_END
+
+QUESTION_START
+ID: DSA4-030
+MODULE: DSA
+TOPIC: Queue
+SUBTOPIC: Code Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: What does this represent?
+int temp = queueArray[front++];
+OPTION_A: Insert
+OPTION_B: Peek
+OPTION_C: Remove
+OPTION_D: Sort
+ANSWER: C
+REASONING: Removes front element and increments front.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-001
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: In a linked list, each node contains:
+OPTION_A: Only data
+OPTION_B: Data and reference to next node
+OPTION_C: Only index
+OPTION_D: Only pointer
+ANSWER: B
+REASONING: Node has data + next pointer. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-002
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Structure
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: The last node points to:
+OPTION_A: First node
+OPTION_B: Previous node
+OPTION_C: NULL
+OPTION_D: Itself
+ANSWER: C
+REASONING: Last node → null reference.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-003
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Access
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: In linked list, accessing an element requires:
+OPTION_A: Indexing
+OPTION_B: Direct access
+OPTION_C: Traversal from first node
+OPTION_D: Binary search
+ANSWER: C
+REASONING: Must follow chain. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-004
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Comparison
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Arrays allow:
+OPTION_A: Sequential access only
+OPTION_B: Direct access using index
+OPTION_C: No access
+OPTION_D: Random removal only
+ANSWER: B
+REASONING: Arrays support indexing.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-005
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Operations
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Which is NOT a linked list operation?
+OPTION_A: Insert
+OPTION_B: Delete
+OPTION_C: Find
+OPTION_D: Sort only
+ANSWER: D
+REASONING: Core ops are insert/delete/find. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-006
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Traversal
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Loop condition to traverse full list:
+OPTION_A: temp == NULL
+OPTION_B: temp != NULL
+OPTION_C: temp.next == NULL
+OPTION_D: temp.next != NULL
+ANSWER: B
+REASONING: Continue until NULL. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-007
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Traversal
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Loop condition temp.next != NULL prints:
+OPTION_A: All nodes
+OPTION_B: Skips last node
+OPTION_C: Only first node
+OPTION_D: None
+ANSWER: B
+REASONING: Stops before last. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-008
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Code
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: first = first.next does:
+OPTION_A: Deletes last node
+OPTION_B: Deletes first node
+OPTION_C: Adds node
+OPTION_D: Reverses list
+ANSWER: B
+REASONING: First node removed.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-009
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Insert
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: InsertAfter operation:
+OPTION_A: Inserts at beginning
+OPTION_B: Inserts after a given node
+OPTION_C: Inserts at end only
+OPTION_D: Deletes node
+ANSWER: B
+REASONING: Insert after key node. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-010
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Delete
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Delete operation removes:
+OPTION_A: All nodes
+OPTION_B: Node with given key
+OPTION_C: Only last node
+OPTION_D: Only first node
+ANSWER: B
+REASONING: Delete by key. :contentReference[oaicite:8]{index=8}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-011
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Application
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Linked list used in:
+OPTION_A: Image viewer navigation
+OPTION_B: Calculator only
+OPTION_C: Sorting only
+OPTION_D: File rename
+ANSWER: A
+REASONING: Previous/next navigation. :contentReference[oaicite:9]{index=9}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-012
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Application
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Linked list used in:
+OPTION_A: Browser history
+OPTION_B: CPU clock
+OPTION_C: Keyboard input
+OPTION_D: RAM only
+ANSWER: A
+REASONING: Back/forward navigation.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-013
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Memory
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Linked list memory allocation:
+OPTION_A: Static
+OPTION_B: Dynamic
+OPTION_C: Fixed
+OPTION_D: None
+ANSWER: B
+REASONING: Uses dynamic memory. :contentReference[oaicite:10]{index=10}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-014
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Code Trace
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Given list: 8→10→32→88→NULL  
+Code:
+temp=first;
+while(temp!=NULL){
+ print(temp.ID);
+ temp=temp.next;
+}
+Output?
+OPTION_A: 8 10 32 88
+OPTION_B: 10 32 88
+OPTION_C: 8 10 32
+OPTION_D: Error
+ANSWER: A
+REASONING: Prints all nodes. :contentReference[oaicite:11]{index=11}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-015
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Code Trace
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Given same list:
+while(temp.next!=NULL){
+ print(temp.ID);
+ temp=temp.next;
+}
+Output?
+OPTION_A: 8 10 32 88
+OPTION_B: 8 10 32
+OPTION_C: 10 32 88
+OPTION_D: 88
+ANSWER: B
+REASONING: Last node skipped.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-016
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Doubly List
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Doubly linked list has:
+OPTION_A: One pointer
+OPTION_B: Two pointers (prev, next)
+OPTION_C: No pointer
+OPTION_D: Three pointers
+ANSWER: B
+REASONING: prev + next pointers. :contentReference[oaicite:12]{index=12}
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-017
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Pointer Update
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: To insert a node at beginning, which step is correct?
+OPTION_A: newNode.next = NULL
+OPTION_B: newNode.next = first
+OPTION_C: first.next = newNode
+OPTION_D: delete first
+ANSWER: B
+REASONING: New node must point to old first.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-018
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Pointer Update
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: After inserting at beginning, we update:
+OPTION_A: last
+OPTION_B: first
+OPTION_C: temp
+OPTION_D: next
+ANSWER: B
+REASONING: First pointer must point to new node.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-019
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Insert End
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: To insert at end, we must:
+OPTION_A: Directly assign
+OPTION_B: Traverse to last node
+OPTION_C: Delete node
+OPTION_D: Use index
+ANSWER: B
+REASONING: Need to reach last node first.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-020
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Insert End
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: To insert at end, last node should point to:
+OPTION_A: NULL
+OPTION_B: first
+OPTION_C: new node
+OPTION_D: itself
+ANSWER: C
+REASONING: Last.next = newNode.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-021
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Edge Case
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: If linked list is empty, first is:
+OPTION_A: 0
+OPTION_B: NULL
+OPTION_C: -1
+OPTION_D: undefined
+ANSWER: B
+REASONING: Empty list → first = NULL.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-022
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Edge Case
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: If list has one node and we delete it:
+OPTION_A: first remains same
+OPTION_B: first becomes NULL
+OPTION_C: last changes
+OPTION_D: error
+ANSWER: B
+REASONING: After deletion → empty list.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-023
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Delete Middle
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: To delete a node, we need:
+OPTION_A: Only current node
+OPTION_B: Previous node
+OPTION_C: Next node
+OPTION_D: Index
+ANSWER: B
+REASONING: Previous node must bypass current node.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-024
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Doubly List
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: To delete node in doubly list:
+OPTION_A: prev.next = next
+OPTION_B: next.prev = prev
+OPTION_C: Both A and B
+OPTION_D: None
+ANSWER: C
+REASONING: Both pointers must be updated.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-025
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Traversal Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: How many times loop runs?
+while(temp != NULL)
+OPTION_A: n-1
+OPTION_B: n
+OPTION_C: n+1
+OPTION_D: infinite
+ANSWER: B
+REASONING: Runs once per node.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-026
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Complexity
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Traversing linked list takes:
+OPTION_A: O(1)
+OPTION_B: O(log n)
+OPTION_C: O(n)
+OPTION_D: O(n^2)
+ANSWER: C
+REASONING: Must visit each node.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-027
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Insert Complexity
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Insert at beginning complexity:
+OPTION_A: O(n)
+OPTION_B: O(1)
+OPTION_C: O(log n)
+OPTION_D: O(n^2)
+ANSWER: B
+REASONING: Direct pointer update.
+QUESTION_END
+
+QUESTION_START
+ID: DSA5-028
+MODULE: DSA
+TOPIC: Linked List
+SUBTOPIC: Insert Complexity
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Insert at end complexity (without tail pointer):
+OPTION_A: O(1)
+OPTION_B: O(n)
+OPTION_C: O(log n)
+OPTION_D: O(n^2)
+ANSWER: B
+REASONING: Need traversal.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-001
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: A tree consists of:
+OPTION_A: Nodes only
+OPTION_B: Edges only
+OPTION_C: Nodes connected by edges
+OPTION_D: Arrays
+ANSWER: C
+REASONING: Tree = nodes + edges. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-002
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Binary Tree
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: A binary tree has:
+OPTION_A: Unlimited children
+OPTION_B: Maximum two children
+OPTION_C: Only one child
+OPTION_D: No child
+ANSWER: B
+REASONING: Max 2 children. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-003
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Root
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: The top node of a tree is:
+OPTION_A: Leaf
+OPTION_B: Root
+OPTION_C: Child
+OPTION_D: Parent
+ANSWER: B
+REASONING: Top node = root. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-004
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Leaf
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: A node with no children is:
+OPTION_A: Root
+OPTION_B: Parent
+OPTION_C: Leaf
+OPTION_D: Edge
+ANSWER: C
+REASONING: No children → leaf node. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-005
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Parent
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: A node with children is called:
+OPTION_A: Leaf
+OPTION_B: Parent
+OPTION_C: Root only
+OPTION_D: Edge
+ANSWER: B
+REASONING: Node with children = parent.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-006
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Path
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: A path is:
+OPTION_A: Single node
+OPTION_B: Sequence of nodes connected by edges
+OPTION_C: Only leaf nodes
+OPTION_D: Random nodes
+ANSWER: B
+REASONING: Sequence along edges. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-007
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Subtree
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: A subtree includes:
+OPTION_A: Only root
+OPTION_B: Node and its descendants
+OPTION_C: Only leaves
+OPTION_D: Only edges
+ANSWER: B
+REASONING: Node + children recursively.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-008
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Key
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: Key value is used to:
+OPTION_A: Delete nodes only
+OPTION_B: Search and operations
+OPTION_C: Store edges
+OPTION_D: Balance tree
+ANSWER: B
+REASONING: Key used for searching. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-009
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Rule
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: In BST:
+OPTION_A: Left child > parent
+OPTION_B: Left child < parent
+OPTION_C: Right child < parent
+OPTION_D: No rule
+ANSWER: B
+REASONING: Left < parent. :contentReference[oaicite:8]{index=8}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-010
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Rule
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: In BST right child:
+OPTION_A: < parent
+OPTION_B: = parent only
+OPTION_C: >= parent
+OPTION_D: random
+ANSWER: C
+REASONING: Right ≥ parent.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-011
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Operation
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: BST operations include:
+OPTION_A: Insert
+OPTION_B: Delete
+OPTION_C: Find
+OPTION_D: All
+ANSWER: D
+REASONING: All are valid. :contentReference[oaicite:9]{index=9}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-012
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Find
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Searching in BST starts from:
+OPTION_A: Leaf
+OPTION_B: Root
+OPTION_C: Middle
+OPTION_D: Random
+ANSWER: B
+REASONING: Always start at root. :contentReference[oaicite:10]{index=10}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-013
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Find Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: If key < node value:
+OPTION_A: Go right
+OPTION_B: Go left
+OPTION_C: Stop
+OPTION_D: Delete
+ANSWER: B
+REASONING: Smaller → left.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-014
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Traversal
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Inorder traversal gives:
+OPTION_A: Random order
+OPTION_B: Sorted order (BST)
+OPTION_C: Reverse order
+OPTION_D: Only root
+ANSWER: B
+REASONING: Inorder → sorted output.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-015
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Traversal
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Preorder traversal order:
+OPTION_A: Left Root Right
+OPTION_B: Root Left Right
+OPTION_C: Left Right Root
+OPTION_D: Right Root Left
+ANSWER: B
+REASONING: Preorder = root first.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-016
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Traversal
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Postorder traversal:
+OPTION_A: Root Left Right
+OPTION_B: Left Root Right
+OPTION_C: Left Right Root
+OPTION_D: Right Left Root
+ANSWER: C
+REASONING: Root last.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-017
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Minimum
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Minimum value in BST is:
+OPTION_A: Root
+OPTION_B: Rightmost node
+OPTION_C: Leftmost node
+OPTION_D: Any leaf
+ANSWER: C
+REASONING: Keep going left. :contentReference[oaicite:11]{index=11}
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-018
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Maximum
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Maximum value in BST is:
+OPTION_A: Root
+OPTION_B: Leftmost node
+OPTION_C: Rightmost node
+OPTION_D: Leaf only
+ANSWER: C
+REASONING: Keep going right.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-019
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Insert Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: To insert a new node in BST:
+OPTION_A: Always insert at root
+OPTION_B: Compare and move left or right until NULL
+OPTION_C: Insert randomly
+OPTION_D: Replace root
+ANSWER: B
+REASONING: Insert follows BST rule until empty spot.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-020
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Insert
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: If inserting value greater than parent:
+OPTION_A: Go left
+OPTION_B: Go right
+OPTION_C: Stop
+OPTION_D: Replace node
+ANSWER: B
+REASONING: Greater values go to right subtree.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-021
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Delete Case
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Deleting a leaf node:
+OPTION_A: Complex operation
+OPTION_B: Just remove node
+OPTION_C: Replace root
+OPTION_D: Traverse tree
+ANSWER: B
+REASONING: Leaf has no children → simple removal.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-022
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Delete Case
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Deleting node with one child:
+OPTION_A: Remove both nodes
+OPTION_B: Replace node with its child
+OPTION_C: Ignore
+OPTION_D: Reverse tree
+ANSWER: B
+REASONING: Child takes place of deleted node.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-023
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Delete Case
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Deleting node with two children uses:
+OPTION_A: Random node
+OPTION_B: Inorder successor
+OPTION_C: Root replacement
+OPTION_D: Delete directly
+ANSWER: B
+REASONING: Replace with smallest value in right subtree.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-024
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Height
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Height of tree is:
+OPTION_A: Number of nodes
+OPTION_B: Number of edges in longest path
+OPTION_C: Only leaf count
+OPTION_D: Only root
+ANSWER: B
+REASONING: Height = longest root-to-leaf path.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-025
+MODULE: DSA
+TOPIC: Tree
+SUBTOPIC: Depth
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Depth of a node is:
+OPTION_A: Number of children
+OPTION_B: Distance from root
+OPTION_C: Number of edges in subtree
+OPTION_D: Number of nodes
+ANSWER: B
+REASONING: Depth = path length from root.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-026
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Tree Shape
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Inserting sorted data into BST results in:
+OPTION_A: Balanced tree
+OPTION_B: Complete tree
+OPTION_C: Skewed tree
+OPTION_D: Full tree
+ANSWER: C
+REASONING: Tree becomes like linked list.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-027
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Complexity
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Worst-case search time in BST:
+OPTION_A: O(1)
+OPTION_B: O(log n)
+OPTION_C: O(n)
+OPTION_D: O(n^2)
+ANSWER: C
+REASONING: Skewed tree behaves like list.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-028
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Traversal Output
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Inorder traversal of BST always gives:
+OPTION_A: Descending order
+OPTION_B: Sorted ascending order
+OPTION_C: Random order
+OPTION_D: Reverse order
+ANSWER: B
+REASONING: BST property ensures sorted order.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-029
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Trace Insert
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Insert: 10, 5, 15, 2 → where is 2 placed?
+OPTION_A: Right of 10
+OPTION_B: Left of 5
+OPTION_C: Right of 5
+OPTION_D: Root
+ANSWER: B
+REASONING: 2 < 5 → left child of 5.
+QUESTION_END
+
+QUESTION_START
+ID: DSA6-030
+MODULE: DSA
+TOPIC: BST
+SUBTOPIC: Trace Insert
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Insert: 10, 20, 30 → tree becomes:
+OPTION_A: Balanced
+OPTION_B: Left skewed
+OPTION_C: Right skewed
+OPTION_D: Full tree
+ANSWER: C
+REASONING: Increasing values go right.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-001
+MODULE: DSA
+TOPIC: Tree Traversal
+SUBTOPIC: Inorder Logic
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: In inorder traversal, the order is:
+OPTION_A: Root Left Right
+OPTION_B: Left Root Right
+OPTION_C: Left Right Root
+OPTION_D: Right Root Left
+ANSWER: B
+REASONING: Left → Node → Right. :contentReference[oaicite:1]{index=1}
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-002
+MODULE: DSA
+TOPIC: Tree Traversal
+SUBTOPIC: Preorder Logic
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Preorder traversal follows:
+OPTION_A: Left Root Right
+OPTION_B: Root Left Right
+OPTION_C: Left Right Root
+OPTION_D: Right Left Root
+ANSWER: B
+REASONING: Visit root first. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-003
+MODULE: DSA
+TOPIC: Tree Traversal
+SUBTOPIC: Postorder Logic
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Postorder traversal:
+OPTION_A: Root Left Right
+OPTION_B: Left Root Right
+OPTION_C: Left Right Root
+OPTION_D: Right Root Left
+ANSWER: C
+REASONING: Root last.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-004
+MODULE: DSA
+TOPIC: Tree Traversal
+SUBTOPIC: Recursion
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: TRICK
+QUESTION: Tree traversal uses:
+OPTION_A: Iteration only
+OPTION_B: Recursion
+OPTION_C: Arrays
+OPTION_D: Stack only
+ANSWER: B
+REASONING: Traversal is recursive. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-005
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Node
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Node contains:
+OPTION_A: Only data
+OPTION_B: Data and two references
+OPTION_C: Only pointer
+OPTION_D: Only root
+ANSWER: B
+REASONING: Data + leftChild + rightChild. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-006
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Root
+TYPE: MCQ
+DIFFICULTY: Easy
+EXPLANATION_LEVEL: BASIC
+QUESTION: Root in Tree class is:
+OPTION_A: Last node
+OPTION_B: First node
+OPTION_C: Middle node
+OPTION_D: Leaf
+ANSWER: B
+REASONING: Root is starting point.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-007
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Find Method
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In find(), loop continues until:
+OPTION_A: current == root
+OPTION_B: current == null
+OPTION_C: key found or current == null
+OPTION_D: leftChild null
+ANSWER: C
+REASONING: Stop when found or null. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-008
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Find Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In find(), if key > current:
+OPTION_A: Go left
+OPTION_B: Go right
+OPTION_C: Stop
+OPTION_D: Delete
+ANSWER: B
+REASONING: Larger → right child.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-009
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Insert
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Insert uses:
+OPTION_A: Recursion
+OPTION_B: While loop
+OPTION_C: Array
+OPTION_D: Stack
+ANSWER: B
+REASONING: Uses loop with parent tracking. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-010
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Insert Root
+TYPE: MCQ
+DIFFICULTY: Medium
+EXPLANATION_LEVEL: BASIC
+QUESTION: If root is null:
+OPTION_A: Ignore
+OPTION_B: Insert as left child
+OPTION_C: New node becomes root
+OPTION_D: Error
+ANSWER: C
+REASONING: First node becomes root.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-011
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Insert Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In insert(), parent is used to:
+OPTION_A: Delete node
+OPTION_B: Track insertion position
+OPTION_C: Store data
+OPTION_D: Traverse only
+ANSWER: B
+REASONING: Parent keeps previous node.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-012
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Inorder Method
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In recursive inorder:
+OPTION_A: Visit → left → right
+OPTION_B: Left → visit → right
+OPTION_C: Right → visit → left
+OPTION_D: Only visit
+ANSWER: B
+REASONING: Standard inorder recursion. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-013
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Preorder Method
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In recursive preorder:
+OPTION_A: Left → right → visit
+OPTION_B: Visit → left → right
+OPTION_C: Left → visit → right
+OPTION_D: Right → visit → left
+ANSWER: B
+REASONING: Root first.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-014
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Postorder Method
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In recursive postorder:
+OPTION_A: Visit → left → right
+OPTION_B: Left → visit → right
+OPTION_C: Left → right → visit
+OPTION_D: Right → left → visit
+ANSWER: C
+REASONING: Root last.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-015
+MODULE: DSA
+TOPIC: Code Trace
+SUBTOPIC: Preorder Output
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Given tree (from slide):
+      50
+     /  \
+   30    60
+  /  \
+20   40
+
+Preorder output?
+OPTION_A: 20 30 40 50 60
+OPTION_B: 50 30 20 40 60
+OPTION_C: 20 40 30 60 50
+OPTION_D: 50 20 30 40 60
+ANSWER: B
+REASONING: Root → Left → Right. (Page 5 diagram)
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-016
+MODULE: DSA
+TOPIC: Code Trace
+SUBTOPIC: Postorder Output
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Given tree (from slide):
+            50
+         /  \
+     30    60
+    /  \
+20   40
+
+Postorder output?
+OPTION_A: 20 40 30 60 50
+OPTION_B: 50 30 20 40 60
+OPTION_C: 20 30 40 60 50
+OPTION_D: 60 50 30 20 40
+ANSWER: A
+REASONING: Left → Right → Root.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-017
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Null Handling
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In traversal, why do we check if(node != null)?
+OPTION_A: To improve speed
+OPTION_B: To avoid infinite loop
+OPTION_C: To avoid null pointer error
+OPTION_D: To skip nodes
+ANSWER: C
+REASONING: Prevents accessing null references.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-018
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Find Edge Case
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In find(), if current becomes null:
+OPTION_A: Key is found
+OPTION_B: Restart search
+OPTION_C: Key not found
+OPTION_D: Insert node
+ANSWER: C
+REASONING: Null means search reached empty branch.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-019
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Insert Stop Condition
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In insert(), when do we insert the new node?
+OPTION_A: When parent is null
+OPTION_B: When current == null
+OPTION_C: When root is null
+OPTION_D: When key matches
+ANSWER: B
+REASONING: Insert happens at empty position.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-020
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Find Loop Behavior
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: In find(), loop condition is:
+while(current.iData != key)
+This loop will:
+OPTION_A: Always run once
+OPTION_B: Stop when key found
+OPTION_C: Skip nodes
+OPTION_D: Delete node
+ANSWER: B
+REASONING: Loop exits when matching value found.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-021
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Direction Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: If key < current.iData, we move:
+OPTION_A: Right
+OPTION_B: Left
+OPTION_C: Stop
+OPTION_D: Root
+ANSWER: B
+REASONING: Smaller values go left.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-022
+MODULE: DSA
+TOPIC: BST Implementation
+SUBTOPIC: Direction Logic
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: If key > current.iData, we move:
+OPTION_A: Left
+OPTION_B: Right
+OPTION_C: Stop
+OPTION_D: Root
+ANSWER: B
+REASONING: Larger values go right.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-023
+MODULE: DSA
+TOPIC: Code Trace
+SUBTOPIC: Inorder Output
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Inorder traversal of BST always produces:
+OPTION_A: Random order
+OPTION_B: Sorted ascending order
+OPTION_C: Descending order
+OPTION_D: Reverse order
+ANSWER: B
+REASONING: BST property ensures sorted output.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-024
+MODULE: DSA
+TOPIC: Code Trace
+SUBTOPIC: Advanced Traversal
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Tree:
+        40
+       /  \
+     20    60
+    / \    /
+   10 30  50
+Postorder output?
+OPTION_A: 10 30 20 50 60 40
+OPTION_B: 40 20 10 30 60 50
+OPTION_C: 10 20 30 50 60 40
+OPTION_D: 20 10 30 40 60 50
+ANSWER: A
+REASONING: Left → Right → Root.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-025
+MODULE: DSA
+TOPIC: Code Trace
+SUBTOPIC: Insert Behavior
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Insert sequence: 10, 5, 15, 12 → where is 12 placed?
+OPTION_A: Left of 10
+OPTION_B: Right of 10
+OPTION_C: Left of 15
+OPTION_D: Right of 15
+ANSWER: C
+REASONING: 12 < 15 → goes left of 15.
+QUESTION_END
+
+QUESTION_START
+ID: DSA7-026
+MODULE: DSA
+TOPIC: Code Trace
+SUBTOPIC: Insert Shape
+TYPE: MCQ
+DIFFICULTY: Hard
+EXPLANATION_LEVEL: TRICK
+QUESTION: Insert sequence: 30, 20, 10 → tree becomes:
+OPTION_A: Balanced
+OPTION_B: Right skewed
+OPTION_C: Left skewed
+OPTION_D: Complete tree
+ANSWER: C
+REASONING: Decreasing order → left chain.
+QUESTION_END

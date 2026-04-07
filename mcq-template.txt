@@ -1,0 +1,31 @@
+QUESTION_START
+ID: MODULE-UNIQUE-ID
+MODULE: OOP
+TOPIC: Main Topic
+SUBTOPIC: Sub Topic
+TYPE: MSQ
+DIFFICULTY: Easy
+QUESTION: Write your question here?
+OPTION_A: First option
+OPTION_B: Second option
+OPTION_C: Third option
+OPTION_D: Fourth option
+ANSWER: A,C
+REASONING: Explain why the correct options are correct and others are wrong.
+QUESTION_END
+
+QUESTION_START
+ID: MODULE-UNIQUE-ID-2
+MODULE: DSA
+TOPIC: Main Topic
+SUBTOPIC: Sub Topic
+TYPE: MSQ
+DIFFICULTY: Medium
+QUESTION: Write your second question here?
+OPTION_A: First option
+OPTION_B: Second option
+OPTION_C: Third option
+OPTION_D: Fourth option
+ANSWER: B,D
+REASONING: Add reasoning here.
+QUESTION_END
