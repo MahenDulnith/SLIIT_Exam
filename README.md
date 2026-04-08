@@ -4,6 +4,8 @@ This is a simple local website for MSQ practice.
 
 It now saves the latest loaded MCQ set and your quiz session in browser local storage, so you do not need to import every refresh.
 
+Current release: Version 1.2
+
 ## What this project does
 
 - Loads questions from TXT format
@@ -13,6 +15,9 @@ It now saves the latest loaded MCQ set and your quiz session in browser local st
 - Renders multi-line Java/code snippets in the question area
 - Tracks score and topic-wise performance
 - Identifies weak topics and allows weak-topic practice
+- Includes start overlay, review-mistakes mode, and end-of-round summary modal
+- Includes validation preview for TXT format issues before loading
+- Includes motivation cues (daily streak, session target, coverage ring)
 
 ## Quiz behavior
 
@@ -24,6 +29,17 @@ It now saves the latest loaded MCQ set and your quiz session in browser local st
 - Keyboard shortcut: press **Space** to submit (after selecting), then **Space** again to move to the next question.
 - Dashboard includes detailed counts (wrong, skipped, timed out, unseen) and a topic breakdown table.
 - Dashboard subject selector scopes analytics and upcoming rounds to one subject or all subjects.
+- Practice opens with a start overlay: Resume Session, Start New Round, Practice Weak Topics, Review Mistakes.
+- Feedback is two-step: quick result first, expandable explanation next.
+- Practice HUD is sticky and shows subject, current streak, target progress, and completion ring.
+- On mobile, action buttons stay reachable using a sticky bottom action bar.
+- Accessibility: keyboard focus rings, `aria-live` feedback/timer cues.
+
+## New v1.2 modes
+
+- **Review Mistakes**: builds a round from recent wrong/skipped/timed-out questions.
+- **Round Summary Modal**: shows answered, correct, accuracy, timed out, and weak-topic hits.
+- **Validation Preview**: shows friendly format errors like “Question 12 missing ANSWER.”
 
 ## Files
 

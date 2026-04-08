@@ -14,7 +14,7 @@
     <header class="hero">
       <p class="eyebrow">Adaptive MCQ Trainer</p>
       <h1>SLIIT Mid Practice</h1>
-      <p class="version-badge">Version 1.1</p>
+      <p class="version-badge">Version 1.2</p>
       <p>Load MCQs from TXT, keep progress in this browser, and practice by weak topic.</p>
     </header>
 
@@ -46,6 +46,12 @@
           <article><span>Timed Out</span><strong id="timedOutCount">0</strong></article>
           <article><span>Unseen</span><strong id="unseenCount">0</strong></article>
         </div>
+        <div class="stats motivation-stats">
+          <article><span>Daily Streak</span><strong id="dailyStreakCount">0</strong></article>
+          <article><span>Session Target</span><strong id="sessionTargetText">0 / 10</strong></article>
+          <article><span>Coverage</span><strong id="coverageText">0%</strong></article>
+          <article><span>Recent Momentum</span><strong id="momentumText">0%</strong></article>
+        </div>
         <div class="details-panel">
           <h3>Topic Breakdown</h3>
           <div class="topic-table-wrap">
@@ -72,7 +78,10 @@
             <li>No data yet</li>
           </ul>
         </div>
-        <button id="practiceWeakBtn" class="secondary" disabled>Practice Weak Topics</button>
+        <div class="actions">
+          <button id="practiceWeakBtn" class="secondary" disabled>Practice Weak Topics</button>
+          <button id="reviewMistakesBtn" class="secondary" disabled>Review Mistakes</button>
+        </div>
       </section>
     </section>
 
@@ -90,17 +99,47 @@
           <button id="loadFromFileBtn">Load From File</button>
           <button id="resetBtn" class="secondary">Reset Session</button>
         </div>
+        <section id="validationPanel" class="validation-panel" aria-live="polite">
+          <h3>Format Validation Preview</h3>
+          <p id="validationSummary" class="hint">Paste or upload data to validate structure before loading.</p>
+          <ul id="validationList" class="validation-list">
+            <li>No validation results yet.</li>
+          </ul>
+        </section>
         <p id="loadMessage" class="status"></p>
       </section>
     </section>
 
     <section id="practiceView" class="view">
+      <section id="practiceStartOverlay" class="panel start-overlay hidden">
+        <h2>Practice Ready</h2>
+        <p class="hint">Pick how you want to continue this session.</p>
+        <div class="actions">
+          <button id="resumeSessionBtn">Resume Session</button>
+          <button id="startFreshRoundBtn" class="secondary">Start New Round</button>
+          <button id="overlayWeakBtn" class="secondary">Practice Weak Topics</button>
+          <button id="overlayReviewBtn" class="secondary">Review Mistakes</button>
+        </div>
+      </section>
+
       <section id="quizPlaceholder" class="panel placeholder-panel">
         <h2>Practice Space</h2>
         <p class="hint">Load a question set from Load Question Data to start practicing.</p>
       </section>
 
       <section id="quizPanel" class="panel hidden">
+        <div class="practice-hud" id="practiceHud">
+          <div class="hud-pill">Subject: <strong id="hudSubject">All Subjects</strong></div>
+          <div class="hud-pill">Streak: <strong id="hudStreak">0</strong></div>
+          <div class="hud-pill">Target: <strong id="hudTarget">0 / 10</strong></div>
+          <div class="hud-completion" aria-label="Completion ring">
+            <svg viewBox="0 0 36 36" role="img" aria-labelledby="completionRingText">
+              <path class="ring-bg" d="M18 2.5a15.5 15.5 0 1 1 0 31a15.5 15.5 0 1 1 0-31" />
+              <path id="completionRingPath" class="ring-value" d="M18 2.5a15.5 15.5 0 1 1 0 31a15.5 15.5 0 1 1 0-31" stroke-dasharray="0, 100" />
+            </svg>
+            <span id="completionRingText">0%</span>
+          </div>
+        </div>
         <div class="quiz-head">
           <span id="questionCounter">Question 0 / 0</span>
           <span id="metaInfo">-</span>
@@ -120,15 +159,35 @@
         <div id="questionText" class="question-text">Question will appear here</div>
         <div id="optionsContainer" class="options"></div>
         <p id="quizHint" class="hint">This is MSQ. Select one or more answers, then submit.</p>
-        <div class="actions">
+        <div class="actions practice-actions">
           <button id="submitBtn">Submit Answer</button>
           <button id="skipBtn" class="secondary">Skip Question</button>
           <button id="nextBtn" class="secondary hidden" disabled>Next Question</button>
         </div>
-        <div id="feedback" class="feedback"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
       </section>
     </section>
   </main>
+
+  <dialog id="roundSummaryModal" class="summary-modal" aria-labelledby="summaryTitle">
+    <h2 id="summaryTitle">Round Summary</h2>
+    <p id="summaryLead" class="hint">Round completed.</p>
+    <div class="summary-grid">
+      <article><span>Answered</span><strong id="summaryAnswered">0</strong></article>
+      <article><span>Correct</span><strong id="summaryCorrect">0</strong></article>
+      <article><span>Accuracy</span><strong id="summaryAccuracy">0%</strong></article>
+      <article><span>Timed Out</span><strong id="summaryTimedOut">0</strong></article>
+    </div>
+    <p id="summaryWeakTopics" class="hint">Weak topics hit: None</p>
+    <div class="actions">
+      <button id="summaryRetryWeakBtn" class="secondary">Retry Weak Topics</button>
+      <button id="summaryReviewMistakesBtn" class="secondary">Review Mistakes</button>
+      <button id="summaryNewRoundBtn">New Adaptive Round</button>
+      <button id="summaryCloseBtn" class="secondary">Close</button>
+    </div>
+  </dialog>
+
+  <div id="a11yLive" class="sr-only" aria-live="polite"></div>
 
   <script src="app.js"></script>
 </body>

@@ -9,6 +9,7 @@ const STORAGE_KEYS = {
 const AUTO_SYNC_INTERVAL_MS = 12000;
 const QUIZ_ROUND_LIMIT = 20;
 const QUESTION_TIME_LIMIT_SECONDS = 30;
+const DAILY_SESSION_TARGET = 10;
 
 const state = {
   allQuestions: [],
@@ -19,7 +20,10 @@ const state = {
   selectedSubject: readStorageValue(STORAGE_KEYS.selectedSubject) || "ALL",
   currentAnswerSet: new Set(),
   timerHandle: null,
-  timeLeft: QUESTION_TIME_LIMIT_SECONDS
+  timeLeft: QUESTION_TIME_LIMIT_SECONDS,
+  roundLog: [],
+  announcedTimes: new Set(),
+  sessionStartedAt: new Date().toISOString()
 };
 
 const refs = {
@@ -51,9 +55,27 @@ const refs = {
   topicBreakdownBody: document.getElementById("topicBreakdownBody"),
   weakTopicsList: document.getElementById("weakTopicsList"),
   practiceWeakBtn: document.getElementById("practiceWeakBtn"),
+  reviewMistakesBtn: document.getElementById("reviewMistakesBtn"),
+  dailyStreakCount: document.getElementById("dailyStreakCount"),
+  sessionTargetText: document.getElementById("sessionTargetText"),
+  coverageText: document.getElementById("coverageText"),
+  momentumText: document.getElementById("momentumText"),
 
+  validationPanel: document.getElementById("validationPanel"),
+  validationSummary: document.getElementById("validationSummary"),
+  validationList: document.getElementById("validationList"),
   quizPlaceholder: document.getElementById("quizPlaceholder"),
+  practiceStartOverlay: document.getElementById("practiceStartOverlay"),
+  resumeSessionBtn: document.getElementById("resumeSessionBtn"),
+  startFreshRoundBtn: document.getElementById("startFreshRoundBtn"),
+  overlayWeakBtn: document.getElementById("overlayWeakBtn"),
+  overlayReviewBtn: document.getElementById("overlayReviewBtn"),
   quizPanel: document.getElementById("quizPanel"),
+  hudSubject: document.getElementById("hudSubject"),
+  hudStreak: document.getElementById("hudStreak"),
+  hudTarget: document.getElementById("hudTarget"),
+  completionRingPath: document.getElementById("completionRingPath"),
+  completionRingText: document.getElementById("completionRingText"),
   questionCounter: document.getElementById("questionCounter"),
   metaInfo: document.getElementById("metaInfo"),
   roundProgressText: document.getElementById("roundProgressText"),
@@ -66,7 +88,20 @@ const refs = {
   submitBtn: document.getElementById("submitBtn"),
   skipBtn: document.getElementById("skipBtn"),
   nextBtn: document.getElementById("nextBtn"),
-  feedback: document.getElementById("feedback")
+  feedback: document.getElementById("feedback"),
+
+  roundSummaryModal: document.getElementById("roundSummaryModal"),
+  summaryLead: document.getElementById("summaryLead"),
+  summaryAnswered: document.getElementById("summaryAnswered"),
+  summaryCorrect: document.getElementById("summaryCorrect"),
+  summaryAccuracy: document.getElementById("summaryAccuracy"),
+  summaryTimedOut: document.getElementById("summaryTimedOut"),
+  summaryWeakTopics: document.getElementById("summaryWeakTopics"),
+  summaryRetryWeakBtn: document.getElementById("summaryRetryWeakBtn"),
+  summaryReviewMistakesBtn: document.getElementById("summaryReviewMistakesBtn"),
+  summaryNewRoundBtn: document.getElementById("summaryNewRoundBtn"),
+  summaryCloseBtn: document.getElementById("summaryCloseBtn"),
+  a11yLive: document.getElementById("a11yLive")
 };
 
 function saveStorageValue(key, value) {
@@ -147,6 +182,301 @@ function formatOptionHtml(optionText) {
     return escapeHtml(normalized);
   }
   return `<span class="option-multiline">${escapeHtml(normalized).replace(/\n/g, "<br>")}</span>`;
+}
+
+function announce(message) {
+  if (!refs.a11yLive || !message) {
+    return;
+  }
+
+  refs.a11yLive.textContent = "";
+  setTimeout(() => {
+    refs.a11yLive.textContent = message;
+  }, 10);
+}
+
+function showPracticeOverlay() {
+  clearQuestionTimer();
+  closeRoundSummaryModal();
+  refs.practiceStartOverlay.classList.remove("hidden");
+  refs.quizPlaceholder.classList.add("hidden");
+  refs.quizPanel.classList.add("hidden");
+}
+
+function hidePracticeOverlay() {
+  refs.practiceStartOverlay.classList.add("hidden");
+  refs.quizPlaceholder.classList.add("hidden");
+  refs.quizPanel.classList.remove("hidden");
+}
+
+function closeRoundSummaryModal() {
+  const modal = refs.roundSummaryModal;
+  if (!modal) {
+    return;
+  }
+
+  if (typeof modal.close === "function" && modal.open) {
+    modal.close();
+  } else {
+    modal.removeAttribute("open");
+  }
+}
+
+function setFeedback(statusClass, summaryText, reasoningText = "") {
+  refs.feedback.className = `feedback ${statusClass}`.trim();
+
+  const summaryHtml = `<p class="feedback-summary">${escapeHtml(summaryText || "")}</p>`;
+  const reasoningHtml = reasoningText
+    ? `<details class="feedback-details"><summary>Show explanation</summary><p>${escapeHtml(reasoningText).replace(/\n/g, "<br>")}</p></details>`
+    : "";
+
+  refs.feedback.innerHTML = `${summaryHtml}${reasoningHtml}`;
+}
+
+function refreshOptionSelectionClasses() {
+  refs.optionsContainer.querySelectorAll(".option").forEach((opt) => {
+    const input = opt.querySelector("input");
+    opt.classList.toggle("selected", Boolean(input && input.checked));
+  });
+}
+
+function getTodayKey(value = new Date()) {
+  const d = value instanceof Date ? value : new Date(value);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function calculateDailyStreak(history) {
+  if (!history.length) {
+    return 0;
+  }
+
+  const activeDays = new Set(history.map((h) => getTodayKey(h.timestamp || new Date())));
+  let streak = 0;
+  const cursor = new Date();
+
+  while (true) {
+    const key = getTodayKey(cursor);
+    if (!activeDays.has(key)) {
+      break;
+    }
+
+    streak += 1;
+    cursor.setDate(cursor.getDate() - 1);
+  }
+
+  return streak;
+}
+
+function calculateCurrentCorrectStreak(history) {
+  let streak = 0;
+  for (let i = history.length - 1; i >= 0; i -= 1) {
+    const status = history[i].status || (history[i].skipped ? "skipped" : (history[i].correct ? "correct" : "wrong"));
+    if (status === "correct") {
+      streak += 1;
+      continue;
+    }
+    break;
+  }
+  return streak;
+}
+
+function calculateRecentMomentum(history, sample = 10) {
+  const recent = history
+    .slice()
+    .reverse()
+    .filter((h) => {
+      const status = h.status || (h.skipped ? "skipped" : (h.correct ? "correct" : "wrong"));
+      return status === "correct" || status === "wrong";
+    })
+    .slice(0, sample);
+
+  if (!recent.length) {
+    return 0;
+  }
+
+  const correct = recent.filter((h) => (h.status || (h.correct ? "correct" : "wrong")) === "correct").length;
+  return Math.round((correct / recent.length) * 100);
+}
+
+function getTodayAnsweredCount(history) {
+  const todayKey = getTodayKey();
+  return history.filter((h) => getTodayKey(h.timestamp || new Date()) === todayKey).length;
+}
+
+function updatePracticeHud() {
+  const scopedQuestions = getScopedQuestions();
+  const scopedHistory = getScopedHistory();
+  const seenIds = new Set(scopedHistory.map((h) => h.id));
+  const coverage = scopedQuestions.length ? Math.round((seenIds.size / scopedQuestions.length) * 100) : 0;
+  const todayProgress = getTodayAnsweredCount(scopedHistory);
+  const streak = calculateCurrentCorrectStreak(scopedHistory);
+
+  refs.hudSubject.textContent = state.selectedSubject === "ALL" ? "All Subjects" : state.selectedSubject;
+  refs.hudStreak.textContent = String(streak);
+  refs.hudTarget.textContent = `${todayProgress} / ${DAILY_SESSION_TARGET}`;
+  refs.completionRingText.textContent = `${coverage}%`;
+  refs.completionRingPath.setAttribute("stroke-dasharray", `${coverage}, 100`);
+}
+
+function showRoundSummaryModal() {
+  const entries = state.roundLog || [];
+  const answered = entries.filter((e) => e.status === "correct" || e.status === "wrong").length;
+  const correct = entries.filter((e) => e.status === "correct").length;
+  const timedOut = entries.filter((e) => e.status === "timeout").length;
+  const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
+  const weakHits = Array.from(new Set(
+    entries
+      .filter((e) => e.status === "wrong" || e.status === "timeout" || e.status === "skipped")
+      .map((e) => `${e.module} | ${e.topic}`)
+  ));
+
+  refs.summaryLead.textContent = `You completed ${entries.length} question(s) in this round.`;
+  refs.summaryAnswered.textContent = String(answered);
+  refs.summaryCorrect.textContent = String(correct);
+  refs.summaryAccuracy.textContent = `${accuracy}%`;
+  refs.summaryTimedOut.textContent = String(timedOut);
+  refs.summaryWeakTopics.textContent = weakHits.length
+    ? `Weak topics hit: ${weakHits.slice(0, 4).join(", ")}`
+    : "Weak topics hit: None";
+
+  refs.summaryRetryWeakBtn.disabled = refs.practiceWeakBtn.disabled;
+  refs.summaryReviewMistakesBtn.disabled = refs.reviewMistakesBtn.disabled;
+
+  const modal = refs.roundSummaryModal;
+  if (!modal) {
+    return;
+  }
+
+  if (typeof modal.showModal === "function") {
+    if (!modal.open) {
+      modal.showModal();
+    }
+  } else {
+    modal.setAttribute("open", "open");
+  }
+}
+
+function buildValidationReport(text) {
+  const normalized = String(text || "").replace(/\r\n/g, "\n");
+  if (!normalized.trim()) {
+    return {
+      total: 0,
+      errors: [],
+      warnings: [],
+      summary: "Paste or upload data to validate structure before loading."
+    };
+  }
+
+  const matches = Array.from(normalized.matchAll(/QUESTION_START([\s\S]*?)QUESTION_END/g));
+  if (!matches.length) {
+    return {
+      total: 0,
+      errors: ["No QUESTION_START ... QUESTION_END blocks detected."],
+      warnings: [],
+      summary: "Validation failed: no question blocks detected."
+    };
+  }
+
+  const errors = [];
+  const warnings = [];
+
+  matches.forEach((match, idx) => {
+    const blockNo = idx + 1;
+    const block = String(match[1] || "").trim();
+    const lines = block.split(/\n/);
+    const item = {};
+    let currentKey = null;
+
+    for (const line of lines) {
+      const fieldMatch = line.match(/^(ID|MODULE|TOPIC|SUBTOPIC|TYPE|DIFFICULTY|EXPLANATION_LEVEL|QUESTION|OPTION_[A-F]|ANSWER|REASONING):\s*(.*)$/);
+      if (fieldMatch) {
+        currentKey = fieldMatch[1].toUpperCase();
+        item[currentKey] = fieldMatch[2];
+      } else if (currentKey) {
+        item[currentKey] = `${item[currentKey]}\n${line}`;
+      }
+    }
+
+    ["ID", "MODULE", "TOPIC", "QUESTION", "ANSWER", "REASONING"].forEach((field) => {
+      if (!String(item[field] || "").trim()) {
+        errors.push(`Question ${blockNo} missing ${field}.`);
+      }
+    });
+
+    const optionKeys = ["A", "B", "C", "D", "E", "F"].filter((letter) => String(item[`OPTION_${letter}`] || "").trim());
+    if (optionKeys.length < 2) {
+      errors.push(`Question ${blockNo} must include at least OPTION_A and OPTION_B.`);
+    }
+
+    const answerTokens = String(item.ANSWER || "")
+      .split(",")
+      .map((s) => s.trim().toUpperCase())
+      .filter(Boolean);
+
+    if (!answerTokens.length) {
+      errors.push(`Question ${blockNo} has an empty ANSWER list.`);
+    } else {
+      answerTokens.forEach((token) => {
+        if (!optionKeys.includes(token)) {
+          errors.push(`Question ${blockNo} ANSWER includes ${token}, but that option is missing.`);
+        }
+      });
+    }
+
+    const type = String(item.TYPE || "").trim().toUpperCase();
+    if (type === "MCQ" && answerTokens.length > 1) {
+      warnings.push(`Question ${blockNo} is MCQ but has multiple answers.`);
+    }
+    if (type === "MSQ" && answerTokens.length < 2) {
+      warnings.push(`Question ${blockNo} is MSQ but has fewer than 2 answers.`);
+    }
+  });
+
+  const summary = errors.length
+    ? `Validation found ${errors.length} error(s) in ${matches.length} question block(s).`
+    : `Validation passed for ${matches.length} question block(s). ${warnings.length ? `${warnings.length} warning(s).` : "No warnings."}`;
+
+  return {
+    total: matches.length,
+    errors,
+    warnings,
+    summary
+  };
+}
+
+function updateValidationPreview(text) {
+  if (!refs.validationSummary || !refs.validationList) {
+    return;
+  }
+
+  const report = buildValidationReport(text);
+  refs.validationSummary.textContent = report.summary;
+  refs.validationList.innerHTML = "";
+
+  if (!report.errors.length && !report.warnings.length) {
+    const li = document.createElement("li");
+    li.className = report.total ? "validation-ok" : "";
+    li.textContent = report.total ? "All required fields are present." : "No validation results yet.";
+    refs.validationList.appendChild(li);
+    return;
+  }
+
+  report.errors.slice(0, 8).forEach((msg) => {
+    const li = document.createElement("li");
+    li.className = "validation-error";
+    li.textContent = msg;
+    refs.validationList.appendChild(li);
+  });
+
+  report.warnings.slice(0, 6).forEach((msg) => {
+    const li = document.createElement("li");
+    li.className = "validation-warning";
+    li.textContent = msg;
+    refs.validationList.appendChild(li);
+  });
 }
 
 function getSeenCount(stat) {
@@ -358,7 +688,10 @@ function startNextAdaptiveRound(message = "New adaptive round started.") {
 
   state.queue = buildAdaptiveQueue(scopedQuestions, state.questionStats, QUIZ_ROUND_LIMIT);
   state.index = 0;
+  state.roundLog = [];
+  closeRoundSummaryModal();
   refs.loadMessage.textContent = `${message} Showing ${state.queue.length} questions.`;
+  hidePracticeOverlay();
   renderQuestion();
   persistSession();
 }
@@ -406,6 +739,7 @@ function rebuildScopedQueue(renderNow = false) {
   const scopedQuestions = getScopedQuestions();
   state.queue = buildAdaptiveQueue(scopedQuestions, state.questionStats, QUIZ_ROUND_LIMIT);
   state.index = 0;
+  state.roundLog = [];
 
   if (renderNow) {
     renderQuestion();
@@ -443,7 +777,9 @@ function clearQuestionTimer() {
 }
 
 function isPracticeTimerContext() {
-  return refs.practiceView.classList.contains("active") && !refs.quizPanel.classList.contains("hidden");
+  return refs.practiceView.classList.contains("active")
+    && !refs.quizPanel.classList.contains("hidden")
+    && refs.practiceStartOverlay.classList.contains("hidden");
 }
 
 function updateTimerUI() {
@@ -452,6 +788,11 @@ function updateTimerUI() {
 
   const pct = Math.max(0, Math.min(100, (remaining / QUESTION_TIME_LIMIT_SECONDS) * 100));
   refs.timerProgressFill.style.width = `${pct}%`;
+
+  if ((remaining === 10 || remaining === 5) && !state.announcedTimes.has(remaining)) {
+    state.announcedTimes.add(remaining);
+    announce(`${remaining} seconds remaining.`);
+  }
 }
 
 function updateRoundProgressUI() {
@@ -480,17 +821,18 @@ function onQuestionTimedOut() {
 
   // Timeout is tracked as timeout (not correct/wrong), then answer is shown for learning.
   recordQuestionOutcome(q, "timeout");
+  state.roundLog.push({ id: q.id, module: q.module, topic: q.topic, status: "timeout" });
 
   lockOptions();
   highlightAnswers(state.currentAnswerSet, new Set());
 
   const sortedAnswers = Array.from(state.currentAnswerSet).sort().join(", ");
-  refs.feedback.className = "feedback bad";
-  refs.feedback.textContent = [
-    `Time is up. Correct answers: ${sortedAnswers}`,
-    "This timeout is not counted as a correct answer.",
-    `Reasoning: ${q.reasoning}`
-  ].join("\n\n");
+  setFeedback(
+    "bad",
+    `Time is up. Correct answers: ${sortedAnswers}. This timeout is not counted as a correct answer.`,
+    q.reasoning
+  );
+  announce("Time is up. Review the answer and continue.");
 
   refs.submitBtn.classList.add("hidden");
   refs.skipBtn.classList.add("hidden");
@@ -513,6 +855,7 @@ function startQuestionTimer() {
 
   clearQuestionTimer();
   state.timeLeft = QUESTION_TIME_LIMIT_SECONDS;
+  state.announcedTimes = new Set();
   updateTimerUI();
 
   state.timerHandle = setInterval(() => {
@@ -543,10 +886,12 @@ function setActiveView(viewName, persist = true) {
 
   if (!practiceActive) {
     clearQuestionTimer();
+    closeRoundSummaryModal();
   } else {
     const hasCurrentQuestion = Boolean(getCurrentQuestion());
     const awaitingAnswer = refs.nextBtn.classList.contains("hidden");
-    if (hasCurrentQuestion && awaitingAnswer && !state.timerHandle) {
+    const overlayHidden = refs.practiceStartOverlay.classList.contains("hidden");
+    if (hasCurrentQuestion && awaitingAnswer && overlayHidden && !state.timerHandle) {
       startQuestionTimer();
     }
   }
@@ -557,6 +902,9 @@ function setActiveView(viewName, persist = true) {
 }
 
 function showPracticeState(hasQuestions) {
+  if (!hasQuestions) {
+    refs.practiceStartOverlay.classList.add("hidden");
+  }
   refs.quizPlaceholder.classList.toggle("hidden", hasQuestions);
   refs.quizPanel.classList.toggle("hidden", !hasQuestions);
 }
@@ -762,6 +1110,7 @@ function getCurrentQuestion() {
 function renderQuestion() {
   const q = getCurrentQuestion();
   updateRoundProgressUI();
+  updatePracticeHud();
 
   if (!q) {
     clearQuestionTimer();
@@ -777,8 +1126,9 @@ function renderQuestion() {
     refs.skipBtn.disabled = true;
     refs.nextBtn.disabled = false;
     refs.quizHint.textContent = "Press Space to start the next adaptive round.";
-    refs.feedback.textContent = "Round completed. Start the next adaptive round to continue.";
+    setFeedback("", "Round completed. Start the next adaptive round to continue.");
     state.currentAnswerSet = new Set();
+    showRoundSummaryModal();
     return;
   }
 
@@ -819,6 +1169,8 @@ function renderQuestion() {
     refs.optionsContainer.appendChild(div);
   });
 
+  refreshOptionSelectionClasses();
+
   const isMsq = q.type === "MSQ";
   refs.submitBtn.classList.toggle("hidden", !isMsq);
   refs.skipBtn.classList.remove("hidden");
@@ -828,13 +1180,13 @@ function renderQuestion() {
   refs.skipBtn.disabled = false;
   refs.nextBtn.disabled = true;
   refs.feedback.className = "feedback";
-  refs.feedback.textContent = "";
+  refs.feedback.innerHTML = "";
   startQuestionTimer();
 }
 
 function onOptionSelectionChange(event) {
   const q = getCurrentQuestion();
-  if (!q || q.type !== "MCQ") {
+  if (!q) {
     return;
   }
 
@@ -844,8 +1196,11 @@ function onOptionSelectionChange(event) {
   }
 
   if (target.type !== "radio") {
+    refreshOptionSelectionClasses();
     return;
   }
+
+  refreshOptionSelectionClasses();
 
   // One-tap MCQ flow: selecting an option submits immediately.
   onSubmitAnswer();
@@ -860,6 +1215,7 @@ function lockOptions() {
   refs.optionsContainer.querySelectorAll("input").forEach((el) => {
     el.disabled = true;
   });
+  refreshOptionSelectionClasses();
 }
 
 function highlightAnswers(correctSet, selectedSet) {
@@ -884,8 +1240,7 @@ function onSubmitAnswer() {
 
   const selected = getSelectedAnswers();
   if (!selected.size) {
-    refs.feedback.className = "feedback bad";
-    refs.feedback.textContent = "Select at least one option before submitting.";
+    setFeedback("bad", "Select at least one option before submitting.");
     return;
   }
 
@@ -893,16 +1248,18 @@ function onSubmitAnswer() {
 
   clearQuestionTimer();
   recordQuestionOutcome(q, isCorrect ? "correct" : "wrong", Array.from(selected).sort().join(","));
+  state.roundLog.push({ id: q.id, module: q.module, topic: q.topic, status: isCorrect ? "correct" : "wrong" });
 
   lockOptions();
   highlightAnswers(state.currentAnswerSet, selected);
 
   const sortedAnswers = Array.from(state.currentAnswerSet).sort().join(", ");
-  refs.feedback.className = isCorrect ? "feedback good" : "feedback bad";
-  refs.feedback.textContent = [
+  setFeedback(
+    isCorrect ? "good" : "bad",
     isCorrect ? "Correct answer." : `Incorrect. Correct answers: ${sortedAnswers}`,
-    `Reasoning: ${q.reasoning}`
-  ].join("\n\n");
+    q.reasoning
+  );
+  announce(isCorrect ? "Correct answer." : "Incorrect answer.");
 
   refs.submitBtn.classList.add("hidden");
   refs.skipBtn.classList.add("hidden");
@@ -924,6 +1281,7 @@ function onSkipQuestion() {
 
   clearQuestionTimer();
   recordQuestionOutcome(q, "skipped");
+  state.roundLog.push({ id: q.id, module: q.module, topic: q.topic, status: "skipped" });
   state.index += 1;
   refs.loadMessage.textContent = `Skipped ${q.id}.`;
   updateDashboard();
@@ -933,6 +1291,7 @@ function onSkipQuestion() {
 
 function onNextQuestion() {
   clearQuestionTimer();
+  closeRoundSummaryModal();
 
   if (!getCurrentQuestion()) {
     startNextAdaptiveRound();
@@ -999,6 +1358,15 @@ function updateDashboard() {
   refs.timedOutCount.textContent = String(timedOut);
   refs.unseenCount.textContent = String(unseen);
 
+  const dailyStreak = calculateDailyStreak(scopedHistory);
+  const todayProgress = getTodayAnsweredCount(scopedHistory);
+  const coverage = scopedQuestions.length ? Math.round(((scopedQuestions.length - unseen) / scopedQuestions.length) * 100) : 0;
+  const momentum = calculateRecentMomentum(scopedHistory);
+  refs.dailyStreakCount.textContent = String(dailyStreak);
+  refs.sessionTargetText.textContent = `${todayProgress} / ${DAILY_SESSION_TARGET}`;
+  refs.coverageText.textContent = `${coverage}%`;
+  refs.momentumText.textContent = `${momentum}%`;
+
   const topicStats = calculateTopicStats();
   const weakTopics = topicStats.filter((t) => t.attempts >= 2 && t.accuracy < 0.6);
 
@@ -1031,6 +1399,7 @@ function updateDashboard() {
     li.textContent = "No weak topics yet (need at least 2 attempts and below 60%).";
     refs.weakTopicsList.appendChild(li);
     refs.practiceWeakBtn.disabled = true;
+    refs.overlayWeakBtn.disabled = true;
   } else {
     weakTopics
       .sort((a, b) => a.accuracy - b.accuracy)
@@ -1040,7 +1409,17 @@ function updateDashboard() {
         refs.weakTopicsList.appendChild(li);
       });
     refs.practiceWeakBtn.disabled = false;
+    refs.overlayWeakBtn.disabled = false;
   }
+
+  const hasMistakes = scopedHistory.some((h) => {
+    const status = h.status || (h.skipped ? "skipped" : (h.correct ? "correct" : "wrong"));
+    return status === "wrong" || status === "skipped" || status === "timeout";
+  });
+  refs.reviewMistakesBtn.disabled = !hasMistakes;
+  refs.overlayReviewBtn.disabled = !hasMistakes;
+
+  updatePracticeHud();
 }
 
 function loadQuestionSet(questions, sourceText, options = {}) {
@@ -1058,6 +1437,7 @@ function loadQuestionSet(questions, sourceText, options = {}) {
   refreshSubjectSelector();
   state.queue = buildAdaptiveQueue(getScopedQuestions(), preserveHistory ? previousStats : {}, QUIZ_ROUND_LIMIT);
   state.index = 0;
+  state.roundLog = [];
   state.history = preserveHistory
     ? previousHistory.filter((h) => validQuestionIds.has(h.id))
     : [];
@@ -1077,12 +1457,14 @@ function loadQuestionSet(questions, sourceText, options = {}) {
   renderQuestion();
   if (!keepView) {
     setActiveView("practice");
+    showPracticeOverlay();
   }
   persistSession();
 }
 
 function resetSession() {
   clearQuestionTimer();
+  closeRoundSummaryModal();
 
   state.allQuestions = [];
   state.queue = [];
@@ -1090,6 +1472,7 @@ function resetSession() {
   state.history = [];
   state.questionStats = {};
   state.timeLeft = QUESTION_TIME_LIMIT_SECONDS;
+  state.roundLog = [];
 
   showPracticeState(false);
   refs.loadMessage.textContent = "Session reset. Local saved data was cleared.";
@@ -1121,7 +1504,47 @@ function practiceWeakTopics() {
 
   state.queue = buildAdaptiveQueue(weakQuestions, state.questionStats, QUIZ_ROUND_LIMIT);
   state.index = 0;
+  state.roundLog = [];
   refs.loadMessage.textContent = `Practice mode: ${state.queue.length} weak-topic questions loaded.`;
+  closeRoundSummaryModal();
+  hidePracticeOverlay();
+  renderQuestion();
+  setActiveView("practice");
+  persistSession();
+}
+
+function practiceMistakes() {
+  const scopedHistory = getScopedHistory();
+  const mistakeIds = [];
+
+  for (let i = scopedHistory.length - 1; i >= 0; i -= 1) {
+    const h = scopedHistory[i];
+    const status = h.status || (h.skipped ? "skipped" : (h.correct ? "correct" : "wrong"));
+    if (status === "wrong" || status === "skipped" || status === "timeout") {
+      if (!mistakeIds.includes(h.id)) {
+        mistakeIds.push(h.id);
+      }
+    }
+    if (mistakeIds.length >= QUIZ_ROUND_LIMIT * 2) {
+      break;
+    }
+  }
+
+  const byId = new Map(getScopedQuestions().map((q) => [q.id, q]));
+  const candidates = mistakeIds
+    .map((id) => byId.get(id))
+    .filter(Boolean);
+
+  if (!candidates.length) {
+    refs.loadMessage.textContent = "No mistakes found yet in this subject scope.";
+    return;
+  }
+
+  state.queue = buildAdaptiveQueue(candidates, state.questionStats, QUIZ_ROUND_LIMIT);
+  state.index = 0;
+  state.roundLog = [];
+  refs.loadMessage.textContent = `Review mode: ${state.queue.length} mistakes-focused questions loaded.`;
+  hidePracticeOverlay();
   renderQuestion();
   setActiveView("practice");
   persistSession();
@@ -1132,8 +1555,17 @@ async function loadFromText() {
     const data = refs.txtInput.value.trim();
     if (!data) {
       refs.loadMessage.textContent = "Paste your TXT data first.";
+      updateValidationPreview(data);
       return;
     }
+
+    const report = buildValidationReport(data);
+    updateValidationPreview(data);
+    if (report.errors.length) {
+      refs.loadMessage.textContent = `Load blocked: fix ${report.errors.length} validation issue(s) first.`;
+      return;
+    }
+
     const questions = parseQuestionText(data);
     loadQuestionSet(questions, data, { preserveHistory: true });
   } catch (err) {
@@ -1149,6 +1581,14 @@ async function loadFromFile() {
       return;
     }
     const text = await file.text();
+
+    const report = buildValidationReport(text);
+    updateValidationPreview(text);
+    if (report.errors.length) {
+      refs.loadMessage.textContent = `File load blocked: fix ${report.errors.length} validation issue(s).`;
+      return;
+    }
+
     const questions = parseQuestionText(text);
     loadQuestionSet(questions, text, { preserveHistory: true });
   } catch (err) {
@@ -1164,6 +1604,7 @@ async function loadFromProjectFile(showFailureMessage = true, options = {}) {
     }
 
     const text = await response.text();
+  updateValidationPreview(text);
     const questions = parseQuestionText(text);
     const mergedOptions = {
       preserveHistory: true,
@@ -1216,7 +1657,7 @@ function openPracticeView() {
     rebuildScopedQueue(false);
   }
   setActiveView("practice");
-  renderQuestion();
+  showPracticeOverlay();
 }
 
 function openDashboardView() {
@@ -1225,6 +1666,31 @@ function openDashboardView() {
 
 function openLoadView() {
   setActiveView("load");
+}
+
+function resumePracticeSession() {
+  if (!state.queue.length) {
+    refs.loadMessage.textContent = "No active queue found. Start a new round.";
+    startNextAdaptiveRound("Started a new adaptive round.");
+    return;
+  }
+
+  hidePracticeOverlay();
+  renderQuestion();
+}
+
+function startFreshRoundFromOverlay() {
+  startNextAdaptiveRound("Fresh adaptive round started.");
+}
+
+function onOverlayPracticeWeak() {
+  closeRoundSummaryModal();
+  practiceWeakTopics();
+}
+
+function onOverlayReviewMistakes() {
+  closeRoundSummaryModal();
+  practiceMistakes();
 }
 
 function shouldIgnoreSpacebarShortcut(target) {
@@ -1254,6 +1720,12 @@ function onGlobalSpacebar(event) {
   }
 
   const inPractice = refs.practiceView.classList.contains("active") && !refs.quizPanel.classList.contains("hidden");
+  if (refs.practiceView.classList.contains("active") && !refs.practiceStartOverlay.classList.contains("hidden")) {
+    event.preventDefault();
+    resumePracticeSession();
+    return;
+  }
+
   if (!inPractice) {
     return;
   }
@@ -1279,12 +1751,31 @@ refs.nextBtn.addEventListener("click", onNextQuestion);
 refs.optionsContainer.addEventListener("change", onOptionSelectionChange);
 refs.resetBtn.addEventListener("click", resetSession);
 refs.practiceWeakBtn.addEventListener("click", practiceWeakTopics);
+refs.reviewMistakesBtn.addEventListener("click", practiceMistakes);
 refs.tabDashboardBtn.addEventListener("click", openDashboardView);
 refs.tabPracticeBtn.addEventListener("click", openPracticeView);
 refs.tabLoadBtn.addEventListener("click", openLoadView);
 refs.subjectSelector.addEventListener("change", onSubjectSelectorChange);
+refs.resumeSessionBtn.addEventListener("click", resumePracticeSession);
+refs.startFreshRoundBtn.addEventListener("click", startFreshRoundFromOverlay);
+refs.overlayWeakBtn.addEventListener("click", onOverlayPracticeWeak);
+refs.overlayReviewBtn.addEventListener("click", onOverlayReviewMistakes);
+refs.summaryRetryWeakBtn.addEventListener("click", () => {
+  closeRoundSummaryModal();
+  practiceWeakTopics();
+});
+refs.summaryReviewMistakesBtn.addEventListener("click", () => {
+  closeRoundSummaryModal();
+  practiceMistakes();
+});
+refs.summaryNewRoundBtn.addEventListener("click", () => {
+  closeRoundSummaryModal();
+  startNextAdaptiveRound();
+});
+refs.summaryCloseBtn.addEventListener("click", closeRoundSummaryModal);
 refs.txtInput.addEventListener("input", () => {
   saveStorageValue(STORAGE_KEYS.questionText, refs.txtInput.value);
+  updateValidationPreview(refs.txtInput.value);
 });
 document.addEventListener("keydown", onGlobalSpacebar);
 
@@ -1302,6 +1793,7 @@ updateDashboard();
 showPracticeState(false);
 updateRoundProgressUI();
 updateTimerUI();
+updateValidationPreview(refs.txtInput.value);
 
 const restored = restoreSessionFromStorage();
 if (restored) {
@@ -1309,10 +1801,14 @@ if (restored) {
   const savedView = readStorageValue(STORAGE_KEYS.activeView);
   const mappedView = savedView === "home" ? "dashboard" : savedView;
   setActiveView(mappedView === "practice" || mappedView === "load" ? mappedView : "dashboard", false);
+  if (mappedView === "practice" && state.queue.length) {
+    showPracticeOverlay();
+  }
   loadFromProjectFile(false, { preserveHistory: true, keepView: true });
 } else {
   setActiveView("dashboard", false);
   refreshSubjectSelector();
+  refs.practiceStartOverlay.classList.add("hidden");
   loadFromProjectFile(false);
 }
 
