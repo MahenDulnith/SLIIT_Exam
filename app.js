@@ -442,6 +442,10 @@ function clearQuestionTimer() {
   }
 }
 
+function isPracticeTimerContext() {
+  return refs.practiceView.classList.contains("active") && !refs.quizPanel.classList.contains("hidden");
+}
+
 function updateTimerUI() {
   const remaining = Math.max(0, state.timeLeft);
   refs.timerValue.textContent = String(remaining);
@@ -471,20 +475,52 @@ function onQuestionTimedOut() {
   }
 
   clearQuestionTimer();
+  state.timeLeft = 0;
+  updateTimerUI();
+
+  // Timeout is tracked as timeout (not correct/wrong), then answer is shown for learning.
   recordQuestionOutcome(q, "timeout");
-  state.index += 1;
-  refs.loadMessage.textContent = `Time up on ${q.id}. Moved to next question.`;
+
+  lockOptions();
+  highlightAnswers(state.currentAnswerSet, new Set());
+
+  const sortedAnswers = Array.from(state.currentAnswerSet).sort().join(", ");
+  refs.feedback.className = "feedback bad";
+  refs.feedback.textContent = [
+    `Time is up. Correct answers: ${sortedAnswers}`,
+    "This timeout is not counted as a correct answer.",
+    `Reasoning: ${q.reasoning}`
+  ].join("\n\n");
+
+  refs.submitBtn.classList.add("hidden");
+  refs.skipBtn.classList.add("hidden");
+  refs.nextBtn.classList.remove("hidden");
+  refs.submitBtn.disabled = true;
+  refs.skipBtn.disabled = true;
+  refs.nextBtn.disabled = false;
+
+  refs.loadMessage.textContent = `Time up on ${q.id}. Review the answer, then continue.`;
+  updateRoundProgressUI();
   updateDashboard();
-  renderQuestion();
   persistSession();
 }
 
 function startQuestionTimer() {
+  if (!isPracticeTimerContext()) {
+    clearQuestionTimer();
+    return;
+  }
+
   clearQuestionTimer();
   state.timeLeft = QUESTION_TIME_LIMIT_SECONDS;
   updateTimerUI();
 
   state.timerHandle = setInterval(() => {
+    if (!isPracticeTimerContext()) {
+      clearQuestionTimer();
+      return;
+    }
+
     state.timeLeft -= 1;
     updateTimerUI();
     if (state.timeLeft <= 0) {
@@ -504,6 +540,16 @@ function setActiveView(viewName, persist = true) {
   refs.tabDashboardBtn.classList.toggle("active", dashboardActive);
   refs.tabPracticeBtn.classList.toggle("active", practiceActive);
   refs.tabLoadBtn.classList.toggle("active", loadActive);
+
+  if (!practiceActive) {
+    clearQuestionTimer();
+  } else {
+    const hasCurrentQuestion = Boolean(getCurrentQuestion());
+    const awaitingAnswer = refs.nextBtn.classList.contains("hidden");
+    if (hasCurrentQuestion && awaitingAnswer && !state.timerHandle) {
+      startQuestionTimer();
+    }
+  }
 
   if (persist) {
     saveStorageValue(STORAGE_KEYS.activeView, viewName);

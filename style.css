@@ -97,6 +97,18 @@ body::before {
   font-size: 1.02rem;
 }
 
+.version-badge {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #bdd9d4;
+  background: #effcf8;
+  color: #0a5e55;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .tab-nav {
   display: inline-flex;
   gap: 8px;
