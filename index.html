@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SLIIT Mid Practice Quiz</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,13 +16,12 @@
       <p class="eyebrow">Adaptive MCQ Trainer</p>
       <h1>SLIIT Mid Practice</h1>
       <p class="version-badge">Version 1.2</p>
-      <p>Load MCQs from TXT, keep progress in this browser, and practice by weak topic.</p>
+      <p>Reads MCQs from mcq-data.txt, keeps progress in this browser, and adapts practice by your weak areas.</p>
     </header>
 
     <nav class="tab-nav" aria-label="Page views">
       <button id="tabDashboardBtn" class="tab-btn active" type="button">Dashboard</button>
       <button id="tabPracticeBtn" class="tab-btn" type="button">Practice</button>
-      <button id="tabLoadBtn" class="tab-btn" type="button">Load Question Data</button>
     </nav>
 
     <section id="dashboardView" class="view active">
@@ -81,31 +81,10 @@
         <div class="actions">
           <button id="practiceWeakBtn" class="secondary" disabled>Practice Weak Topics</button>
           <button id="reviewMistakesBtn" class="secondary" disabled>Review Mistakes</button>
-        </div>
-      </section>
-    </section>
-
-    <section id="loadView" class="view">
-      <section class="panel">
-        <h2>Load Question Data</h2>
-        <p class="hint">Paste your GPT output in the required TXT format, or upload a .txt file.</p>
-        <p class="hint">Your latest loaded MCQ set is saved locally in this browser.</p>
-        <textarea id="txtInput" placeholder="Paste QUESTION_START ... QUESTION_END blocks here"></textarea>
-        <div class="actions">
-          <button id="loadFromTextBtn">Load From Text</button>
-          <button id="loadDefaultBtn" class="secondary">Load mcq-data.txt</button>
-          <label class="file-btn" for="txtFile">Choose TXT File</label>
-          <input id="txtFile" type="file" accept=".txt" />
-          <button id="loadFromFileBtn">Load From File</button>
+          <button id="loadDefaultBtn" class="secondary">Reload mcq-data.txt</button>
           <button id="resetBtn" class="secondary">Reset Session</button>
         </div>
-        <section id="validationPanel" class="validation-panel" aria-live="polite">
-          <h3>Format Validation Preview</h3>
-          <p id="validationSummary" class="hint">Paste or upload data to validate structure before loading.</p>
-          <ul id="validationList" class="validation-list">
-            <li>No validation results yet.</li>
-          </ul>
-        </section>
+        <p class="hint">Question source: mcq-data.txt in this project. Edit the file and reload or wait for auto-sync.</p>
         <p id="loadMessage" class="status"></p>
       </section>
     </section>
@@ -124,7 +103,7 @@
 
       <section id="quizPlaceholder" class="panel placeholder-panel">
         <h2>Practice Space</h2>
-        <p class="hint">Load a question set from Load Question Data to start practicing.</p>
+        <p class="hint">Questions are loaded from mcq-data.txt. Open Practice to continue your adaptive session.</p>
       </section>
 
       <section id="quizPanel" class="panel hidden">

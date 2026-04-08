@@ -2,13 +2,13 @@
 
 This is a simple local website for MSQ practice.
 
-It now saves the latest loaded MCQ set and your quiz session in browser local storage, so you do not need to import every refresh.
+It reads questions directly from `mcq-data.txt` and saves your quiz session in browser local storage.
 
 Current release: Version 1.2
 
 ## What this project does
 
-- Loads questions from TXT format
+- Loads questions directly from `mcq-data.txt`
 - Builds adaptive rounds (up to 20 questions) based on performance
 - Asks one question at a time
 - Checks your answer and shows reasoning
@@ -16,7 +16,6 @@ Current release: Version 1.2
 - Tracks score and topic-wise performance
 - Identifies weak topics and allows weak-topic practice
 - Includes start overlay, review-mistakes mode, and end-of-round summary modal
-- Includes validation preview for TXT format issues before loading
 - Includes motivation cues (daily streak, session target, coverage ring)
 
 ## Quiz behavior
@@ -39,7 +38,6 @@ Current release: Version 1.2
 
 - **Review Mistakes**: builds a round from recent wrong/skipped/timed-out questions.
 - **Round Summary Modal**: shows answered, correct, accuracy, timed out, and weak-topic hits.
-- **Validation Preview**: shows friendly format errors like “Question 12 missing ANSWER.”
 
 ## Files
 
@@ -47,49 +45,32 @@ Current release: Version 1.2
 - `style.css` - styling
 - `app.js` - parsing + quiz logic + dashboard
 - `mcq-data.txt` - sample question data file (you can replace with your own)
-- `mcq-template.txt` - clean template for pasting your own GPT MCQs
+- `mcq-template.txt` - optional template for creating new question blocks
 
 ## How to run
 
-The app has three views:
+The app has two views:
 
 - Dashboard: progress, analytics, and weak topics
 - Practice: answer adaptive quiz rounds
-- Load Question Data: paste/upload/import MCQ data
 
-Option 1 (easiest):
-
-1. Open `index.html` in a browser.
-2. Open `mcq-data.txt`, copy all text, and paste into the text area.
-3. Click **Load From Text**.
-
-Option 2 (upload file):
-
-1. Open `index.html` in a browser.
-2. Click **Choose TXT File** and select your question file.
-3. Click **Load From File**.
-
-Option 3 (one-click project file import):
-
-1. Run the app through a local web server.
-2. Click **Load mcq-data.txt** to import the workspace file directly.
-
-Option 4 (automatic project-file updates):
+How data updates work:
 
 1. Run the app through a local web server.
 2. The app auto-checks `mcq-data.txt` every few seconds and on tab focus.
 3. If the file changed, question data is auto-synced.
+4. You can also click **Reload mcq-data.txt** from the Dashboard.
 
 ## Local save behavior
 
-- After loading questions, data is stored in browser local storage.
+- After loading from `mcq-data.txt`, data is stored in browser local storage.
 - On refresh/reopen in the same browser, the previous session is restored automatically.
 - Dashboard progress/history is stored locally and restored after browser restart.
 - **Reset Session** clears the local saved data.
 
 Note: Automatic reading of `mcq-data.txt` requires serving the app over HTTP (local server). Direct `file:///` opening may block automatic file access in browsers.
 
-## Required TXT format
+## Required TXT format (for mcq-data.txt)
 
 Each question must be wrapped with:
 

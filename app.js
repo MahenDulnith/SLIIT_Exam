@@ -27,20 +27,14 @@ const state = {
 };
 
 const refs = {
-  txtInput: document.getElementById("txtInput"),
-  txtFile: document.getElementById("txtFile"),
-  loadFromTextBtn: document.getElementById("loadFromTextBtn"),
   loadDefaultBtn: document.getElementById("loadDefaultBtn"),
-  loadFromFileBtn: document.getElementById("loadFromFileBtn"),
   resetBtn: document.getElementById("resetBtn"),
   loadMessage: document.getElementById("loadMessage"),
 
   tabDashboardBtn: document.getElementById("tabDashboardBtn"),
   tabPracticeBtn: document.getElementById("tabPracticeBtn"),
-  tabLoadBtn: document.getElementById("tabLoadBtn"),
   dashboardView: document.getElementById("dashboardView"),
   practiceView: document.getElementById("practiceView"),
-  loadView: document.getElementById("loadView"),
 
   totalQuestions: document.getElementById("totalQuestions"),
   answeredCount: document.getElementById("answeredCount"),
@@ -61,9 +55,6 @@ const refs = {
   coverageText: document.getElementById("coverageText"),
   momentumText: document.getElementById("momentumText"),
 
-  validationPanel: document.getElementById("validationPanel"),
-  validationSummary: document.getElementById("validationSummary"),
-  validationList: document.getElementById("validationList"),
   quizPlaceholder: document.getElementById("quizPlaceholder"),
   practiceStartOverlay: document.getElementById("practiceStartOverlay"),
   resumeSessionBtn: document.getElementById("resumeSessionBtn"),
@@ -357,126 +348,6 @@ function showRoundSummaryModal() {
   } else {
     modal.setAttribute("open", "open");
   }
-}
-
-function buildValidationReport(text) {
-  const normalized = String(text || "").replace(/\r\n/g, "\n");
-  if (!normalized.trim()) {
-    return {
-      total: 0,
-      errors: [],
-      warnings: [],
-      summary: "Paste or upload data to validate structure before loading."
-    };
-  }
-
-  const matches = Array.from(normalized.matchAll(/QUESTION_START([\s\S]*?)QUESTION_END/g));
-  if (!matches.length) {
-    return {
-      total: 0,
-      errors: ["No QUESTION_START ... QUESTION_END blocks detected."],
-      warnings: [],
-      summary: "Validation failed: no question blocks detected."
-    };
-  }
-
-  const errors = [];
-  const warnings = [];
-
-  matches.forEach((match, idx) => {
-    const blockNo = idx + 1;
-    const block = String(match[1] || "").trim();
-    const lines = block.split(/\n/);
-    const item = {};
-    let currentKey = null;
-
-    for (const line of lines) {
-      const fieldMatch = line.match(/^(ID|MODULE|TOPIC|SUBTOPIC|TYPE|DIFFICULTY|EXPLANATION_LEVEL|QUESTION|OPTION_[A-F]|ANSWER|REASONING):\s*(.*)$/);
-      if (fieldMatch) {
-        currentKey = fieldMatch[1].toUpperCase();
-        item[currentKey] = fieldMatch[2];
-      } else if (currentKey) {
-        item[currentKey] = `${item[currentKey]}\n${line}`;
-      }
-    }
-
-    ["ID", "MODULE", "TOPIC", "QUESTION", "ANSWER", "REASONING"].forEach((field) => {
-      if (!String(item[field] || "").trim()) {
-        errors.push(`Question ${blockNo} missing ${field}.`);
-      }
-    });
-
-    const optionKeys = ["A", "B", "C", "D", "E", "F"].filter((letter) => String(item[`OPTION_${letter}`] || "").trim());
-    if (optionKeys.length < 2) {
-      errors.push(`Question ${blockNo} must include at least OPTION_A and OPTION_B.`);
-    }
-
-    const answerTokens = String(item.ANSWER || "")
-      .split(",")
-      .map((s) => s.trim().toUpperCase())
-      .filter(Boolean);
-
-    if (!answerTokens.length) {
-      errors.push(`Question ${blockNo} has an empty ANSWER list.`);
-    } else {
-      answerTokens.forEach((token) => {
-        if (!optionKeys.includes(token)) {
-          errors.push(`Question ${blockNo} ANSWER includes ${token}, but that option is missing.`);
-        }
-      });
-    }
-
-    const type = String(item.TYPE || "").trim().toUpperCase();
-    if (type === "MCQ" && answerTokens.length > 1) {
-      warnings.push(`Question ${blockNo} is MCQ but has multiple answers.`);
-    }
-    if (type === "MSQ" && answerTokens.length < 2) {
-      warnings.push(`Question ${blockNo} is MSQ but has fewer than 2 answers.`);
-    }
-  });
-
-  const summary = errors.length
-    ? `Validation found ${errors.length} error(s) in ${matches.length} question block(s).`
-    : `Validation passed for ${matches.length} question block(s). ${warnings.length ? `${warnings.length} warning(s).` : "No warnings."}`;
-
-  return {
-    total: matches.length,
-    errors,
-    warnings,
-    summary
-  };
-}
-
-function updateValidationPreview(text) {
-  if (!refs.validationSummary || !refs.validationList) {
-    return;
-  }
-
-  const report = buildValidationReport(text);
-  refs.validationSummary.textContent = report.summary;
-  refs.validationList.innerHTML = "";
-
-  if (!report.errors.length && !report.warnings.length) {
-    const li = document.createElement("li");
-    li.className = report.total ? "validation-ok" : "";
-    li.textContent = report.total ? "All required fields are present." : "No validation results yet.";
-    refs.validationList.appendChild(li);
-    return;
-  }
-
-  report.errors.slice(0, 8).forEach((msg) => {
-    const li = document.createElement("li");
-    li.className = "validation-error";
-    li.textContent = msg;
-    refs.validationList.appendChild(li);
-  });
-
-  report.warnings.slice(0, 6).forEach((msg) => {
-    const li = document.createElement("li");
-    li.className = "validation-warning";
-    li.textContent = msg;
-    refs.validationList.appendChild(li);
-  });
 }
 
 function getSeenCount(stat) {
@@ -875,14 +746,11 @@ function startQuestionTimer() {
 function setActiveView(viewName, persist = true) {
   const dashboardActive = viewName === "dashboard";
   const practiceActive = viewName === "practice";
-  const loadActive = viewName === "load";
 
   refs.dashboardView.classList.toggle("active", dashboardActive);
   refs.practiceView.classList.toggle("active", practiceActive);
-  refs.loadView.classList.toggle("active", loadActive);
   refs.tabDashboardBtn.classList.toggle("active", dashboardActive);
   refs.tabPracticeBtn.classList.toggle("active", practiceActive);
-  refs.tabLoadBtn.classList.toggle("active", loadActive);
 
   if (!practiceActive) {
     clearQuestionTimer();
@@ -905,8 +773,10 @@ function showPracticeState(hasQuestions) {
   if (!hasQuestions) {
     refs.practiceStartOverlay.classList.add("hidden");
   }
+
+  const overlayVisible = !refs.practiceStartOverlay.classList.contains("hidden");
   refs.quizPlaceholder.classList.toggle("hidden", hasQuestions);
-  refs.quizPanel.classList.toggle("hidden", !hasQuestions);
+  refs.quizPanel.classList.toggle("hidden", !hasQuestions || overlayVisible);
 }
 
 function parseQuestionText(text) {
@@ -1021,11 +891,6 @@ function persistSession() {
 }
 
 function restoreSessionFromStorage() {
-  const storedText = readStorageValue(STORAGE_KEYS.questionText);
-  if (storedText) {
-    refs.txtInput.value = storedText;
-  }
-
   const rawSession = readStorageValue(STORAGE_KEYS.session);
   if (!rawSession) {
     return false;
@@ -1064,6 +929,7 @@ function restoreSessionFromStorage() {
     removeStorageValue(STORAGE_KEYS.session);
   }
 
+  const storedText = readStorageValue(STORAGE_KEYS.questionText);
   if (!storedText) {
     return false;
   }
@@ -1446,7 +1312,6 @@ function loadQuestionSet(questions, sourceText, options = {}) {
     : {};
 
   if (typeof sourceText === "string") {
-    refs.txtInput.value = sourceText;
     saveStorageValue(STORAGE_KEYS.questionText, sourceText);
   }
 
@@ -1476,8 +1341,6 @@ function resetSession() {
 
   showPracticeState(false);
   refs.loadMessage.textContent = "Session reset. Local saved data was cleared.";
-  refs.txtInput.value = "";
-  refs.txtFile.value = "";
 
   removeStorageValue(STORAGE_KEYS.questionText);
   removeStorageValue(STORAGE_KEYS.session);
@@ -1550,52 +1413,6 @@ function practiceMistakes() {
   persistSession();
 }
 
-async function loadFromText() {
-  try {
-    const data = refs.txtInput.value.trim();
-    if (!data) {
-      refs.loadMessage.textContent = "Paste your TXT data first.";
-      updateValidationPreview(data);
-      return;
-    }
-
-    const report = buildValidationReport(data);
-    updateValidationPreview(data);
-    if (report.errors.length) {
-      refs.loadMessage.textContent = `Load blocked: fix ${report.errors.length} validation issue(s) first.`;
-      return;
-    }
-
-    const questions = parseQuestionText(data);
-    loadQuestionSet(questions, data, { preserveHistory: true });
-  } catch (err) {
-    refs.loadMessage.textContent = `Load failed: ${err.message}`;
-  }
-}
-
-async function loadFromFile() {
-  try {
-    const file = refs.txtFile.files[0];
-    if (!file) {
-      refs.loadMessage.textContent = "Choose a .txt file first.";
-      return;
-    }
-    const text = await file.text();
-
-    const report = buildValidationReport(text);
-    updateValidationPreview(text);
-    if (report.errors.length) {
-      refs.loadMessage.textContent = `File load blocked: fix ${report.errors.length} validation issue(s).`;
-      return;
-    }
-
-    const questions = parseQuestionText(text);
-    loadQuestionSet(questions, text, { preserveHistory: true });
-  } catch (err) {
-    refs.loadMessage.textContent = `File load failed: ${err.message}`;
-  }
-}
-
 async function loadFromProjectFile(showFailureMessage = true, options = {}) {
   try {
     const response = await fetch("mcq-data.txt", { cache: "no-store" });
@@ -1604,7 +1421,6 @@ async function loadFromProjectFile(showFailureMessage = true, options = {}) {
     }
 
     const text = await response.text();
-  updateValidationPreview(text);
     const questions = parseQuestionText(text);
     const mergedOptions = {
       preserveHistory: true,
@@ -1616,7 +1432,7 @@ async function loadFromProjectFile(showFailureMessage = true, options = {}) {
     if (showFailureMessage) {
       refs.loadMessage.textContent = [
         "Could not auto-load mcq-data.txt.",
-        "If you opened index.html directly, use Choose TXT File or run a local server."
+        "If you opened index.html directly, run a local server to allow file access."
       ].join(" ");
     }
   }
@@ -1647,25 +1463,29 @@ async function autoSyncProjectFile() {
 
 function openPracticeView() {
   if (!getScopedQuestions().length) {
-    refs.loadMessage.textContent = state.selectedSubject === "ALL"
-      ? "Load question data in the Load Question Data tab before entering Practice."
-      : `No questions found for subject ${state.selectedSubject}.`;
-    setActiveView(state.selectedSubject === "ALL" ? "load" : "dashboard");
+    refs.loadMessage.textContent = "No questions found from mcq-data.txt for the selected subject.";
+    setActiveView("dashboard");
     return;
   }
+
   if (!state.queue.length) {
     rebuildScopedQueue(false);
   }
+
   setActiveView("practice");
+
+  // If there is an active question in the queue, resume immediately.
+  if (getCurrentQuestion()) {
+    hidePracticeOverlay();
+    renderQuestion();
+    return;
+  }
+
   showPracticeOverlay();
 }
 
 function openDashboardView() {
   setActiveView("dashboard");
-}
-
-function openLoadView() {
-  setActiveView("load");
 }
 
 function resumePracticeSession() {
@@ -1742,9 +1562,7 @@ function onGlobalSpacebar(event) {
   }
 }
 
-refs.loadFromTextBtn.addEventListener("click", loadFromText);
 refs.loadDefaultBtn.addEventListener("click", () => loadFromProjectFile(true));
-refs.loadFromFileBtn.addEventListener("click", loadFromFile);
 refs.submitBtn.addEventListener("click", onSubmitAnswer);
 refs.skipBtn.addEventListener("click", onSkipQuestion);
 refs.nextBtn.addEventListener("click", onNextQuestion);
@@ -1754,7 +1572,6 @@ refs.practiceWeakBtn.addEventListener("click", practiceWeakTopics);
 refs.reviewMistakesBtn.addEventListener("click", practiceMistakes);
 refs.tabDashboardBtn.addEventListener("click", openDashboardView);
 refs.tabPracticeBtn.addEventListener("click", openPracticeView);
-refs.tabLoadBtn.addEventListener("click", openLoadView);
 refs.subjectSelector.addEventListener("change", onSubjectSelectorChange);
 refs.resumeSessionBtn.addEventListener("click", resumePracticeSession);
 refs.startFreshRoundBtn.addEventListener("click", startFreshRoundFromOverlay);
@@ -1773,10 +1590,6 @@ refs.summaryNewRoundBtn.addEventListener("click", () => {
   startNextAdaptiveRound();
 });
 refs.summaryCloseBtn.addEventListener("click", closeRoundSummaryModal);
-refs.txtInput.addEventListener("input", () => {
-  saveStorageValue(STORAGE_KEYS.questionText, refs.txtInput.value);
-  updateValidationPreview(refs.txtInput.value);
-});
 document.addEventListener("keydown", onGlobalSpacebar);
 
 document.addEventListener("visibilitychange", () => {
@@ -1793,16 +1606,16 @@ updateDashboard();
 showPracticeState(false);
 updateRoundProgressUI();
 updateTimerUI();
-updateValidationPreview(refs.txtInput.value);
 
 const restored = restoreSessionFromStorage();
 if (restored) {
   refreshSubjectSelector();
   const savedView = readStorageValue(STORAGE_KEYS.activeView);
-  const mappedView = savedView === "home" ? "dashboard" : savedView;
-  setActiveView(mappedView === "practice" || mappedView === "load" ? mappedView : "dashboard", false);
+  const mappedView = savedView === "practice" ? "practice" : "dashboard";
+  setActiveView(mappedView, false);
   if (mappedView === "practice" && state.queue.length) {
-    showPracticeOverlay();
+    hidePracticeOverlay();
+    renderQuestion();
   }
   loadFromProjectFile(false, { preserveHistory: true, keepView: true });
 } else {
