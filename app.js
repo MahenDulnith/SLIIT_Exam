@@ -696,11 +696,11 @@ function getScopedQuestions() {
 }
 
 function getScopedHistory() {
-  if (state.selectedSubject === "ALL") {
-    return state.history;
-  }
+  const bySubject = state.selectedSubject === "ALL"
+    ? state.history
+    : state.history.filter((h) => h.module === state.selectedSubject);
 
-  return state.history.filter((h) => h.module === state.selectedSubject);
+  return bySubject.filter((h) => !isQuestionBlocked(h.id));
 }
 
 function refreshSubjectSelector() {
