@@ -3,7 +3,8 @@ const STORAGE_KEYS = {
   session: "sliit.quiz.session",
   history: "sliit.quiz.history",
   activeView: "sliit.quiz.activeView",
-  selectedSubject: "sliit.quiz.selectedSubject"
+  selectedSubject: "sliit.quiz.selectedSubject",
+  blockedQuestions: "sliit.quiz.blockedQuestions"
 };
 
 const AUTO_SYNC_INTERVAL_MS = 12000;
@@ -23,7 +24,8 @@ const state = {
   timeLeft: QUESTION_TIME_LIMIT_SECONDS,
   roundLog: [],
   announcedTimes: new Set(),
-  sessionStartedAt: new Date().toISOString()
+  sessionStartedAt: new Date().toISOString(),
+  blockedQuestions: {}
 };
 
 const refs = {
@@ -48,8 +50,11 @@ const refs = {
   subjectScopeText: document.getElementById("subjectScopeText"),
   topicBreakdownBody: document.getElementById("topicBreakdownBody"),
   weakTopicsList: document.getElementById("weakTopicsList"),
+  blockedQuestionsList: document.getElementById("blockedQuestionsList"),
   practiceWeakBtn: document.getElementById("practiceWeakBtn"),
   reviewMistakesBtn: document.getElementById("reviewMistakesBtn"),
+  downloadBlockedBtn: document.getElementById("downloadBlockedBtn"),
+  clearBlockedBtn: document.getElementById("clearBlockedBtn"),
   dailyStreakCount: document.getElementById("dailyStreakCount"),
   sessionTargetText: document.getElementById("sessionTargetText"),
   coverageText: document.getElementById("coverageText"),
@@ -78,6 +83,7 @@ const refs = {
   optionsContainer: document.getElementById("optionsContainer"),
   submitBtn: document.getElementById("submitBtn"),
   skipBtn: document.getElementById("skipBtn"),
+  blockQuestionBtn: document.getElementById("blockQuestionBtn"),
   nextBtn: document.getElementById("nextBtn"),
   feedback: document.getElementById("feedback"),
 
@@ -117,6 +123,120 @@ function removeStorageValue(key) {
   } catch (err) {
     // Ignore storage failures.
   }
+}
+
+function loadBlockedQuestionsFromStorage() {
+  const raw = readStorageValue(STORAGE_KEYS.blockedQuestions);
+  if (!raw) {
+    state.blockedQuestions = {};
+    return;
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    state.blockedQuestions = parsed && typeof parsed === "object" ? parsed : {};
+  } catch (err) {
+    state.blockedQuestions = {};
+    removeStorageValue(STORAGE_KEYS.blockedQuestions);
+  }
+}
+
+function persistBlockedQuestions() {
+  saveStorageValue(STORAGE_KEYS.blockedQuestions, JSON.stringify(state.blockedQuestions));
+}
+
+function isQuestionBlocked(questionId) {
+  return Boolean(state.blockedQuestions && state.blockedQuestions[questionId]);
+}
+
+function renderBlockedQuestionsList() {
+  const list = refs.blockedQuestionsList;
+  if (!list) {
+    return;
+  }
+
+  const entries = Object.values(state.blockedQuestions || {})
+    .sort((a, b) => String(b.blockedAt || "").localeCompare(String(a.blockedAt || "")));
+
+  list.innerHTML = "";
+  if (!entries.length) {
+    const li = document.createElement("li");
+    li.textContent = "No blocked questions yet.";
+    list.appendChild(li);
+    refs.downloadBlockedBtn.disabled = true;
+    refs.clearBlockedBtn.disabled = true;
+    return;
+  }
+
+  entries.forEach((entry) => {
+    const li = document.createElement("li");
+    const dateText = entry.blockedAt ? new Date(entry.blockedAt).toLocaleDateString() : "-";
+    li.innerHTML = [
+      `<strong>${escapeHtml(entry.id || "")}</strong>`,
+      ` - ${escapeHtml(entry.module || "")}`,
+      ` | ${escapeHtml(entry.topic || "")}`,
+      ` | ${escapeHtml(entry.preview || "")}`,
+      ` <em>(blocked ${escapeHtml(dateText)})</em>`,
+      ` <button class="secondary" type="button" data-unblock-id="${escapeHtml(entry.id || "")}">Unblock</button>`
+    ].join("");
+    list.appendChild(li);
+  });
+
+  refs.downloadBlockedBtn.disabled = false;
+  refs.clearBlockedBtn.disabled = false;
+}
+
+function exportBlockedQuestions() {
+  const entries = Object.values(state.blockedQuestions || {});
+  if (!entries.length) {
+    refs.loadMessage.textContent = "No blocked questions to export.";
+    return;
+  }
+
+  const lines = [
+    "# Blocked Questions",
+    "# id | module | topic | blockedAt | preview"
+  ];
+
+  entries
+    .sort((a, b) => String(a.id || "").localeCompare(String(b.id || "")))
+    .forEach((entry) => {
+      lines.push(`${entry.id || ""} | ${entry.module || ""} | ${entry.topic || ""} | ${entry.blockedAt || ""} | ${entry.preview || ""}`);
+    });
+
+  const blob = new Blob([lines.join("\n")], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "blocked-questions.txt";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+
+  refs.loadMessage.textContent = `Exported ${entries.length} blocked questions.`;
+}
+
+function clearBlockedQuestions() {
+  state.blockedQuestions = {};
+  persistBlockedQuestions();
+  renderBlockedQuestionsList();
+  refs.loadMessage.textContent = "Blocked question list cleared.";
+  rebuildScopedQueue(false);
+  updateDashboard();
+}
+
+function unblockQuestionById(questionId) {
+  if (!questionId || !state.blockedQuestions[questionId]) {
+    return;
+  }
+
+  delete state.blockedQuestions[questionId];
+  persistBlockedQuestions();
+  renderBlockedQuestionsList();
+  refs.loadMessage.textContent = `Unblocked ${questionId}.`;
+  rebuildScopedQueue(false);
+  updateDashboard();
 }
 
 function normalizeQuestionText(text) {
@@ -568,11 +688,11 @@ function startNextAdaptiveRound(message = "New adaptive round started.") {
 }
 
 function getScopedQuestions() {
-  if (state.selectedSubject === "ALL") {
-    return state.allQuestions;
-  }
+  const source = state.selectedSubject === "ALL"
+    ? state.allQuestions
+    : state.allQuestions.filter((q) => q.module === state.selectedSubject);
 
-  return state.allQuestions.filter((q) => q.module === state.selectedSubject);
+  return source.filter((q) => !isQuestionBlocked(q.id));
 }
 
 function getScopedHistory() {
@@ -986,10 +1106,12 @@ function renderQuestion() {
     refs.optionsContainer.innerHTML = "";
     refs.submitBtn.classList.add("hidden");
     refs.skipBtn.classList.add("hidden");
+    refs.blockQuestionBtn.classList.add("hidden");
     refs.nextBtn.classList.remove("hidden");
     refs.nextBtn.textContent = "Start Next Round";
     refs.submitBtn.disabled = true;
     refs.skipBtn.disabled = true;
+    refs.blockQuestionBtn.disabled = true;
     refs.nextBtn.disabled = false;
     refs.quizHint.textContent = "Press Space to start the next adaptive round.";
     setFeedback("", "Round completed. Start the next adaptive round to continue.");
@@ -1040,14 +1162,47 @@ function renderQuestion() {
   const isMsq = q.type === "MSQ";
   refs.submitBtn.classList.toggle("hidden", !isMsq);
   refs.skipBtn.classList.remove("hidden");
+  refs.blockQuestionBtn.classList.remove("hidden");
   refs.nextBtn.classList.add("hidden");
   refs.nextBtn.textContent = "Next Question";
   refs.submitBtn.disabled = !isMsq;
   refs.skipBtn.disabled = false;
+  refs.blockQuestionBtn.disabled = false;
   refs.nextBtn.disabled = true;
   refs.feedback.className = "feedback";
   refs.feedback.innerHTML = "";
   startQuestionTimer();
+}
+
+function onBlockCurrentQuestion() {
+  const q = getCurrentQuestion();
+  if (!q) {
+    return;
+  }
+
+  state.blockedQuestions[q.id] = {
+    id: q.id,
+    module: q.module,
+    topic: q.topic,
+    preview: String(q.question || "").replace(/\s+/g, " ").slice(0, 90),
+    blockedAt: new Date().toISOString()
+  };
+  persistBlockedQuestions();
+  renderBlockedQuestionsList();
+
+  // Remove blocked questions from the current queue immediately.
+  const currentId = q.id;
+  state.queue = state.queue.filter((item) => !isQuestionBlocked(item.id));
+
+  // Keep index valid. If current question was removed, same index now points to next question.
+  if (state.index >= state.queue.length) {
+    state.index = Math.max(0, state.queue.length - 1);
+  }
+
+  refs.loadMessage.textContent = `Blocked ${currentId}. It will not appear in future rounds.`;
+  updateDashboard();
+  renderQuestion();
+  persistSession();
 }
 
 function onOptionSelectionChange(event) {
@@ -1285,6 +1440,7 @@ function updateDashboard() {
   refs.reviewMistakesBtn.disabled = !hasMistakes;
   refs.overlayReviewBtn.disabled = !hasMistakes;
 
+  renderBlockedQuestionsList();
   updatePracticeHud();
 }
 
@@ -1345,6 +1501,8 @@ function resetSession() {
   removeStorageValue(STORAGE_KEYS.questionText);
   removeStorageValue(STORAGE_KEYS.session);
   removeStorageValue(STORAGE_KEYS.history);
+
+  // Keep blocked list separate from session reset by design.
 
   updateDashboard();
   updateRoundProgressUI();
@@ -1565,9 +1723,25 @@ function onGlobalSpacebar(event) {
 refs.loadDefaultBtn.addEventListener("click", () => loadFromProjectFile(true));
 refs.submitBtn.addEventListener("click", onSubmitAnswer);
 refs.skipBtn.addEventListener("click", onSkipQuestion);
+refs.blockQuestionBtn.addEventListener("click", onBlockCurrentQuestion);
 refs.nextBtn.addEventListener("click", onNextQuestion);
 refs.optionsContainer.addEventListener("change", onOptionSelectionChange);
 refs.resetBtn.addEventListener("click", resetSession);
+refs.downloadBlockedBtn.addEventListener("click", exportBlockedQuestions);
+refs.clearBlockedBtn.addEventListener("click", clearBlockedQuestions);
+refs.blockedQuestionsList.addEventListener("click", (event) => {
+  const target = event.target;
+  if (!(target instanceof HTMLElement)) {
+    return;
+  }
+
+  const unblockId = target.getAttribute("data-unblock-id");
+  if (!unblockId) {
+    return;
+  }
+
+  unblockQuestionById(unblockId);
+});
 refs.practiceWeakBtn.addEventListener("click", practiceWeakTopics);
 refs.reviewMistakesBtn.addEventListener("click", practiceMistakes);
 refs.tabDashboardBtn.addEventListener("click", openDashboardView);
@@ -1600,8 +1774,10 @@ document.addEventListener("visibilitychange", () => {
 
 window.addEventListener("beforeunload", () => {
   persistSession();
+  persistBlockedQuestions();
 });
 
+loadBlockedQuestionsFromStorage();
 updateDashboard();
 showPracticeState(false);
 updateRoundProgressUI();

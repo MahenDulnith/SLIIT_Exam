@@ -221,6 +221,10 @@ button.secondary {
   background: linear-gradient(135deg, #4f5f75, #394556);
 }
 
+button.danger {
+  background: linear-gradient(135deg, #b42318, #7f1d1d);
+}
+
 .file-btn {
   display: inline-flex;
   align-items: center;
@@ -332,6 +336,30 @@ button.secondary {
 .weak-topics ul {
   margin: 8px 0 0;
   padding-left: 20px;
+}
+
+.blocked-topics {
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid #e0e6ef;
+  border-radius: 12px;
+  background: #fbfdff;
+}
+
+.blocked-list {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.blocked-list li {
+  margin-bottom: 8px;
+}
+
+.blocked-list button {
+  margin-left: 8px;
+  padding: 4px 8px;
+  font-size: 0.78rem;
+  border-radius: 8px;
 }
 
 .details-panel {

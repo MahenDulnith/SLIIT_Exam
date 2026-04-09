@@ -15,6 +15,7 @@ Current release: Version 1.2
 - Renders multi-line Java/code snippets in the question area
 - Tracks score and topic-wise performance
 - Identifies weak topics and allows weak-topic practice
+- Supports blocking invalid or unwanted questions directly from Practice
 - Includes start overlay, review-mistakes mode, and end-of-round summary modal
 - Includes motivation cues (daily streak, session target, coverage ring)
 
@@ -29,6 +30,7 @@ Current release: Version 1.2
 - Dashboard includes detailed counts (wrong, skipped, timed out, unseen) and a topic breakdown table.
 - Dashboard subject selector scopes analytics and upcoming rounds to one subject or all subjects.
 - Practice opens with a start overlay: Resume Session, Start New Round, Practice Weak Topics, Review Mistakes.
+- Practice includes a **Block Question** button to exclude bad tutorial/ambiguous questions.
 - Feedback is two-step: quick result first, expandable explanation next.
 - Practice HUD is sticky and shows subject, current streak, target progress, and completion ring.
 - On mobile, action buttons stay reachable using a sticky bottom action bar.
@@ -38,6 +40,7 @@ Current release: Version 1.2
 
 - **Review Mistakes**: builds a round from recent wrong/skipped/timed-out questions.
 - **Round Summary Modal**: shows answered, correct, accuracy, timed out, and weak-topic hits.
+- **Blocked Questions List**: shown on Dashboard with unblock, export, and clear actions.
 
 ## Files
 
@@ -66,6 +69,8 @@ How data updates work:
 - After loading from `mcq-data.txt`, data is stored in browser local storage.
 - On refresh/reopen in the same browser, the previous session is restored automatically.
 - Dashboard progress/history is stored locally and restored after browser restart.
+- Blocked questions are stored in a separate local key and are preserved across session resets.
+- You can download blocked questions as `blocked-questions.txt` for manual review and cleanup.
 - **Reset Session** clears the local saved data.
 
 Note: Automatic reading of `mcq-data.txt` requires serving the app over HTTP (local server). Direct `file:///` opening may block automatic file access in browsers.

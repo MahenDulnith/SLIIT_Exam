@@ -78,6 +78,17 @@
             <li>No data yet</li>
           </ul>
         </div>
+        <div class="blocked-topics">
+          <h3>Blocked Questions</h3>
+          <p class="hint">Blocked questions are stored separately in your browser and excluded from future rounds.</p>
+          <ul id="blockedQuestionsList" class="blocked-list">
+            <li>No blocked questions yet.</li>
+          </ul>
+          <div class="actions">
+            <button id="downloadBlockedBtn" class="secondary">Download Block List</button>
+            <button id="clearBlockedBtn" class="secondary">Clear Block List</button>
+          </div>
+        </div>
         <div class="actions">
           <button id="practiceWeakBtn" class="secondary" disabled>Practice Weak Topics</button>
           <button id="reviewMistakesBtn" class="secondary" disabled>Review Mistakes</button>
@@ -141,6 +152,7 @@
         <div class="actions practice-actions">
           <button id="submitBtn">Submit Answer</button>
           <button id="skipBtn" class="secondary">Skip Question</button>
+          <button id="blockQuestionBtn" class="secondary danger">Block Question</button>
           <button id="nextBtn" class="secondary hidden" disabled>Next Question</button>
         </div>
         <div id="feedback" class="feedback" aria-live="polite"></div>
