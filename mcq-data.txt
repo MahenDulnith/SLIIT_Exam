@@ -6605,3 +6605,2659 @@ OPTION_D: Complete tree
 ANSWER: C
 REASONING: Decreasing order → left chain.
 QUESTION_END
+
+QUESTION_START
+ID: IS4-001
+MODULE: IS
+TOPIC: Classification
+SUBTOPIC: Industry
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Billing system is an example of:
+OPTION_A: Unique system
+OPTION_B: General system
+OPTION_C: Strategic system
+OPTION_D: DSS
+ANSWER: B
+REASONING: Billing is common across industries. :contentReference[oaicite:0]{index=0}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-002
+MODULE: IS
+TOPIC: Classification
+SUBTOPIC: Industry
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Hospital management system is:
+OPTION_A: General system
+OPTION_B: Unique system
+OPTION_C: TPS
+OPTION_D: DSS
+ANSWER: B
+REASONING: Specific to domain.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-003
+MODULE: IS
+TOPIC: Classification
+SUBTOPIC: People Impact
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Individual activity system affects:
+OPTION_A: Whole company
+OPTION_B: One person
+OPTION_C: Multiple companies
+OPTION_D: Government only
+ANSWER: B
+REASONING: Individual level. (Image Page 6)
+QUESTION_END
+
+QUESTION_START
+ID: IS4-004
+MODULE: IS
+TOPIC: Classification
+SUBTOPIC: People Impact
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Inter-organizational system connects:
+OPTION_A: Individuals
+OPTION_B: Departments
+OPTION_C: Multiple organizations
+OPTION_D: One team
+ANSWER: C
+REASONING: Between organizations. (Image Page 6)
+QUESTION_END
+
+QUESTION_START
+ID: IS4-005
+MODULE: IS
+TOPIC: Classification
+SUBTOPIC: IS Levels
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Workgroup IS is used by:
+OPTION_A: One person
+OPTION_B: Group/team
+OPTION_C: Whole company
+OPTION_D: External organizations
+ANSWER: B
+REASONING: Team-level system. (Image Page 7)
+QUESTION_END
+
+QUESTION_START
+ID: IS4-006
+MODULE: IS
+TOPIC: Levels
+SUBTOPIC: Strategic
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Strategic level focuses on:
+OPTION_A: Daily operations
+OPTION_B: Long-term decisions
+OPTION_C: Data entry
+OPTION_D: Transactions
+ANSWER: B
+REASONING: Vision & mission. :contentReference[oaicite:1]{index=1}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-007
+MODULE: IS
+TOPIC: Levels
+SUBTOPIC: Operational
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Operational level involves:
+OPTION_A: Long-term planning
+OPTION_B: Daily tasks
+OPTION_C: Strategy
+OPTION_D: Forecasting
+ANSWER: B
+REASONING: Day-to-day operations.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-008
+MODULE: IS
+TOPIC: TPS
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: TPS handles:
+OPTION_A: Strategic decisions
+OPTION_B: Routine transactions
+OPTION_C: Forecasting
+OPTION_D: AI analysis
+ANSWER: B
+REASONING: TPS processes transactions. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-009
+MODULE: IS
+TOPIC: TPS
+SUBTOPIC: Examples
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: POS system is:
+OPTION_A: MIS
+OPTION_B: TPS
+OPTION_C: DSS
+OPTION_D: ESS
+ANSWER: B
+REASONING: Transaction processing.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-010
+MODULE: IS
+TOPIC: TPS
+SUBTOPIC: Cycle
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Correct TPS step:
+OPTION_A: Data deletion
+OPTION_B: Data editing
+OPTION_C: Data ignoring
+OPTION_D: Data skipping
+ANSWER: B
+REASONING: Validity checking step. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-011
+MODULE: IS
+TOPIC: MIS
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: MIS supports:
+OPTION_A: Unstructured decisions
+OPTION_B: Routine decisions
+OPTION_C: Random decisions
+OPTION_D: AI decisions
+ANSWER: B
+REASONING: Structured problems. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-012
+MODULE: IS
+TOPIC: MIS
+SUBTOPIC: Reports
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Monthly report is:
+OPTION_A: Ad-hoc
+OPTION_B: Scheduled
+OPTION_C: Real-time
+OPTION_D: Random
+ANSWER: B
+REASONING: Regular interval report.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-013
+MODULE: IS
+TOPIC: MIS
+SUBTOPIC: Reports
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: One-time report is:
+OPTION_A: Scheduled
+OPTION_B: Ad-hoc
+OPTION_C: Real-time
+OPTION_D: TPS
+ANSWER: B
+REASONING: Created for specific need.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-014
+MODULE: IS
+TOPIC: DSS
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: DSS supports:
+OPTION_A: Routine work
+OPTION_B: Semi-structured decisions
+OPTION_C: Data entry
+OPTION_D: Printing
+ANSWER: B
+REASONING: Analytical decision-making. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-015
+MODULE: IS
+TOPIC: DSS
+SUBTOPIC: Analysis
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: What-if analysis belongs to:
+OPTION_A: TPS
+OPTION_B: MIS
+OPTION_C: DSS
+OPTION_D: ESS
+ANSWER: C
+REASONING: DSS performs analysis.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-016
+MODULE: IS
+TOPIC: ESS
+SUBTOPIC: Users
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: ESS is used by:
+OPTION_A: Workers
+OPTION_B: Managers
+OPTION_C: Executives
+OPTION_D: Customers
+ANSWER: C
+REASONING: Top-level executives. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-017
+MODULE: IS
+TOPIC: ERP
+SUBTOPIC: Concept
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: ERP ensures:
+OPTION_A: Separate data
+OPTION_B: Shared data
+OPTION_C: Manual processing
+OPTION_D: No integration
+ANSWER: B
+REASONING: Integrated database.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-018
+MODULE: IS
+TOPIC: CRM
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: CRM focuses on:
+OPTION_A: Inventory
+OPTION_B: Customers
+OPTION_C: Production
+OPTION_D: Hardware
+ANSWER: B
+REASONING: Customer relationships.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-019
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Process Flow
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Order → Payment → Packed → Delivered is:
+OPTION_A: Algorithm
+OPTION_B: Business process
+OPTION_C: Data structure
+OPTION_D: MIS report
+ANSWER: B
+REASONING: Process flow diagram. (Tutorial Image)
+QUESTION_END
+
+QUESTION_START
+ID: IS4-020
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: System Type
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Sales table (monthly report) is generated by:
+OPTION_A: TPS
+OPTION_B: MIS
+OPTION_C: DSS
+OPTION_D: ESS
+ANSWER: B
+REASONING: Summary report → MIS.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-021
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Management Level
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Monthly sales report used by:
+OPTION_A: Operational level
+OPTION_B: Tactical level
+OPTION_C: Strategic level
+OPTION_D: External users
+ANSWER: B
+REASONING: Middle management.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-022
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case Study
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: POS + Inventory system enables:
+OPTION_A: Manual stock
+OPTION_B: Automatic stock update
+OPTION_C: Guessing
+OPTION_D: Paper records
+ANSWER: B
+REASONING: Automated updates. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-023
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: DSS
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: DSS helps to:
+OPTION_A: Print bills
+OPTION_B: Predict trends
+OPTION_C: Store data only
+OPTION_D: Enter data
+ANSWER: B
+REASONING: Analytical predictions.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-024
+MODULE: IS
+TOPIC: TPS
+SUBTOPIC: Processing Cycle
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Correct order of TPS cycle is:
+OPTION_A: Storage → Collection → Editing → Output
+OPTION_B: Collection → Editing → Correction → Manipulation → Storage → Output
+OPTION_C: Editing → Collection → Storage → Output
+OPTION_D: Manipulation → Storage → Collection
+ANSWER: B
+REASONING: TPS follows full processing sequence from input to output. :contentReference[oaicite:1]{index=1}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-025
+MODULE: IS
+TOPIC: MIS
+SUBTOPIC: Reports
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Real-time report is used for:
+OPTION_A: Monthly analysis
+OPTION_B: One-time questions
+OPTION_C: Monitoring live changes
+OPTION_D: Data entry
+ANSWER: C
+REASONING: Real-time reports track live data. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-026
+MODULE: IS
+TOPIC: DSS
+SUBTOPIC: Analysis
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: DSS uses what-if analysis to:
+OPTION_A: Print reports
+OPTION_B: Test different scenarios
+OPTION_C: Store data
+OPTION_D: Delete data
+ANSWER: B
+REASONING: What-if evaluates impact of variable changes. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-027
+MODULE: IS
+TOPIC: DSS
+SUBTOPIC: Model
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Optimization model in DSS is used to:
+OPTION_A: Store data
+OPTION_B: Find best solution under constraints
+OPTION_C: Print reports
+OPTION_D: Delete records
+ANSWER: B
+REASONING: Optimization finds best decision outcome.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-028
+MODULE: IS
+TOPIC: DSS
+SUBTOPIC: OLAP
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: OLAP is used for:
+OPTION_A: Data entry
+OPTION_B: Multidimensional data analysis
+OPTION_C: Printing reports
+OPTION_D: Storing data
+ANSWER: B
+REASONING: OLAP analyzes data across dimensions.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-029
+MODULE: IS
+TOPIC: ESS
+SUBTOPIC: Data Sources
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: ESS uses data from:
+OPTION_A: Internal systems only
+OPTION_B: External sources only
+OPTION_C: Both internal and external sources
+OPTION_D: Manual records
+ANSWER: C
+REASONING: ESS combines multiple data sources. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-030
+MODULE: IS
+TOPIC: Levels
+SUBTOPIC: System Mapping
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Correct mapping is:
+OPTION_A: Strategic → TPS
+OPTION_B: Operational → ESS
+OPTION_C: Tactical → MIS/DSS
+OPTION_D: Operational → ESS
+ANSWER: C
+REASONING: MIS and DSS support middle-level decisions.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-031
+MODULE: IS
+TOPIC: Levels
+SUBTOPIC: System Mapping
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Which system supports operational level?
+OPTION_A: ESS
+OPTION_B: MIS
+OPTION_C: TPS
+OPTION_D: DSS
+ANSWER: C
+REASONING: TPS handles daily operations.
+QUESTION_END
+
+QUESTION_START
+ID: IS4-032
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case Study
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Inventory DSS helps to:
+OPTION_A: Print receipts
+OPTION_B: Predict demand and trends
+OPTION_C: Enter data manually
+OPTION_D: Store files
+ANSWER: B
+REASONING: DSS supports forecasting decisions. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: IS4-033
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case Study
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Data-driven decision making means:
+OPTION_A: Guessing outcomes
+OPTION_B: Using reports to make decisions
+OPTION_C: Ignoring data
+OPTION_D: Manual processing
+ANSWER: B
+REASONING: Decisions based on data insights. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: IS1-001
+MODULE: IS
+TOPIC: System
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: A system is:
+OPTION_A: Random elements
+OPTION_B: Components working together to achieve a goal
+OPTION_C: Only data
+OPTION_D: Only people
+ANSWER: B
+REASONING: System = components + goal. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: IS1-002
+MODULE: IS
+TOPIC: System
+SUBTOPIC: Flow
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Correct system flow:
+OPTION_A: Output → Input → Process
+OPTION_B: Input → Process → Output
+OPTION_C: Process → Input → Output
+OPTION_D: Input → Output → Process
+ANSWER: B
+REASONING: Standard flow. (Page 9 image)
+QUESTION_END
+
+QUESTION_START
+ID: IS1-003
+MODULE: IS
+TOPIC: System
+SUBTOPIC: Goals
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: A system may:
+OPTION_A: Have no goal
+OPTION_B: Have one or multiple goals
+OPTION_C: Only one goal
+OPTION_D: Only output
+ANSWER: B
+REASONING: Systems can have multiple goals.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-004
+MODULE: IS
+TOPIC: Subsystem
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: A subsystem is:
+OPTION_A: Independent system only
+OPTION_B: Part of a system
+OPTION_C: External system
+OPTION_D: Output
+ANSWER: B
+REASONING: Subsystem = component of system. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: IS1-005
+MODULE: IS
+TOPIC: Subsystem
+SUBTOPIC: Behavior
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Subsystems:
+OPTION_A: Do not interact
+OPTION_B: Work independently only
+OPTION_C: Transfer output to other subsystems
+OPTION_D: Only store data
+ANSWER: C
+REASONING: Subsystems interact.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-006
+MODULE: IS
+TOPIC: Information System
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Information system is:
+OPTION_A: Only software
+OPTION_B: Components that provide information
+OPTION_C: Only hardware
+OPTION_D: Only data
+ANSWER: B
+REASONING: Collection of components. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: IS1-007
+MODULE: IS
+TOPIC: Information System
+SUBTOPIC: Functions
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IS performs:
+OPTION_A: Only input
+OPTION_B: Only output
+OPTION_C: Collect, process, store, and distribute information
+OPTION_D: Only storage
+ANSWER: C
+REASONING: Full cycle.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-008
+MODULE: IS
+TOPIC: Information System
+SUBTOPIC: Computerized
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IS must be computerized:
+OPTION_A: Always true
+OPTION_B: Always false
+OPTION_C: Not necessarily
+OPTION_D: Only digital
+ANSWER: C
+REASONING: IS can be manual.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-009
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Which is NOT IS component?
+OPTION_A: Hardware
+OPTION_B: Software
+OPTION_C: Data
+OPTION_D: Weather
+ANSWER: D
+REASONING: Weather not a component.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-010
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: People in IS are:
+OPTION_A: Optional
+OPTION_B: Core component
+OPTION_C: Not needed
+OPTION_D: External only
+ANSWER: B
+REASONING: Personnel is key.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-011
+MODULE: IS
+TOPIC: Functions
+SUBTOPIC: Storage
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Storage function:
+OPTION_A: Deletes data
+OPTION_B: Keeps data
+OPTION_C: Processes data
+OPTION_D: Outputs data
+ANSWER: B
+REASONING: Retains data.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-012
+MODULE: IS
+TOPIC: Functions
+SUBTOPIC: Processing
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Processing means:
+OPTION_A: Storing
+OPTION_B: Manipulating data
+OPTION_C: Deleting
+OPTION_D: Ignoring
+ANSWER: B
+REASONING: Calculations & transformation.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-013
+MODULE: IS
+TOPIC: Information Quality
+SUBTOPIC: Characteristics
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Useful information must be:
+OPTION_A: Random
+OPTION_B: Accurate
+OPTION_C: Delayed
+OPTION_D: Incomplete
+ANSWER: B
+REASONING: Accuracy required. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: IS1-014
+MODULE: IS
+TOPIC: Information Quality
+SUBTOPIC: Characteristics
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Current information means:
+OPTION_A: Old
+OPTION_B: Up-to-date
+OPTION_C: Wrong
+OPTION_D: Random
+ANSWER: B
+REASONING: Timely info.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-015
+MODULE: IS
+TOPIC: Data vs Information
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Data is:
+OPTION_A: Processed facts
+OPTION_B: Raw facts
+OPTION_C: Decision
+OPTION_D: Knowledge
+ANSWER: B
+REASONING: Raw input.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-016
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Matching
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: "List of borrowed books" is:
+OPTION_A: Data
+OPTION_B: Information
+OPTION_C: Knowledge
+OPTION_D: Decision
+ANSWER: A
+REASONING: Raw listing. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: IS1-017
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Matching
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: "Report on overdue books" is:
+OPTION_A: Data
+OPTION_B: Information
+OPTION_C: Knowledge
+OPTION_D: Decision
+ANSWER: B
+REASONING: Processed data.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-018
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Matching
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: "Identify popular books" is:
+OPTION_A: Data
+OPTION_B: Information
+OPTION_C: Knowledge
+OPTION_D: Decision
+ANSWER: C
+REASONING: Analysis result.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-019
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case Study
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Inventory availability is handled by:
+OPTION_A: Knowledge base
+OPTION_B: Inventory module
+OPTION_C: Printer
+OPTION_D: Customer app
+ANSWER: B
+REASONING: Stock management system. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: IS1-020
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Concept
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Order → POS → Inventory → Report shows:
+OPTION_A: Random process
+OPTION_B: Subsystems working together
+OPTION_C: Data loss
+OPTION_D: Manual system
+ANSWER: B
+REASONING: System integration.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-021
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Function
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Updating inventory after sale is:
+OPTION_A: Input
+OPTION_B: Processing
+OPTION_C: Output
+OPTION_D: Storage
+ANSWER: B
+REASONING: Data manipulation.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-022
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Integration
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Integration helps:
+OPTION_A: Slow processing
+OPTION_B: Better decision making
+OPTION_C: Data loss
+OPTION_D: Manual work
+ANSWER: B
+REASONING: Holistic analysis.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-023
+MODULE: IS
+TOPIC: Functions
+SUBTOPIC: Full Flow
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Correct IS function order:
+OPTION_A: Input → Storage → Process → Output
+OPTION_B: Input → Process → Storage → Output
+OPTION_C: Process → Input → Output → Storage
+OPTION_D: Output → Input → Storage → Process
+ANSWER: B
+REASONING: Standard IS flow.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-024
+MODULE: IS
+TOPIC: Functions
+SUBTOPIC: Identification
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Entering customer order is:
+OPTION_A: Processing
+OPTION_B: Input
+OPTION_C: Output
+OPTION_D: Storage
+ANSWER: B
+REASONING: Data entering = input.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-025
+MODULE: IS
+TOPIC: Functions
+SUBTOPIC: Identification
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Generating report is:
+OPTION_A: Input
+OPTION_B: Processing
+OPTION_C: Output
+OPTION_D: Storage
+ANSWER: C
+REASONING: Result production = output.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-026
+MODULE: IS
+TOPIC: Information Quality
+SUBTOPIC: Characteristics
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Information must be relevant means:
+OPTION_A: Random data
+OPTION_B: Related to decision need
+OPTION_C: Old data
+OPTION_D: Incomplete data
+ANSWER: B
+REASONING: Must support decision.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-027
+MODULE: IS
+TOPIC: Information Quality
+SUBTOPIC: Characteristics
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Complete information means:
+OPTION_A: Missing data
+OPTION_B: Enough data for decision
+OPTION_C: Old data
+OPTION_D: Random data
+ANSWER: B
+REASONING: No missing parts.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-028
+MODULE: IS
+TOPIC: Information Quality
+SUBTOPIC: Characteristics
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Economic information means:
+OPTION_A: Free only
+OPTION_B: Cost-effective to obtain
+OPTION_C: Expensive always
+OPTION_D: Random
+ANSWER: B
+REASONING: Value > cost.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-029
+MODULE: IS
+TOPIC: Data Flow
+SUBTOPIC: Concept
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Correct flow:
+OPTION_A: Knowledge → Data → Information
+OPTION_B: Data → Information → Knowledge
+OPTION_C: Information → Data → Knowledge
+OPTION_D: Data → Knowledge → Information
+ANSWER: B
+REASONING: Standard hierarchy.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-030
+MODULE: IS
+TOPIC: Data Flow
+SUBTOPIC: Decision
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Decision is made from:
+OPTION_A: Raw data
+OPTION_B: Information only
+OPTION_C: Knowledge
+OPTION_D: Hardware
+ANSWER: C
+REASONING: Decisions use knowledge.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-031
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Internet connection belongs to:
+OPTION_A: Hardware
+OPTION_B: Software
+OPTION_C: Telecommunication
+OPTION_D: Procedures
+ANSWER: C
+REASONING: Communication network.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-032
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Rules for using system are:
+OPTION_A: Hardware
+OPTION_B: Software
+OPTION_C: Procedures
+OPTION_D: Data
+ANSWER: C
+REASONING: Instructions = procedures.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-033
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Advanced Case
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Automatic stock alert belongs to:
+OPTION_A: Hardware
+OPTION_B: Communication subsystem
+OPTION_C: Data
+OPTION_D: Output only
+ANSWER: B
+REASONING: Alert = communication.
+QUESTION_END
+
+QUESTION_START
+ID: IS1-034
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Advanced Case
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Suggesting drinks based on history uses:
+OPTION_A: Hardware
+OPTION_B: Software
+OPTION_C: People
+OPTION_D: Procedures
+ANSWER: B
+REASONING: Data analysis logic.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-001
+MODULE: IS
+TOPIC: Systems
+SUBTOPIC: Unique
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Patient scheduling system is:
+OPTION_A: General system
+OPTION_B: Unique system
+OPTION_C: MIS
+OPTION_D: DSS
+ANSWER: B
+REASONING: Specific to healthcare. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-002
+MODULE: IS
+TOPIC: Systems
+SUBTOPIC: General
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Payroll system is:
+OPTION_A: Unique
+OPTION_B: General
+OPTION_C: Strategic
+OPTION_D: DSS
+ANSWER: B
+REASONING: Used in many industries.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-003
+MODULE: IS
+TOPIC: Categorization
+SUBTOPIC: Methods
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IS can be categorized by:
+OPTION_A: Color
+OPTION_B: Price
+OPTION_C: Number of users
+OPTION_D: Weather
+ANSWER: C
+REASONING: Classification method.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-004
+MODULE: IS
+TOPIC: Types
+SUBTOPIC: Levels
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Global IS affects:
+OPTION_A: One person
+OPTION_B: One team
+OPTION_C: Multiple countries
+OPTION_D: One office
+ANSWER: C
+REASONING: Global level.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-005
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Operational Excellence
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Operational excellence means:
+OPTION_A: Random work
+OPTION_B: Improved efficiency
+OPTION_C: Marketing
+OPTION_D: Data storage
+ANSWER: B
+REASONING: Efficiency & productivity.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-006
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Examples
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: PickMe GPS system shows:
+OPTION_A: DSS
+OPTION_B: Operational excellence
+OPTION_C: Survival
+OPTION_D: MIS
+ANSWER: B
+REASONING: Improves efficiency.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-007
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Business Model
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Amazon is example of:
+OPTION_A: TPS
+OPTION_B: New business model
+OPTION_C: MIS
+OPTION_D: DSS
+ANSWER: B
+REASONING: Online business model.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-008
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Intimacy
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Tracking customer preferences shows:
+OPTION_A: Survival
+OPTION_B: Customer intimacy
+OPTION_C: MIS
+OPTION_D: TPS
+ANSWER: B
+REASONING: Improves relationship.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-009
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Decision Making
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Real-time dashboard supports:
+OPTION_A: Storage
+OPTION_B: Decision making
+OPTION_C: Hardware
+OPTION_D: Input
+ANSWER: B
+REASONING: Better decisions.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-010
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Competitive Advantage
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Online banking gives:
+OPTION_A: Data loss
+OPTION_B: Competitive advantage
+OPTION_C: Hardware
+OPTION_D: Random output
+ANSWER: B
+REASONING: Better service.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-011
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Survival
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: ATM systems represent:
+OPTION_A: Optional system
+OPTION_B: Survival requirement
+OPTION_C: MIS only
+OPTION_D: DSS only
+ANSWER: B
+REASONING: Must-have system.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-012
+MODULE: IS
+TOPIC: Users
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: IS user is:
+OPTION_A: Programmer only
+OPTION_B: End-user
+OPTION_C: Hardware
+OPTION_D: Data
+ANSWER: B
+REASONING: Non-technical user. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-013
+MODULE: IS
+TOPIC: Users
+SUBTOPIC: Example
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Cashier using POS is:
+OPTION_A: Developer
+OPTION_B: User
+OPTION_C: Hardware
+OPTION_D: Data
+ANSWER: B
+REASONING: End-user.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-014
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Structure
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Strategic level uses:
+OPTION_A: TPS
+OPTION_B: MIS
+OPTION_C: ESS
+OPTION_D: DSS
+ANSWER: C
+REASONING: Executive level. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-015
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Structure
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Tactical level uses:
+OPTION_A: TPS
+OPTION_B: MIS
+OPTION_C: ESS
+OPTION_D: None
+ANSWER: B
+REASONING: Middle management.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-016
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Structure
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Operational level uses:
+OPTION_A: TPS
+OPTION_B: ESS
+OPTION_C: DSS
+OPTION_D: MIS
+ANSWER: A
+REASONING: Daily operations.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-017
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case Study
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: ATM direct user:
+OPTION_A: Manager
+OPTION_B: Customer
+OPTION_C: System
+OPTION_D: Database
+ANSWER: B
+REASONING: Uses system directly.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-018
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case Study
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: ATM indirect user:
+OPTION_A: Customer
+OPTION_B: Bank manager
+OPTION_C: Machine
+OPTION_D: Card
+ANSWER: B
+REASONING: Uses reports.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-019
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Concept
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Integration of IS leads to:
+OPTION_A: Data loss
+OPTION_B: Better decisions
+OPTION_C: Slow system
+OPTION_D: Manual work
+ANSWER: B
+REASONING: Holistic view.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-020
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Objective
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Subscription model relates to:
+OPTION_A: Survival
+OPTION_B: New business model
+OPTION_C: TPS
+OPTION_D: Data entry
+ANSWER: B
+REASONING: New revenue model.
+QUESTION_END
+
+QUESTION_START
+ID: IS2-021
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Identification
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Which is NOT a strategic objective of IS?
+OPTION_A: Operational excellence
+OPTION_B: Competitive advantage
+OPTION_C: Entertainment
+OPTION_D: Survival
+ANSWER: C
+REASONING: Entertainment is not a business objective. :contentReference[oaicite:1]{index=1}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-022
+MODULE: IS
+TOPIC: Digital Firm
+SUBTOPIC: Concept
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: In a digital firm, business processes are:
+OPTION_A: Manual
+OPTION_B: Paper-based
+OPTION_C: Digitally enabled
+OPTION_D: Random
+ANSWER: C
+REASONING: Digital firms rely on digital systems. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-023
+MODULE: IS
+TOPIC: Digital Firm
+SUBTOPIC: Features
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Digital firms allow:
+OPTION_A: Fixed working only
+OPTION_B: No flexibility
+OPTION_C: Time and space shifting
+OPTION_D: Manual control only
+ANSWER: C
+REASONING: Digital firms support flexible work. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-024
+MODULE: IS
+TOPIC: Concept
+SUBTOPIC: Interdependence
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Relationship between IT and business strategy is:
+OPTION_A: Independent
+OPTION_B: Interdependent
+OPTION_C: Opposite
+OPTION_D: Random
+ANSWER: B
+REASONING: Both depend on each other. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-025
+MODULE: IS
+TOPIC: Business Model
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Business model describes:
+OPTION_A: Hardware design
+OPTION_B: How company creates value
+OPTION_C: Data storage
+OPTION_D: Only software
+ANSWER: B
+REASONING: Defines how business operates and earns. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-026
+MODULE: IS
+TOPIC: Globalization
+SUBTOPIC: Role
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: IS supports globalization by:
+OPTION_A: Increasing costs
+OPTION_B: Reducing global operation costs
+OPTION_C: Stopping communication
+OPTION_D: Manual processes
+ANSWER: B
+REASONING: Internet reduces global costs. :contentReference[oaicite:6]{index=6}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-027
+MODULE: IS
+TOPIC: Users
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: IS user is best described as:
+OPTION_A: Only programmer
+OPTION_B: Only manager
+OPTION_C: Person who benefits from system
+OPTION_D: Hardware device
+ANSWER: C
+REASONING: End-user definition. :contentReference[oaicite:7]{index=7}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-028
+MODULE: IS
+TOPIC: Case Study
+SUBTOPIC: Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Rider using delivery app is:
+OPTION_A: Indirect user
+OPTION_B: Direct user
+OPTION_C: Hardware
+OPTION_D: Output
+ANSWER: B
+REASONING: Uses system directly. :contentReference[oaicite:8]{index=8}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-029
+MODULE: IS
+TOPIC: Case Study
+SUBTOPIC: Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Restaurant owner viewing reports is:
+OPTION_A: Direct user
+OPTION_B: Indirect user
+OPTION_C: Hardware
+OPTION_D: Data
+ANSWER: B
+REASONING: Uses processed output. :contentReference[oaicite:9]{index=9}
+QUESTION_END
+
+QUESTION_START
+ID: IS2-030
+MODULE: IS
+TOPIC: Strategic Objectives
+SUBTOPIC: Deep Understanding
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Improved decision making reduces:
+OPTION_A: Efficiency
+OPTION_B: Errors and poor outcomes
+OPTION_C: Data usage
+OPTION_D: Storage
+ANSWER: B
+REASONING: Better decisions reduce mistakes. :contentReference[oaicite:10]{index=10}
+QUESTION_END
+
+QUESTION_START
+ID: IS3-001
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Hardware
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Hardware refers to:
+OPTION_A: Programs
+OPTION_B: Physical devices
+OPTION_C: Data only
+OPTION_D: Rules
+ANSWER: B
+REASONING: Physical components. :contentReference[oaicite:1]{index=1}
+QUESTION_END
+
+QUESTION_START
+ID: IS3-002
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Software
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Software is:
+OPTION_A: Hardware
+OPTION_B: Instructions/programs
+OPTION_C: Data only
+OPTION_D: Output
+ANSWER: B
+REASONING: Programs controlling hardware.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-003
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Data
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Data is:
+OPTION_A: Processed information
+OPTION_B: Raw facts
+OPTION_C: Decisions
+OPTION_D: Knowledge
+ANSWER: B
+REASONING: Raw input.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-004
+MODULE: IS
+TOPIC: Data Types
+SUBTOPIC: Structured
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Structured data is:
+OPTION_A: Images
+OPTION_B: Tables with rows/columns
+OPTION_C: Videos
+OPTION_D: Audio
+ANSWER: B
+REASONING: Organized format. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: IS3-005
+MODULE: IS
+TOPIC: Data Types
+SUBTOPIC: Unstructured
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Unstructured data includes:
+OPTION_A: Tables
+OPTION_B: SQL records
+OPTION_C: Images and videos
+OPTION_D: Numbers only
+ANSWER: C
+REASONING: No fixed format.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-006
+MODULE: IS
+TOPIC: Data Types
+SUBTOPIC: Semi-structured
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: JSON is:
+OPTION_A: Structured
+OPTION_B: Semi-structured
+OPTION_C: Unstructured
+OPTION_D: Raw
+ANSWER: B
+REASONING: Uses tags.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-007
+MODULE: IS
+TOPIC: Database
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Database is:
+OPTION_A: Random data
+OPTION_B: Organized collection of data
+OPTION_C: Only hardware
+OPTION_D: Only output
+ANSWER: B
+REASONING: Structured storage. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: IS3-008
+MODULE: IS
+TOPIC: Database
+SUBTOPIC: DBMS
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: DBMS is used to:
+OPTION_A: Delete system
+OPTION_B: Manage database
+OPTION_C: Display images
+OPTION_D: Run OS
+ANSWER: B
+REASONING: Controls database.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-009
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: People
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IS people include:
+OPTION_A: Only users
+OPTION_B: Only programmers
+OPTION_C: Users, managers, IT staff
+OPTION_D: Only hardware
+ANSWER: C
+REASONING: All involved roles.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-010
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Procedures
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Procedures are:
+OPTION_A: Devices
+OPTION_B: Rules and instructions
+OPTION_C: Data
+OPTION_D: Output
+ANSWER: B
+REASONING: Policies.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-011
+MODULE: IS
+TOPIC: Business Process
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Business process is:
+OPTION_A: Random tasks
+OPTION_B: Set of related activities
+OPTION_C: Data only
+OPTION_D: Hardware
+ANSWER: B
+REASONING: Organized tasks. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: IS3-012
+MODULE: IS
+TOPIC: Business Process
+SUBTOPIC: Flow
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Input → Process → Output describes:
+OPTION_A: Database
+OPTION_B: Business process
+OPTION_C: Hardware
+OPTION_D: Software
+ANSWER: B
+REASONING: Process flow.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-013
+MODULE: IS
+TOPIC: CPU
+SUBTOPIC: Components
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: CPU consists of:
+OPTION_A: RAM only
+OPTION_B: ALU and Control Unit
+OPTION_C: Monitor
+OPTION_D: Printer
+ANSWER: B
+REASONING: Core CPU parts. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: IS3-014
+MODULE: IS
+TOPIC: CPU
+SUBTOPIC: Cycle
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: CPU cycle is:
+OPTION_A: Input-output
+OPTION_B: Fetch-Decode-Execute
+OPTION_C: Store-delete
+OPTION_D: Run-stop
+ANSWER: B
+REASONING: Execution cycle.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-015
+MODULE: IS
+TOPIC: CPU
+SUBTOPIC: ALU
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: ALU performs:
+OPTION_A: Control tasks
+OPTION_B: Arithmetic and logic
+OPTION_C: Storage
+OPTION_D: Input
+ANSWER: B
+REASONING: Calculations.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-016
+MODULE: IS
+TOPIC: CPU
+SUBTOPIC: Cache
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Cache is:
+OPTION_A: Slow memory
+OPTION_B: Fast temporary memory
+OPTION_C: Output device
+OPTION_D: Storage only
+ANSWER: B
+REASONING: High-speed memory.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-017
+MODULE: IS
+TOPIC: Data Types
+SUBTOPIC: Scenario
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Social media posts are:
+OPTION_A: Structured
+OPTION_B: Unstructured
+OPTION_C: Semi-structured
+OPTION_D: Tables
+ANSWER: B
+REASONING: Free format.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-018
+MODULE: IS
+TOPIC: Data Types
+SUBTOPIC: Scenario
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: SQL tables are:
+OPTION_A: Unstructured
+OPTION_B: Semi-structured
+OPTION_C: Structured
+OPTION_D: Random
+ANSWER: C
+REASONING: Organized format.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-019
+MODULE: IS
+TOPIC: Data Types
+SUBTOPIC: Hybrid
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Tables + videos =:
+OPTION_A: Structured only
+OPTION_B: Unstructured only
+OPTION_C: Hybrid data
+OPTION_D: Semi only
+ANSWER: C
+REASONING: Mixed types.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-020
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: AI prompt input device:
+OPTION_A: Monitor
+OPTION_B: Keyboard
+OPTION_C: Printer
+OPTION_D: Speaker
+ANSWER: B
+REASONING: Text input.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-021
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: AI software is:
+OPTION_A: Hardware
+OPTION_B: Application software
+OPTION_C: Data
+OPTION_D: Output
+ANSWER: B
+REASONING: Program interaction.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-022
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Image display device:
+OPTION_A: CPU
+OPTION_B: Monitor
+OPTION_C: RAM
+OPTION_D: Cache
+ANSWER: B
+REASONING: Output device.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-023
+MODULE: IS
+TOPIC: Components
+SUBTOPIC: Telecommunication
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Telecommunication component includes:
+OPTION_A: Keyboard
+OPTION_B: Router and networks
+OPTION_C: Database
+OPTION_D: Procedures
+ANSWER: B
+REASONING: Enables data transmission.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-024
+MODULE: IS
+TOPIC: Software
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Operating system is:
+OPTION_A: Application software
+OPTION_B: System software
+OPTION_C: Data
+OPTION_D: Hardware
+ANSWER: B
+REASONING: OS manages system resources.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-025
+MODULE: IS
+TOPIC: Software
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Excel is:
+OPTION_A: Hardware
+OPTION_B: System software
+OPTION_C: Application software
+OPTION_D: Procedure
+ANSWER: C
+REASONING: End-user program.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-026
+MODULE: IS
+TOPIC: Data Types
+SUBTOPIC: Comparison
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Which is TRUE?
+OPTION_A: Structured data is difficult to query
+OPTION_B: Unstructured data fits tables
+OPTION_C: Structured data uses rows and columns
+OPTION_D: Unstructured data uses SQL easily
+ANSWER: C
+REASONING: Organized tabular format.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-027
+MODULE: IS
+TOPIC: Data Types
+SUBTOPIC: Comparison
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Unstructured data requires:
+OPTION_A: SQL only
+OPTION_B: Tables only
+OPTION_C: AI/NLP for analysis
+OPTION_D: Manual entry only
+ANSWER: C
+REASONING: Complex data needs advanced tools.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-028
+MODULE: IS
+TOPIC: Database
+SUBTOPIC: Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: DBMS helps in:
+OPTION_A: Only storing data
+OPTION_B: Managing and querying data
+OPTION_C: Hardware control
+OPTION_D: Input only
+ANSWER: B
+REASONING: Full database operations.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-029
+MODULE: IS
+TOPIC: Business Process
+SUBTOPIC: Identification
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Cooking burger using ingredients is:
+OPTION_A: Input
+OPTION_B: Process
+OPTION_C: Output
+OPTION_D: Storage
+ANSWER: B
+REASONING: Transformation step.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-030
+MODULE: IS
+TOPIC: Business Process
+SUBTOPIC: Identification
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Ingredients in burger example are:
+OPTION_A: Output
+OPTION_B: Input
+OPTION_C: Process
+OPTION_D: Storage
+ANSWER: B
+REASONING: Raw materials.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-031
+MODULE: IS
+TOPIC: Business Process
+SUBTOPIC: Identification
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Finished burger is:
+OPTION_A: Input
+OPTION_B: Process
+OPTION_C: Output
+OPTION_D: Data
+ANSWER: C
+REASONING: Final result.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-032
+MODULE: IS
+TOPIC: Process Modeling
+SUBTOPIC: Concept
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Process modeling is used to:
+OPTION_A: Delete data
+OPTION_B: Understand and improve processes
+OPTION_C: Store data
+OPTION_D: Only input data
+ANSWER: B
+REASONING: Helps analyze workflows.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-033
+MODULE: IS
+TOPIC: Process Modeling
+SUBTOPIC: Importance
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Process modeling helps in:
+OPTION_A: Reducing understanding
+OPTION_B: Improving efficiency
+OPTION_C: Deleting processes
+OPTION_D: Ignoring systems
+ANSWER: B
+REASONING: Enhances performance.
+QUESTION_END
+
+QUESTION_START
+ID: IS3-034
+MODULE: IS
+TOPIC: Scenario
+SUBTOPIC: Advanced
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: CCTV video + transaction data is:
+OPTION_A: Structured
+OPTION_B: Unstructured
+OPTION_C: Hybrid data
+OPTION_D: Random
+ANSWER: C
+REASONING: Combination of data types.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-001
+MODULE: IS
+TOPIC: Functional Areas
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Functional areas are:
+OPTION_A: Random groups
+OPTION_B: Departments in organization
+OPTION_C: Hardware parts
+OPTION_D: Data only
+ANSWER: B
+REASONING: Divisions like marketing, finance. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: IS5-002
+MODULE: IS
+TOPIC: Functional Areas
+SUBTOPIC: Examples
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Which is NOT functional area?
+OPTION_A: Marketing
+OPTION_B: Finance
+OPTION_C: RAM
+OPTION_D: HR
+ANSWER: C
+REASONING: RAM is hardware.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-003
+MODULE: IS
+TOPIC: IS Importance
+SUBTOPIC: Efficiency
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IS improves:
+OPTION_A: Manual work
+OPTION_B: Efficiency
+OPTION_C: Errors
+OPTION_D: Delay
+ANSWER: B
+REASONING: Automation improves efficiency.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-004
+MODULE: IS
+TOPIC: IS Importance
+SUBTOPIC: Decision
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IS supports:
+OPTION_A: Random decisions
+OPTION_B: Data-driven decisions
+OPTION_C: No decisions
+OPTION_D: Manual work
+ANSWER: B
+REASONING: Accurate info improves decisions.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-005
+MODULE: IS
+TOPIC: IS Importance
+SUBTOPIC: Communication
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IS helps:
+OPTION_A: Reduce communication
+OPTION_B: Improve coordination
+OPTION_C: Remove data
+OPTION_D: Increase delay
+ANSWER: B
+REASONING: Departments share data.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-006
+MODULE: IS
+TOPIC: MKIS
+SUBTOPIC: Functions
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: MKIS helps to:
+OPTION_A: Payroll
+OPTION_B: Forecast sales
+OPTION_C: Hiring
+OPTION_D: Inventory only
+ANSWER: B
+REASONING: Marketing analysis. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: IS5-007
+MODULE: IS
+TOPIC: MKIS
+SUBTOPIC: Subsystems
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Which is MKIS subsystem?
+OPTION_A: Payroll
+OPTION_B: Pricing
+OPTION_C: Scheduling
+OPTION_D: Asset management
+ANSWER: B
+REASONING: Marketing pricing.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-008
+MODULE: IS
+TOPIC: MKIS
+SUBTOPIC: Example
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Sales drop analysis uses:
+OPTION_A: HRMIS
+OPTION_B: MKIS
+OPTION_C: FIS
+OPTION_D: TPS
+ANSWER: B
+REASONING: Marketing decision.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-009
+MODULE: IS
+TOPIC: FIS
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: FIS manages:
+OPTION_A: Employees
+OPTION_B: Finance
+OPTION_C: Inventory
+OPTION_D: Marketing
+ANSWER: B
+REASONING: Financial data.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-010
+MODULE: IS
+TOPIC: FIS
+SUBTOPIC: Subsystems
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Budgeting belongs to:
+OPTION_A: MKIS
+OPTION_B: HRMIS
+OPTION_C: FIS
+OPTION_D: TPS
+ANSWER: C
+REASONING: Finance function.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-011
+MODULE: IS
+TOPIC: HRMIS
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: HRMIS manages:
+OPTION_A: Customers
+OPTION_B: Employees
+OPTION_C: Finance
+OPTION_D: Inventory
+ANSWER: B
+REASONING: HR activities.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-012
+MODULE: IS
+TOPIC: HRMIS
+SUBTOPIC: Subsystems
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Recruitment belongs to:
+OPTION_A: HRMIS
+OPTION_B: FIS
+OPTION_C: MKIS
+OPTION_D: TPS
+ANSWER: A
+REASONING: HR process.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-013
+MODULE: IS
+TOPIC: Operations MIS
+SUBTOPIC: Purpose
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Operations MIS handles:
+OPTION_A: Hiring
+OPTION_B: Production & inventory
+OPTION_C: Marketing
+OPTION_D: Finance
+ANSWER: B
+REASONING: Manufacturing support.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-014
+MODULE: IS
+TOPIC: Operations MIS
+SUBTOPIC: Example
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Auto reorder when stock low is:
+OPTION_A: HRMIS
+OPTION_B: MKIS
+OPTION_C: Operations MIS
+OPTION_D: FIS
+ANSWER: C
+REASONING: Inventory system.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-015
+MODULE: IS
+TOPIC: Decision Support
+SUBTOPIC: Mapping
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Pricing decision uses:
+OPTION_A: HRMIS
+OPTION_B: MKIS
+OPTION_C: FIS
+OPTION_D: TPS
+ANSWER: B
+REASONING: Marketing decision.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-016
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Dashboard
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Sales dashboard belongs to:
+OPTION_A: FIS
+OPTION_B: HRMIS
+OPTION_C: MKIS
+OPTION_D: TPS
+ANSWER: C
+REASONING: Marketing analytics. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: IS5-017
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Budget
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Budget statement generated by:
+OPTION_A: HRMIS
+OPTION_B: MKIS
+OPTION_C: FIS
+OPTION_D: TPS
+ANSWER: C
+REASONING: Financial system.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-018
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Matching
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Detect fraud patterns:
+OPTION_A: MKIS
+OPTION_B: FIS
+OPTION_C: HRMIS
+OPTION_D: TPS
+ANSWER: B
+REASONING: Financial auditing.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-019
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Integration
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: ERP integrates:
+OPTION_A: Only HR
+OPTION_B: Only finance
+OPTION_C: All systems
+OPTION_D: Hardware
+ANSWER: C
+REASONING: Full integration.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-020
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Case
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Price adjustment requires:
+OPTION_A: HRMIS
+OPTION_B: MKIS
+OPTION_C: FIS
+OPTION_D: TPS
+ANSWER: B
+REASONING: Marketing decision.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-021
+MODULE: IS
+TOPIC: IS Importance
+SUBTOPIC: Data Management
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: IS helps in:
+OPTION_A: Deleting data
+OPTION_B: Organizing and retrieving data
+OPTION_C: Ignoring data
+OPTION_D: Manual storage only
+ANSWER: B
+REASONING: IS improves data management.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-022
+MODULE: IS
+TOPIC: IS Importance
+SUBTOPIC: Customer Service
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: CRM system improves:
+OPTION_A: Inventory
+OPTION_B: Customer service
+OPTION_C: Payroll
+OPTION_D: Hardware
+ANSWER: B
+REASONING: CRM tracks customer preferences.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-023
+MODULE: IS
+TOPIC: IS Importance
+SUBTOPIC: Strategic Planning
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Strategic planning is supported by:
+OPTION_A: Input devices
+OPTION_B: Business intelligence tools
+OPTION_C: Keyboard
+OPTION_D: Printer
+ANSWER: B
+REASONING: BI supports long-term decisions.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-024
+MODULE: IS
+TOPIC: MKIS
+SUBTOPIC: Inputs
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: MKIS uses which input?
+OPTION_A: Payroll data
+OPTION_B: Customer trends and competitor pricing
+OPTION_C: Hardware data
+OPTION_D: Employee records
+ANSWER: B
+REASONING: Marketing data inputs.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-025
+MODULE: IS
+TOPIC: MKIS
+SUBTOPIC: Outputs
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: MKIS output includes:
+OPTION_A: Salary reports
+OPTION_B: Sales forecasts
+OPTION_C: Attendance
+OPTION_D: Payroll
+ANSWER: B
+REASONING: Marketing output.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-026
+MODULE: IS
+TOPIC: MKIS
+SUBTOPIC: Decision
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: MKIS helps decide:
+OPTION_A: Employee salary
+OPTION_B: What and where to sell
+OPTION_C: Payroll
+OPTION_D: Hardware usage
+ANSWER: B
+REASONING: Marketing decisions.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-027
+MODULE: IS
+TOPIC: FIS
+SUBTOPIC: Outputs
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: FIS provides:
+OPTION_A: Customer trends
+OPTION_B: Investment recommendations
+OPTION_C: Hiring data
+OPTION_D: Inventory
+ANSWER: B
+REASONING: Financial decision support.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-028
+MODULE: IS
+TOPIC: FIS
+SUBTOPIC: Analysis
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Budget variance analysis is part of:
+OPTION_A: HRMIS
+OPTION_B: MKIS
+OPTION_C: FIS
+OPTION_D: TPS
+ANSWER: C
+REASONING: Financial analysis.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-029
+MODULE: IS
+TOPIC: HRMIS
+SUBTOPIC: Outputs
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: HRMIS output includes:
+OPTION_A: Sales forecast
+OPTION_B: Performance reports
+OPTION_C: Inventory
+OPTION_D: Pricing
+ANSWER: B
+REASONING: Employee analysis.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-030
+MODULE: IS
+TOPIC: HRMIS
+SUBTOPIC: Training
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Training effectiveness belongs to:
+OPTION_A: MKIS
+OPTION_B: HRMIS
+OPTION_C: FIS
+OPTION_D: TPS
+ANSWER: B
+REASONING: HR subsystem.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-031
+MODULE: IS
+TOPIC: Operations MIS
+SUBTOPIC: Subsystems
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: CAD is used for:
+OPTION_A: Payroll
+OPTION_B: Product design
+OPTION_C: Finance
+OPTION_D: Marketing
+ANSWER: B
+REASONING: Design system.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-032
+MODULE: IS
+TOPIC: Operations MIS
+SUBTOPIC: Subsystems
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: JIT system means:
+OPTION_A: Late delivery
+OPTION_B: Deliver materials exactly when needed
+OPTION_C: Store everything
+OPTION_D: Manual process
+ANSWER: B
+REASONING: Just-in-time concept.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-033
+MODULE: IS
+TOPIC: Operations MIS
+SUBTOPIC: Quality
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Quality control tracks:
+OPTION_A: Customers
+OPTION_B: Defects and failures
+OPTION_C: Payroll
+OPTION_D: Ads
+ANSWER: B
+REASONING: Manufacturing quality.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-034
+MODULE: IS
+TOPIC: Decision Mapping
+SUBTOPIC: Cross Function
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Workforce allocation belongs to:
+OPTION_A: Marketing
+OPTION_B: Finance
+OPTION_C: HR
+OPTION_D: Operations
+ANSWER: C
+REASONING: HR decision.
+QUESTION_END
+
+QUESTION_START
+ID: IS5-035
+MODULE: IS
+TOPIC: Decision Mapping
+SUBTOPIC: Cross Function
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Inventory decision belongs to:
+OPTION_A: HR
+OPTION_B: Marketing
+OPTION_C: Operations
+OPTION_D: Finance
+ANSWER: C
+REASONING: Operations responsibility.
+QUESTION_END
