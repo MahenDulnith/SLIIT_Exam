@@ -9261,3 +9261,531 @@ OPTION_D: Finance
 ANSWER: C
 REASONING: Operations responsibility.
 QUESTION_END
+
+QUESTION_START
+ID: IS6-001
+MODULE: IS
+TOPIC: Cloud Computing
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Cloud computing is:
+OPTION_A: Local storage only
+OPTION_B: Internet-based services
+OPTION_C: Hardware only
+OPTION_D: Offline system
+ANSWER: B
+REASONING: Services over internet. :contentReference[oaicite:2]{index=2}
+QUESTION_END
+
+QUESTION_START
+ID: IS6-002
+MODULE: IS
+TOPIC: Cloud
+SUBTOPIC: Example
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Google Drive is:
+OPTION_A: Local storage
+OPTION_B: Cloud service
+OPTION_C: Hardware
+OPTION_D: CPU
+ANSWER: B
+REASONING: Cloud storage.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-003
+MODULE: IS
+TOPIC: Cloud
+SUBTOPIC: Characteristics
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Pay-as-you-go means:
+OPTION_A: Fixed cost
+OPTION_B: Pay only for usage
+OPTION_C: Free system
+OPTION_D: Offline system
+ANSWER: B
+REASONING: Usage-based pricing.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-004
+MODULE: IS
+TOPIC: Cloud
+SUBTOPIC: Service Model
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: SaaS provides:
+OPTION_A: Hardware
+OPTION_B: Ready software
+OPTION_C: Network only
+OPTION_D: Sensors
+ANSWER: B
+REASONING: Software over internet. :contentReference[oaicite:3]{index=3}
+QUESTION_END
+
+QUESTION_START
+ID: IS6-005
+MODULE: IS
+TOPIC: Cloud
+SUBTOPIC: Service Model
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IaaS provides:
+OPTION_A: Software
+OPTION_B: Infrastructure
+OPTION_C: Database only
+OPTION_D: UI
+ANSWER: B
+REASONING: Virtual servers.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-006
+MODULE: IS
+TOPIC: AI
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: AI is:
+OPTION_A: Hardware only
+OPTION_B: Human-like intelligence in machines
+OPTION_C: Data only
+OPTION_D: Storage
+ANSWER: B
+REASONING: Machine intelligence.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-007
+MODULE: IS
+TOPIC: AI
+SUBTOPIC: Capability
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: NLP means:
+OPTION_A: Network processing
+OPTION_B: Natural Language Processing
+OPTION_C: New logic program
+OPTION_D: None
+ANSWER: B
+REASONING: Language understanding. :contentReference[oaicite:4]{index=4}
+QUESTION_END
+
+QUESTION_START
+ID: IS6-008
+MODULE: IS
+TOPIC: AI
+SUBTOPIC: Example
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Chatbot is:
+OPTION_A: Hardware
+OPTION_B: AI system
+OPTION_C: Database
+OPTION_D: Sensor
+ANSWER: B
+REASONING: AI application.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-009
+MODULE: IS
+TOPIC: IoT
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: IoT connects:
+OPTION_A: Only computers
+OPTION_B: Physical devices via internet
+OPTION_C: Only people
+OPTION_D: Only software
+ANSWER: B
+REASONING: Device connectivity.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-010
+MODULE: IS
+TOPIC: IoT
+SUBTOPIC: Components
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: IoT uses:
+OPTION_A: Sensors
+OPTION_B: Data
+OPTION_C: Connectivity
+OPTION_D: All
+ANSWER: D
+REASONING: Full system.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-011
+MODULE: IS
+TOPIC: IoT
+SUBTOPIC: Function
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Sensors:
+OPTION_A: Display data
+OPTION_B: Collect data
+OPTION_C: Delete data
+OPTION_D: Store data
+ANSWER: B
+REASONING: Data collection.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-012
+MODULE: IS
+TOPIC: Mobile Computing
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Easy
+QUESTION: Mobile computing allows:
+OPTION_A: Fixed access
+OPTION_B: Anywhere access
+OPTION_C: Offline only
+OPTION_D: Hardware only
+ANSWER: B
+REASONING: Mobility. :contentReference[oaicite:5]{index=5}
+QUESTION_END
+
+QUESTION_START
+ID: IS6-013
+MODULE: IS
+TOPIC: Mobile
+SUBTOPIC: Features
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Mobile devices use:
+OPTION_A: Wired only
+OPTION_B: Wireless networks
+OPTION_C: No network
+OPTION_D: CPU only
+ANSWER: B
+REASONING: WiFi/4G.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-014
+MODULE: IS
+TOPIC: Agents
+SUBTOPIC: Definition
+TYPE: MCQ
+DIFFICULTY: Medium
+QUESTION: Software agents are:
+OPTION_A: Hardware
+OPTION_B: Autonomous programs
+OPTION_C: Data
+OPTION_D: Output
+ANSWER: B
+REASONING: Independent systems.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-015
+MODULE: IS
+TOPIC: Agents
+SUBTOPIC: Characteristics
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Agents show:
+OPTION_A: Autonomy
+OPTION_B: Reactivity
+OPTION_C: Proactiveness
+OPTION_D: All
+ANSWER: D
+REASONING: Key features.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-016
+MODULE: IS
+TOPIC: Agents
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Learning agent:
+OPTION_A: Does not learn
+OPTION_B: Improves from data
+OPTION_C: Stores data only
+OPTION_D: Deletes data
+ANSWER: B
+REASONING: Learns over time.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-017
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: SaaS
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: SaaS allows:
+OPTION_A: Install software
+OPTION_B: Use via browser
+OPTION_C: Hardware only
+OPTION_D: Offline use
+ANSWER: B
+REASONING: Browser-based.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-018
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Expert System
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Expert system example:
+OPTION_A: Calculator
+OPTION_B: Medical diagnosis
+OPTION_C: Keyboard
+OPTION_D: Mouse
+ANSWER: B
+REASONING: Decision system.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-019
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: IoT Case
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Fitness band uses:
+OPTION_A: Only software
+OPTION_B: Sensors + app
+OPTION_C: Hardware only
+OPTION_D: Database only
+ANSWER: B
+REASONING: IoT system.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-020
+MODULE: IS
+TOPIC: Tutorial
+SUBTOPIC: Cloud Case
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Google Drive used in university is:
+OPTION_A: IaaS
+OPTION_B: SaaS
+OPTION_C: PaaS
+OPTION_D: Hardware
+ANSWER: B
+REASONING: Software service.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-021
+MODULE: IS
+TOPIC: Cloud
+SUBTOPIC: Deployment Model
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Public cloud means:
+OPTION_A: Private system
+OPTION_B: Shared infrastructure
+OPTION_C: Offline system
+OPTION_D: Manual storage
+ANSWER: B
+REASONING: Shared among users.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-022
+MODULE: IS
+TOPIC: Cloud
+SUBTOPIC: Deployment Model
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Hybrid cloud is:
+OPTION_A: Only public
+OPTION_B: Only private
+OPTION_C: Combination of both
+OPTION_D: Offline system
+ANSWER: C
+REASONING: Mix of public and private.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-023
+MODULE: IS
+TOPIC: Cloud
+SUBTOPIC: Service Model
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: PaaS provides:
+OPTION_A: Hardware
+OPTION_B: Platform for development
+OPTION_C: Ready software
+OPTION_D: Sensors
+ANSWER: B
+REASONING: App development platform.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-024
+MODULE: IS
+TOPIC: Cloud
+SUBTOPIC: Risks
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Cloud risk includes:
+OPTION_A: No internet needed
+OPTION_B: Vendor lock-in
+OPTION_C: Free cost always
+OPTION_D: No security issues
+ANSWER: B
+REASONING: Dependency on provider.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-025
+MODULE: IS
+TOPIC: AI
+SUBTOPIC: Capabilities
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: AI learning means:
+OPTION_A: Fixed behavior
+OPTION_B: Improving from data
+OPTION_C: Manual input
+OPTION_D: Storage only
+ANSWER: B
+REASONING: Learns over time.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-026
+MODULE: IS
+TOPIC: AI
+SUBTOPIC: Capabilities
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: AI perception is:
+OPTION_A: Storage
+OPTION_B: Understanding images/sounds
+OPTION_C: Input only
+OPTION_D: Hardware
+ANSWER: B
+REASONING: Recognition ability.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-027
+MODULE: IS
+TOPIC: IoT
+SUBTOPIC: Components
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: IoT data processing is:
+OPTION_A: Sensors
+OPTION_B: Servers/cloud analyzing data
+OPTION_C: Input device
+OPTION_D: Output only
+ANSWER: B
+REASONING: Data is processed centrally.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-028
+MODULE: IS
+TOPIC: IoT
+SUBTOPIC: Components
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: IoT user interface is:
+OPTION_A: Sensors
+OPTION_B: Dashboard/app
+OPTION_C: CPU
+OPTION_D: Network
+ANSWER: B
+REASONING: User interaction layer.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-029
+MODULE: IS
+TOPIC: Mobile
+SUBTOPIC: Features
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Portability means:
+OPTION_A: Fixed location
+OPTION_B: Easy to carry devices
+OPTION_C: No network
+OPTION_D: Storage
+ANSWER: B
+REASONING: Mobile device feature.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-030
+MODULE: IS
+TOPIC: Mobile
+SUBTOPIC: Features
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Real-time access means:
+OPTION_A: Delayed data
+OPTION_B: Instant data access
+OPTION_C: Offline data
+OPTION_D: Manual
+ANSWER: B
+REASONING: Immediate availability.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-031
+MODULE: IS
+TOPIC: Agents
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Monitoring agent:
+OPTION_A: Stores data
+OPTION_B: Observes systems continuously
+OPTION_C: Deletes data
+OPTION_D: Hardware
+ANSWER: B
+REASONING: Tracks system conditions.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-032
+MODULE: IS
+TOPIC: Agents
+SUBTOPIC: Types
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Collaborative agent:
+OPTION_A: Works alone
+OPTION_B: Works with other agents
+OPTION_C: Stores data
+OPTION_D: Input device
+ANSWER: B
+REASONING: Multi-agent interaction.
+QUESTION_END
+
+QUESTION_START
+ID: IS6-033
+MODULE: IS
+TOPIC: Comparison
+SUBTOPIC: Cloud vs Local
+TYPE: MCQ
+DIFFICULTY: Hard
+QUESTION: Cloud vs local storage difference:
+OPTION_A: Cloud requires internet
+OPTION_B: Local requires internet
+OPTION_C: Both same
+OPTION_D: None
+ANSWER: A
+REASONING: Cloud depends on internet.
+QUESTION_END
